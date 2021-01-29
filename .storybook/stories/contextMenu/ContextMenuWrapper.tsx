@@ -1,5 +1,5 @@
 import React, { CSSProperties, useState } from 'react';
-import TagMoreInfo from '../../../src/buttonWithPopover/ButtonWithPopover';
+import ButtonWithPopover from '../../../src/buttonWithPopover/ButtonWithPopover';
 import ContextMenu from '../../../src/contextMenu/ContextMenu';
 import { DataInformation } from '../../../src/types/dataInformation';
 
@@ -49,7 +49,11 @@ const ContextMenuWrapper: React.FC<ContextMenuWrapperProps> = ({
             positionStyle={position}
             openTagInformation={openTagInformation}
         >
-            <TagMoreInfo fetchDataToShow={fetchDataToShow} isLoading={isLoading} fetchedData={fetchedDataToShow} />
+            <ButtonWithPopover
+                fetchDataToShow={fetchDataToShow}
+                isLoading={isLoading}
+                fetchedData={fetchedDataToShow}
+            />
         </ContextMenu>
     );
 };

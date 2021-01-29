@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders icon wrapper correctly 1`] = `
+<svg
+  aria-labelledby="eds-arrow_up-1"
+  className="sc-idOhPF bqIcIz"
+  fill="#000"
+  height="24px"
+  name={null}
+  role="img"
+  title="Up"
+  viewBox="0 0 24 24"
+  width="24px"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title
+    id="eds-arrow_up-1"
+  >
+    Up
+  </title>
+  <path
+    className="sc-dIUggk"
+    clipRule="evenodd"
+    d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+    data-testid="eds-icon-path"
+    fillRule="evenodd"
+    height="24"
+    size={null}
+    transform={null}
+  />
+</svg>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TagIcon correctly 1`] = `
+<div
+  className="icon"
+  style={
+    Object {
+      "background": "#FFF",
+    }
+  }
+>
+  <svg />
+</div>
+`;
+
+exports[`renders TagIcon with shadow correctly 1`] = `
+<div
+  className="shadow"
+>
+  <div
+    className="icon"
+    style={
+      Object {
+        "background": "#FFF",
+      }
+    }
+  >
+    <svg />
+  </div>
+</div>
+`;
