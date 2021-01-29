@@ -1,5 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders ButtonWithPopover with more info button correctly 1`] = `
+<div
+  className="wrapper"
+>
+  <button
+    className="sc-gsTCUz eUnAE button"
+    disabled={false}
+    onClick={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="sc-bdfBwQ ibGDsh"
+    >
+      <svg
+        aria-labelledby="eds-more_horizontal-1"
+        className="sc-idOhPF bqIcIz"
+        fill="#007079"
+        height="24px"
+        name={null}
+        role="img"
+        title="more options"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title
+          id="eds-more_horizontal-1"
+        >
+          more options
+        </title>
+        <path
+          className="sc-dIUggk"
+          clipRule="evenodd"
+          d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-8 2c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"
+          data-testid="eds-icon-path"
+          fillRule="evenodd"
+          height="24"
+          size={null}
+          transform={null}
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
 exports[`renders ContextMenu with more info button correctly 1`] = `
 <div
   className="wrapper"
