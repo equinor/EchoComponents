@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders open data info button with badge correctly 1`] = `
+exports[`renders open DataInfoButton with badge correctly 1`] = `
 <button
   aria-label="P&ID"
   className="sc-gsTCUz eUnAE undefined button buttonWithBadge"
@@ -18,7 +18,7 @@ exports[`renders open data info button with badge correctly 1`] = `
 </button>
 `;
 
-exports[`renders open data info button with badge with over 99 items correctly 1`] = `
+exports[`renders open DataInfoButton with badge with over 99 items correctly 1`] = `
 <button
   aria-label="Others"
   className="sc-gsTCUz eUnAE undefined button buttonWithBadge"
@@ -36,7 +36,7 @@ exports[`renders open data info button with badge with over 99 items correctly 1
 </button>
 `;
 
-exports[`renders open data info button without badge correctly 1`] = `
+exports[`renders open DataInfoButton without badge correctly 1`] = `
 <button
   aria-label="D&ID"
   className="sc-gsTCUz eUnAE undefined button "

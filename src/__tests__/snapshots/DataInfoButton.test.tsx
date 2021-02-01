@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { DataInfoButton } from '../..';
 
-it('renders open data info button with badge correctly', () => {
+it('renders open DataInfoButton with badge correctly', () => {
     const data = {
         numberOfItems: 5,
         label: 'P&ID',
@@ -15,7 +15,7 @@ it('renders open data info button with badge correctly', () => {
     expect(tree).toMatchSnapshot();
 });
 
-it('renders open data info button without badge correctly', () => {
+it('renders open DataInfoButton without badge correctly', () => {
     const data = {
         numberOfItems: 1,
         label: 'D&ID',
@@ -27,7 +27,7 @@ it('renders open data info button without badge correctly', () => {
     expect(tree).toMatchSnapshot();
 });
 
-it('renders open data info button with badge with over 99 items correctly', () => {
+it('renders open DataInfoButton with badge with over 99 items correctly', () => {
     const data = {
         numberOfItems: 120,
         label: 'Others',

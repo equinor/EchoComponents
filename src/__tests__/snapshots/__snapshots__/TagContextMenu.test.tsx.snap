@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders closed tagContextMenu correctly 1`] = `
+exports[`renders closed TagContextMenu correctly 1`] = `
 <div
   className="contextWrapper"
   onClick={[Function]}
@@ -16,13 +16,15 @@ exports[`renders closed tagContextMenu correctly 1`] = `
         }
       }
     >
-      <svg />
+      <svg
+        aria-label="electrical"
+      />
     </div>
   </div>
 </div>
 `;
 
-exports[`renders open tagContextMenu correctly 1`] = `
+exports[`renders open TagContextMenu correctly 1`] = `
 <div
   className="contextWrapperExpanded"
   onClick={[MockFunction]}
@@ -38,7 +40,9 @@ exports[`renders open tagContextMenu correctly 1`] = `
         }
       }
     >
-      <svg />
+      <svg
+        aria-label="electrical"
+      />
     </div>
     <div
       className="tagText"

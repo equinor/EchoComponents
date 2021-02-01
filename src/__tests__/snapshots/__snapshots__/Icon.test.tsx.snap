@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders icon wrapper correctly 1`] = `
+exports[`renders Icon wrapper correctly 1`] = `
 <svg
   aria-labelledby="eds-arrow_up-1"
   className="sc-idOhPF bqIcIz"

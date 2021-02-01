@@ -4,7 +4,7 @@ import { TagContextMenu } from '../..';
 import { getIcon } from '../../helpers/getIcon';
 import TagIcon from '../../tagIcon/TagIcon';
 
-it('renders closed tagContextMenu correctly', () => {
+it('renders closed TagContextMenu correctly', () => {
     const setExpanded = jest.fn();
     const openTagInformation = jest.fn();
 
@@ -24,7 +24,7 @@ it('renders closed tagContextMenu correctly', () => {
     expect(tree).toMatchSnapshot();
 });
 
-it('renders open tagContextMenu correctly', () => {
+it('renders open TagContextMenu correctly', () => {
     const setExpanded = jest.fn();
     const openTagInformation = jest.fn();
 

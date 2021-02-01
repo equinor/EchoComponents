@@ -48,30 +48,30 @@ export function getIcon(
 ): JSX.Element {
     switch (iconType) {
         case 'Electrical':
-            return <ElectricalIcon />;
+            return <ElectricalIcon aria-label={'electrical'} />;
         case 'Main Equipment':
-            return <MainEquipment />;
+            return <MainEquipment aria-label={'main equipment'} />;
         case 'Line':
-            return <Line />;
+            return <Line aria-label={'line'} />;
         case 'Manual Valve':
-            return <ManualValve />;
+            return <ManualValve aria-label={'manual valve'} />;
         case 'Circuit/Starter':
-            return <CircuitStarter />;
+            return <CircuitStarter aria-label={'circuit/starter'} />;
         case 'Cable':
-            return <Cable />;
+            return <Cable title={'cable'} />;
         case 'Instrument':
-            return <Instrument />;
+            return <Instrument aria-label={'instrument'} />;
         case 'Function':
-            return <Function />;
+            return <Function aria-label={'function'} />;
         case 'Signal':
-            return <Signal />;
+            return <Signal aria-label={'signal'} />;
         case 'Telecom':
-            return <Telecom />;
+            return <Telecom aria-label={'telecom'} />;
         case 'Junction Box':
-            return <JunctionBox />;
+            return <JunctionBox aria-label={'junction box'} />;
         case 'Administrative':
-            return <Tag />;
+            return <Tag aria-label={'tag'} />;
         default:
-            return <Tag />;
+            return <Tag aria-label={'tag'} />;
     }
 }
