@@ -60,6 +60,7 @@ export const TagContextMenu: React.FC<TagContextMenuProps> = ({
     } else {
         return (
             <div
+                data-testid="open-tag-info"
                 className={styles.contextWrapper}
                 onClick={(): void => {
                     setExpanded(true);

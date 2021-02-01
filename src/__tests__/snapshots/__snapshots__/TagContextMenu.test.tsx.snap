@@ -3,6 +3,7 @@
 exports[`renders closed TagContextMenu correctly 1`] = `
 <div
   className="contextWrapper"
+  data-testid="open-tag-info"
   onClick={[Function]}
 >
   <div
