@@ -15,61 +15,61 @@ import { ReactComponent as Telecom } from '../icons/tags/Telecom-icon.svg';
  * Method that returns the relevant Icon for the iconType provided
  * Tag icon is the default JSX.Element Icon returned
  * @export
- * @param {('Electrical'
- *         | 'Main Equipment'
- *         | 'Line'
- *         | 'Manual Valve'
- *         | 'Circuit/Starter'
- *         | 'Instrument'
- *         | 'Cable'
- *         | 'Function'
- *         | 'Signal'
- *         | 'Telecom'
- *         | 'Junction Box'
- *         | 'Administrative'
+ * @param {('electrical'
+ *         | 'main Equipment'
+ *         | 'line'
+ *         | 'manual Valve'
+ *         | 'circuit/starter'
+ *         | 'instrument'
+ *         | 'cable'
+ *         | 'function'
+ *         | 'signal'
+ *         | 'telecom'
+ *         | 'junction box'
+ *         | 'administrative'
  *         | string)} iconType The type of icon you want returned
  * @return {*}  {JSX.Element} Relevant icon for the provided iconType
  */
 export function getIcon(
     iconType:
-        | 'Electrical'
-        | 'Main Equipment'
-        | 'Line'
-        | 'Manual Valve'
-        | 'Circuit/Starter'
-        | 'Instrument'
-        | 'Cable'
-        | 'Function'
-        | 'Signal'
-        | 'Telecom'
-        | 'Junction Box'
-        | 'Administrative'
+        | 'electrical'
+        | 'main equipment'
+        | 'line'
+        | 'manual valve'
+        | 'circuit/starter'
+        | 'instrument'
+        | 'cable'
+        | 'function'
+        | 'signal'
+        | 'telecom'
+        | 'junction box'
+        | 'administrative'
         | string
 ): JSX.Element {
-    switch (iconType) {
-        case 'Electrical':
+    switch (iconType.toLocaleLowerCase()) {
+        case 'electrical':
             return <ElectricalIcon aria-label={'electrical'} />;
-        case 'Main Equipment':
+        case 'main equipment':
             return <MainEquipment aria-label={'main equipment'} />;
-        case 'Line':
+        case 'line':
             return <Line aria-label={'line'} />;
-        case 'Manual Valve':
+        case 'manual valve':
             return <ManualValve aria-label={'manual valve'} />;
-        case 'Circuit/Starter':
+        case 'circuit/starter':
             return <CircuitStarter aria-label={'circuit/starter'} />;
-        case 'Cable':
+        case 'cable':
             return <Cable title={'cable'} />;
-        case 'Instrument':
+        case 'instrument':
             return <Instrument aria-label={'instrument'} />;
-        case 'Function':
+        case 'function':
             return <Function aria-label={'function'} />;
-        case 'Signal':
+        case 'signal':
             return <Signal aria-label={'signal'} />;
-        case 'Telecom':
+        case 'telecom':
             return <Telecom aria-label={'telecom'} />;
-        case 'Junction Box':
+        case 'junction box':
             return <JunctionBox aria-label={'junction box'} />;
-        case 'Administrative':
+        case 'administrative':
             return <Tag aria-label={'tag'} />;
         default:
             return <Tag aria-label={'tag'} />;

@@ -9,7 +9,7 @@
     "build": "rollup -c",
     "build-watch": "rollup -c -w ",
     "start": "npm run build && node dist/index.js",
-    "publish": "npm publish --access public",
+    "echo-publish": "npm publish --access public",
     "test": "jest --watchAll",
     "test-coverage": "jest --coverage --watchAll",
     "patch": "npm version patch",
