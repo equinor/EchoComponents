@@ -1,6 +1,6 @@
 {
   "name": "@equinor/echo-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Package for creating echo related components.",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
