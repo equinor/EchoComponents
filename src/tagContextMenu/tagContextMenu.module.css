@@ -6,22 +6,6 @@
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
-    max-width: 350px;
-    min-width: 150px;
-}
-
-@media screen and (max-width: 440px) {
-    .contextWrapperExpanded {
-        max-width: 250px;
-        min-width: 250px;
-    }
-}
-
-@media screen and (min-width: 440px) and (max-width: 560px) {
-    .contextWrapperExpanded {
-        max-width: 300px;
-        min-width: 150px;
-    }
 }
 
 .tagInfoWrapper {
@@ -33,6 +17,7 @@
     width: 100%;
     height: 46px;
     overflow: hidden;
+    box-sizing: unset;
 }
 
 .tagText {
@@ -44,6 +29,21 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin: auto;
+    max-width: 240px;
+    min-width: 55px;
+}
+
+@media screen and (max-width: 440px) {
+    .tagText {
+        max-width: 140px;
+        min-width: 140px;
+    }
+}
+
+@media screen and (min-width: 440px) and (max-width: 560px) {
+    .tagText {
+        max-width: 240px;
+    }
 }
 
 .tagHeader {
