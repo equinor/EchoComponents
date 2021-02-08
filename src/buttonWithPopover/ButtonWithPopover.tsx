@@ -38,8 +38,8 @@ export const ButtonWithPopover: React.FC<ButtonWithPopoverProps> = ({
     };
 
     const onShowMoreClicked = (): void => {
+        if (!expanded) fetchDataToShow();
         setExpanded(!expanded);
-        if (expanded) fetchDataToShow();
     };
 
     return (
