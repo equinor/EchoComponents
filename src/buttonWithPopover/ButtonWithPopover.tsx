@@ -38,14 +38,14 @@ export const ButtonWithPopover: React.FC<ButtonWithPopoverProps> = ({
     };
 
     const onShowMoreClicked = (): void => {
-        fetchDataToShow();
         setExpanded(!expanded);
+        if (expanded) fetchDataToShow();
     };
 
     return (
         <div className={style.wrapper}>
             {expanded && isLoading ? (
-                <div className={style.button}>
+                <div className={style.button} onClick={onShowMoreClicked}>
                     <CircularProgress className={style.spinner} />
                 </div>
             ) : (
