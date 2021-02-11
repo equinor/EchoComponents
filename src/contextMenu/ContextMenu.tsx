@@ -13,6 +13,8 @@ interface ContextMenuProps {
     description: string;
     positionStyle: CSSProperties;
     openTagInformation: () => void;
+    selectedClassName?: string;
+    selected: boolean;
     children?: React.ReactNode;
 }
 /**
@@ -28,6 +30,8 @@ interface ContextMenuProps {
  *     description: The tag description to display
  *     positionStyle: The position styling element used to position the context menu
  *     openTagInformation: Method that will be called when expanded context menu is clicked
+ *     selected: Flag to handle if there are multiple context menu's on a page, and a selected style should be applied
+ *     selectedClassName: styling used to handle multiple tag visible on the page at the same time, class will be added to tagIcon when context menu is not expanded
  *     children: Related elements to display, e.g. more information button
  * }
  * @return {*} {JSX.Element} Context menu with relevant children wrapped
@@ -40,6 +44,8 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({
     tagNo,
     description,
     positionStyle,
+    selected,
+    selectedClassName,
     openTagInformation,
     children
 }: ContextMenuProps): JSX.Element => {
@@ -51,6 +57,8 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({
                 tagNo={tagNo}
                 description={description}
                 expanded={expanded}
+                selected={selected}
+                selectedClassName={selectedClassName}
             >
                 <TagIcon icon={getIcon(icon)} legendColor={legendColor}></TagIcon>
             </TagContextMenu>

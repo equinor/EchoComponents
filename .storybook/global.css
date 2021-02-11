@@ -1,1 +1,9 @@
 @import url('https://eds-static.equinor.com/font/equinor-font.css?family=Equinor');
+
+.tagSelected {
+    box-shadow: 0px 0px 10px 5px var(--toggleActive);
+}
+
+.TagContextMenu {
+    max-width: 250px;
+}

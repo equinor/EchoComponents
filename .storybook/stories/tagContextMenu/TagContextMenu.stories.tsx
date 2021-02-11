@@ -39,5 +39,7 @@ Default.args = {
     icon: 'Electrical',
     legendColor: '#007079',
     tagNo: 'D-11PSSV0803',
-    description: 'CEMENT UNIT'
+    description: 'CEMENT UNIT',
+    selectedClassName: '',
+    selected: false
 };

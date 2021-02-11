@@ -1,8 +1,8 @@
 import { themeConst } from '@equinor/echo-framework';
 import { Button, Typography } from '@equinor/eds-core-react';
 import React from 'react';
+import { TagIconShadowWrapper } from '..';
 import { Icon } from '../icon/Icon';
-import TagIconShadowWrapper from '../tagIcon/TagIconShadow';
 import styles from './tagContextMenu.module.css';
 
 interface TagContextMenuProps {
@@ -11,6 +11,8 @@ interface TagContextMenuProps {
     tagNo: string;
     description: string;
     openTagInformation: () => void;
+    selected: boolean;
+    selectedClassName?: string;
     children: React.ReactNode;
 }
 /**
@@ -24,6 +26,8 @@ interface TagContextMenuProps {
  *     tagNo: the tag no to display
  *     description: the tag description
  *     openTagInformation: method called when expanded context menu is called
+ *     selected: Flag to handle if there are multiple context menu's on a page, and a selected style should be applied
+ *     selectedClassName: styling used to handle multiple tag visible on the page at the same time, class will be added to tagIcon when context menu is not expanded
  *     children: Meant to be used to pass TagIcon component to this component
  * }
  * @return {*}  {JSX.Element} a tag context menu for the provided properties
@@ -33,6 +37,8 @@ export const TagContextMenu: React.FC<TagContextMenuProps> = ({
     setExpanded,
     tagNo,
     description,
+    selected,
+    selectedClassName,
     openTagInformation,
     children
 }: TagContextMenuProps): JSX.Element => {
@@ -61,7 +67,9 @@ export const TagContextMenu: React.FC<TagContextMenuProps> = ({
         return (
             <div
                 data-testid="open-tag-info"
-                className={styles.contextWrapper}
+                className={`${styles.contextWrapper} ${
+                    selected ? (selectedClassName ? selectedClassName : styles.selected) : ''
+                }`}
                 onClick={(): void => {
                     setExpanded(true);
                 }}

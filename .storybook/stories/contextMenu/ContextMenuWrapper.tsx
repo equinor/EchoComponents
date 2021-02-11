@@ -10,6 +10,8 @@ export interface ContextMenuWrapperProps {
     tagNo: string;
     description: string;
     position: CSSProperties;
+    selected: boolean;
+    selectedClassName?: string;
 }
 
 const ContextMenuWrapper: React.FC<ContextMenuWrapperProps> = ({
@@ -18,7 +20,9 @@ const ContextMenuWrapper: React.FC<ContextMenuWrapperProps> = ({
     legendColor,
     tagNo,
     description,
-    position
+    position,
+    selected,
+    selectedClassName
 }: ContextMenuWrapperProps): JSX.Element => {
     const [fetchedDataToShow, setFetchedDataToShow] = useState<DataInformation[]>([]);
     const [expanded, setExpanded] = useState(false);
@@ -48,6 +52,8 @@ const ContextMenuWrapper: React.FC<ContextMenuWrapperProps> = ({
             description={description}
             positionStyle={position}
             openTagInformation={openTagInformation}
+            selected={selected}
+            selectedClassName={selectedClassName}
         >
             <ButtonWithPopover
                 fetchDataToShow={fetchDataToShow}

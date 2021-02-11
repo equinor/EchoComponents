@@ -105,5 +105,7 @@ Default.args = {
     legendColor: '#007079',
     tagNo: 'D-11PSSV0803',
     description: 'CEMENT UNIT',
-    position: { left: '20px', top: '20px' } as CSSProperties
+    position: { left: '20px', top: '20px' } as CSSProperties,
+    selectedClassName: 'tagSelected',
+    selected: false
 };
