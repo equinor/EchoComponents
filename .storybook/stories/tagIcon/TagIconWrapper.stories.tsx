@@ -1,3 +1,4 @@
+import { themeConst } from '@equinor/echo-framework';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import TagIconWrapper, { TagIconWrapperProps } from './TagIconWrapper';
@@ -38,7 +39,7 @@ export const Default = Template.bind({});
 
 Default.args = {
     icon: 'Electrical',
-    legendColor: 'blue'
+    legendColor: themeConst.asBuilt
 };
 
 const TemplateShadow: Story<TagIconWrapperProps> = (args) => <TagIconWrapper {...args} shadow={true} />;
@@ -46,5 +47,5 @@ export const Shadow = TemplateShadow.bind({});
 
 Shadow.args = {
     icon: 'Electrical',
-    legendColor: 'blue'
+    legendColor: themeConst.asBuilt
 };

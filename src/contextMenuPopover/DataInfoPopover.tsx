@@ -1,5 +1,7 @@
-import { DotProgress } from '@equinor/eds-core-react';
+import { themeConst } from '@equinor/echo-framework';
+import { Banner, DotProgress } from '@equinor/eds-core-react';
 import React from 'react';
+import { Icon } from '../icon/Icon';
 import { DataInformation } from '../types/dataInformation';
 import DataInfoButton from './DataInfoButton';
 import style from './dataInfoPopover.module.css';
@@ -36,6 +38,16 @@ const DataInfoPopover: React.FC<DataInfoPopoverProps> = ({
             <div className={style.arrow}></div>
             <div className={style.optionsPopover}>
                 {isLoading && dataToShow.length === 0 && <DotProgress variant="white" />}
+                {!isLoading && dataToShow.length === 0 && (
+                    <Banner className={style.banner}>
+                        <Banner.BannerIcon variant="info">
+                            <Icon name="info_circle" title="No data to display" color={themeConst.asBuilt} />
+                        </Banner.BannerIcon>
+                        <Banner.BannerMessage className={style.infoMessage}>
+                            No information to display
+                        </Banner.BannerMessage>
+                    </Banner>
+                )}
                 {Object.keys(getDataGroupings).map((key) => {
                     return (
                         <div key={key} className={style.groupWrapper}>

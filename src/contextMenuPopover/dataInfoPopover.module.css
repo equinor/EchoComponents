@@ -62,3 +62,19 @@
         align-self: flex-start;
     }
 }
+
+.banner {
+    white-space: nowrap;
+}
+
+.infoMessage {
+    color: var(--equiGray4) !important;
+}
+
+.banner > div {
+    padding: 0px 16px 0px 0px !important;
+}
+
+.banner > hr {
+    display: none;
+}

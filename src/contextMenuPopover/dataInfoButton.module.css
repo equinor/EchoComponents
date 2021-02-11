@@ -29,4 +29,5 @@
     font-style: normal;
     font-weight: bold;
     font-size: 9px;
+    box-sizing: unset;
 }
