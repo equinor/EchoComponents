@@ -1,6 +1,6 @@
 import { themeConst } from '@equinor/echo-framework';
 import { Banner, DotProgress } from '@equinor/eds-core-react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Icon } from '../icon/Icon';
 import { DataInformation } from '../types/dataInformation';
 import DataInfoButton from './DataInfoButton';
@@ -33,12 +33,23 @@ const DataInfoPopover: React.FC<DataInfoPopoverProps> = ({
         return dictionary;
     }, {});
 
+    const [showNoDataIndicator, setShowNoDataIndicator] = useState(false);
+
+    useEffect(() => {
+        const delay = 200;
+
+        const timer = setTimeout(() => setShowNoDataIndicator(true), delay);
+        return (): void => {
+            clearTimeout(timer);
+        };
+    });
+
     return (
         <div className={style.wrapper}>
             <div className={style.arrow}></div>
             <div className={style.optionsPopover}>
                 {isLoading && dataToShow.length === 0 && <DotProgress variant="white" />}
-                {!isLoading && dataToShow.length === 0 && (
+                {showNoDataIndicator && !isLoading && dataToShow.length === 0 && (
                     <Banner className={style.banner}>
                         <Banner.BannerIcon variant="info">
                             <Icon name="info_circle" title="No data to display" color={themeConst.asBuilt} />
