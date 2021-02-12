@@ -60,3 +60,24 @@ test('should click show more and popover data info buttons should be visible', (
     expect(screen.getByLabelText(fetchedDataToShow[0].ariaLabel as string)).toBeTruthy();
     expect(screen.getByLabelText(fetchedDataToShow[1].ariaLabel as string)).toBeTruthy();
 });
+
+test('should click show more, then hide again and fetch data should only be called once', () => {
+    const fetchDataToShow = jest.fn();
+    const fetchedDataToShow: DataInformation[] = [];
+    const isLoading = false;
+
+    render(
+        <ButtonWithPopover fetchDataToShow={fetchDataToShow} fetchedData={fetchedDataToShow} isLoading={isLoading} />
+    );
+
+    const showPopoverButton = screen.getByRole(`button`);
+
+    // open popover
+    fireEvent.click(showPopoverButton);
+    // close popover
+    fireEvent.click(showPopoverButton);
+
+    expect(fetchDataToShow).toHaveBeenCalledTimes(1);
+    expect(screen.queryByLabelText('close more options')).toBeFalsy();
+    expect(screen.queryByText('more options')).toBeTruthy();
+});
