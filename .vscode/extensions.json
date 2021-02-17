@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "christian-kohler.path-intellisense",
+        "vscode-icons-team.vscode-icons",
+        "esbenp.prettier-vscode",
+        "sonarsource.sonarlint-vscode",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}

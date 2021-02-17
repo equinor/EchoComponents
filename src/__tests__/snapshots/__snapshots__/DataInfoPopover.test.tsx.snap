@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders DataInfoPopover with data correctly 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="arrow"
+  />
+  <div
+    className="optionsPopover"
+  >
+    <div
+      className="groupWrapper"
+    >
+      <button
+        aria-label="P&ID"
+        className="sc-gsTCUz eUnAE undefined button buttonWithBadge"
+        data-count={5}
+        disabled={false}
+        onClick={[MockFunction]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="sc-bdfBwQ ibGDsh"
+        >
+          P&ID
+        </span>
+      </button>
+      <button
+        aria-label="D&ID"
+        className="sc-gsTCUz eUnAE undefined button "
+        data-count={1}
+        disabled={false}
+        onClick={[MockFunction]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="sc-bdfBwQ ibGDsh"
+        >
+          D&ID
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders DataInfoPopover with loading indicator 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="arrow"
+  />
+  <div
+    className="optionsPopover"
+  >
+    <svg
+      className="sc-fWPcDo gbIjsj  white-progress"
+      color="#fff"
+      height="8px"
+      role="progressbar"
+      viewBox="0 0 16 4"
+      width="32px"
+    >
+      <circle
+        cx={2}
+        cy={2}
+        r={2}
+      />
+      <circle
+        cx={8}
+        cy={2}
+        r={2}
+      />
+      <circle
+        cx={14}
+        cy={2}
+        r={2}
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`renders DataInfoPopover with multiple item types correctly 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="arrow"
+  />
+  <div
+    className="optionsPopover"
+  >
+    <div
+      className="groupWrapper"
+    >
+      <button
+        aria-label="P&ID"
+        className="sc-gsTCUz eUnAE undefined button buttonWithBadge"
+        data-count={5}
+        disabled={false}
+        onClick={[MockFunction]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="sc-bdfBwQ ibGDsh"
+        >
+          P&ID
+        </span>
+      </button>
+      <button
+        aria-label="D&ID"
+        className="sc-gsTCUz eUnAE undefined button "
+        data-count={1}
+        disabled={false}
+        onClick={[MockFunction]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="sc-bdfBwQ ibGDsh"
+        >
+          D&ID
+        </span>
+      </button>
+    </div>
+    <div
+      className="groupWrapper"
+    >
+      <button
+        aria-label="M1"
+        className="sc-gsTCUz eUnAE undefined button buttonWithBadge"
+        data-count={5}
+        disabled={false}
+        onClick={[MockFunction]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="sc-bdfBwQ ibGDsh"
+        >
+          M1
+        </span>
+      </button>
+      <button
+        aria-label="M2"
+        className="sc-gsTCUz eUnAE undefined button "
+        data-count={1}
+        disabled={false}
+        onClick={[MockFunction]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="sc-bdfBwQ ibGDsh"
+        >
+          M2
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders DataInfoPopover without data correctly 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="arrow"
+  />
+  <div
+    className="optionsPopover"
+  />
+</div>
+`;

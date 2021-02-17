@@ -1,0 +1,33 @@
+.button {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 3px !important;
+    width: 48px !important;
+    height: 48px !important;
+    border: 2px solid var(--equiGreen1) !important;
+    color: var(--asBuilt) !important;
+    background-color: var(--white) !important;
+}
+
+.button:hover {
+    background: rgba(222, 237, 238, 1) !important;
+}
+
+.buttonWithBadge:after {
+    content: attr(data-count) !important;
+    width: 18px !important;
+    height: 18px !important;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    border-radius: 100%;
+    background: var(--white);
+    color: var(--equiGreen1);
+    border: 1px solid var(--asBuilt);
+    position: absolute;
+    top: -5px !important;
+    left: 25px !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 9px;
+    box-sizing: unset;
+}

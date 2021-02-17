@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ContextMenu with more info button correctly 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "left": "20px",
+      "top": "20px",
+    }
+  }
+>
+  <div
+    className="contextWrapperExpanded"
+    onClick={[MockFunction]}
+  >
+    <div
+      className="tagInfoWrapper"
+    >
+      <div
+        className="icon"
+        style={
+          Object {
+            "background": "#007079",
+          }
+        }
+      >
+        <svg
+          aria-label="signal"
+        />
+      </div>
+      <div
+        className="tagText"
+      >
+        <h5
+          className="sc-dlfnbm eTggQY tagHeader"
+        >
+          361B1-MA001-Q02
+        </h5>
+        <p
+          className="sc-dlfnbm gsGDwC tagDescription"
+        >
+          Pipehandling Crane Running
+        </p>
+      </div>
+      <div
+        className="tagInfoIcon"
+      >
+        <button
+          className="sc-gsTCUz eUnAE"
+          disabled={false}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="sc-bdfBwQ ibGDsh"
+          >
+            <svg
+              aria-labelledby="eds-info_circle-2"
+              className="sc-idOhPF bqIcIz"
+              fill="#007079"
+              height="24px"
+              name={null}
+              role="img"
+              title="tag information"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title
+                id="eds-info_circle-2"
+              >
+                tag information
+              </title>
+              <path
+                className="sc-dIUggk"
+                clipRule="evenodd"
+                d="M12.01 22C17.53 22 22 17.52 22 12S17.53 2 12.01 2C6.48 2 2 6.48 2 12s4.48 10 10.01 10zM13 9V7h-2v2h2zm0 8v-6h-2v6h2zm7-5c0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8 8-3.58 8-8z"
+                data-testid="eds-icon-path"
+                fillRule="evenodd"
+                height="24"
+                size={null}
+                transform={null}
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="wrapper"
+  >
+    <button
+      className="sc-gsTCUz eUnAE button"
+      disabled={false}
+      onClick={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="sc-bdfBwQ ibGDsh"
+      >
+        <svg
+          aria-labelledby="eds-more_horizontal-3"
+          className="sc-idOhPF bqIcIz"
+          fill="#007079"
+          height="24px"
+          name={null}
+          role="img"
+          title="more options"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title
+            id="eds-more_horizontal-3"
+          >
+            more options
+          </title>
+          <path
+            className="sc-dIUggk"
+            clipRule="evenodd"
+            d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-8 2c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"
+            data-testid="eds-icon-path"
+            fillRule="evenodd"
+            height="24"
+            size={null}
+            transform={null}
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders ContextMenu without more info button correctly 1`] = `
+<div
+  className="wrapper"
+  style={
+    Object {
+      "left": "20px",
+      "top": "20px",
+    }
+  }
+>
+  <div
+    className="contextWrapperExpanded"
+    onClick={[MockFunction]}
+  >
+    <div
+      className="tagInfoWrapper"
+    >
+      <div
+        className="icon"
+        style={
+          Object {
+            "background": "#007079",
+          }
+        }
+      >
+        <svg
+          aria-label="signal"
+        />
+      </div>
+      <div
+        className="tagText"
+      >
+        <h5
+          className="sc-dlfnbm eTggQY tagHeader"
+        >
+          361B1-MA001-Q02
+        </h5>
+        <p
+          className="sc-dlfnbm gsGDwC tagDescription"
+        >
+          Pipehandling Crane Running
+        </p>
+      </div>
+      <div
+        className="tagInfoIcon"
+      >
+        <button
+          className="sc-gsTCUz eUnAE"
+          disabled={false}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="sc-bdfBwQ ibGDsh"
+          >
+            <svg
+              aria-labelledby="eds-info_circle-1"
+              className="sc-idOhPF bqIcIz"
+              fill="#007079"
+              height="24px"
+              name={null}
+              role="img"
+              title="tag information"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title
+                id="eds-info_circle-1"
+              >
+                tag information
+              </title>
+              <path
+                className="sc-dIUggk"
+                clipRule="evenodd"
+                d="M12.01 22C17.53 22 22 17.52 22 12S17.53 2 12.01 2C6.48 2 2 6.48 2 12s4.48 10 10.01 10zM13 9V7h-2v2h2zm0 8v-6h-2v6h2zm7-5c0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8 8-3.58 8-8z"
+                data-testid="eds-icon-path"
+                fillRule="evenodd"
+                height="24"
+                size={null}
+                transform={null}
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

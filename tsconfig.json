@@ -11,10 +11,9 @@
         "module": "esnext",
         "moduleResolution": "node",
         "resolveJsonModule": true,
-        "isolatedModules": false,
-        "noImplicitAny": false ,
+        "isolatedModules": true,
         "noEmit": true,
         "jsx": "react"
     },
-    "include": ["src"]
+    "include": ["src", ".storybook/stories/tagInfoButton", ".storybook/stories/tagIcon", ".storybook/stories/tagContextMenu", ".storybook/stories/contextMenu"]
 }

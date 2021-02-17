@@ -1,0 +1,80 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    right: 0px;
+    position: absolute;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid rgba(0, 0, 0, 0.4);
+    position: relative;
+    margin-top: 3px;
+    margin-right: 17px;
+    align-self: flex-end;
+}
+
+.optionsPopover :global(.arrow::after) {
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+}
+
+.optionsPopover :global(.arrow::before) {
+    border-bottom: 0;
+}
+
+.optionsPopover {
+    background: rgba(0, 0, 0, 0.4);
+    border: 0;
+    position: relative;
+    max-width: max-content;
+    padding: var(--small);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 440px) {
+    .optionsPopover {
+        max-width: 270px;
+    }
+}
+
+.groupWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 440px) {
+    .wrapper {
+        left: 0px;
+    }
+    .arrow {
+        align-self: flex-start;
+        margin-left: 15px;
+    }
+
+    .optionsPopover {
+        align-self: flex-start;
+    }
+}
+
+.banner {
+    white-space: nowrap;
+}
+
+.infoMessage {
+    color: var(--equiGray4) !important;
+}
+
+.banner > div {
+    padding: 0px 16px 0px 0px !important;
+}
+
+.banner > hr {
+    display: none;
+}

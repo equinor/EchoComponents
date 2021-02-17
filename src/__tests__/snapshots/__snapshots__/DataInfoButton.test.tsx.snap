@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders open DataInfoButton with badge correctly 1`] = `
+<button
+  aria-label="P&ID"
+  className="sc-gsTCUz eUnAE undefined button buttonWithBadge"
+  data-count={5}
+  disabled={false}
+  onClick={[MockFunction]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="sc-bdfBwQ ibGDsh"
+  >
+    P&ID
+  </span>
+</button>
+`;
+
+exports[`renders open DataInfoButton with badge with over 99 items correctly 1`] = `
+<button
+  aria-label="Others"
+  className="sc-gsTCUz eUnAE undefined button buttonWithBadge"
+  data-count="99+"
+  disabled={false}
+  onClick={[MockFunction]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="sc-bdfBwQ ibGDsh"
+  >
+    Others
+  </span>
+</button>
+`;
+
+exports[`renders open DataInfoButton without badge correctly 1`] = `
+<button
+  aria-label="D&ID"
+  className="sc-gsTCUz eUnAE undefined button "
+  data-count={1}
+  disabled={false}
+  onClick={[MockFunction]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="sc-bdfBwQ ibGDsh"
+  >
+    D&ID
+  </span>
+</button>
+`;

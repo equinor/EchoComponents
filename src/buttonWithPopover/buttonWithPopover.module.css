@@ -1,0 +1,23 @@
+.button {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 10rem;
+    border: 3px solid var(--white) !important;
+    background-color: var(--white) !important;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    background: rgba(222, 237, 238, 1) !important;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.spinner {
+    height: 34px !important;
+    width: 34px !important;
+    margin: 3px;
+}
