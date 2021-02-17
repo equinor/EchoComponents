@@ -2,6 +2,7 @@ import { themeConst } from '@equinor/echo-framework';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { ButtonWithPopover, ContextMenu } from '../..';
+import { getIcon } from '../../helpers/getIcon';
 import { DataInformation } from '../../types/dataInformation';
 
 it('renders ContextMenu without more info button correctly', () => {
@@ -11,7 +12,7 @@ it('renders ContextMenu without more info button correctly', () => {
     const tree = renderer
         .create(
             <ContextMenu
-                icon={'Signal'}
+                icon={getIcon('Signal')}
                 expanded={true}
                 setExpanded={setExpanded}
                 legendColor={themeConst.asBuilt}
@@ -19,6 +20,7 @@ it('renders ContextMenu without more info button correctly', () => {
                 description={'Pipehandling Crane Running'}
                 positionStyle={{ left: '20px', top: '20px' }}
                 openTagInformation={openTagInformation}
+                selected={false}
             ></ContextMenu>
         )
         .toJSON();
@@ -34,7 +36,7 @@ it('renders ContextMenu with more info button correctly', () => {
     const tree = renderer
         .create(
             <ContextMenu
-                icon={'Signal'}
+                icon={getIcon('Signal')}
                 expanded={true}
                 setExpanded={setExpanded}
                 legendColor={themeConst.asBuilt}
@@ -42,6 +44,7 @@ it('renders ContextMenu with more info button correctly', () => {
                 description={'Pipehandling Crane Running'}
                 positionStyle={{ left: '20px', top: '20px' }}
                 openTagInformation={openTagInformation}
+                selected={false}
             >
                 <ButtonWithPopover
                     fetchDataToShow={fetchDataToShow}

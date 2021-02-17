@@ -19,7 +19,7 @@ test('on initial load the banner should not be shown when dataToShow list is emp
     expect(screen.queryByText('No information to display')).toBeFalsy();
 });
 
-test('XXX', async () => {
+test('on initial load the banner should not be shown when dataToShow list is empty, but after a 400 ms a message stating no information to display should be shown', async () => {
     const dataToShow: DataInformation[] = [];
 
     render(<DataInfoPopover dataToShow={dataToShow} isLoading={false} />);

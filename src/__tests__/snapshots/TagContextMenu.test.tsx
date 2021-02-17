@@ -16,6 +16,7 @@ it('renders closed TagContextMenu correctly', () => {
                 tagNo={'11PT100'}
                 description={'Pressure Transmitter for Instrument Air Supply '}
                 openTagInformation={openTagInformation}
+                selected={false}
             >
                 <TagIcon icon={getIcon('Electrical')} legendColor={'#FFF'} />
             </TagContextMenu>
@@ -36,6 +37,7 @@ it('renders open TagContextMenu correctly', () => {
                 tagNo={'11PT100'}
                 description={'Pressure Transmitter for Instrument Air Supply '}
                 openTagInformation={openTagInformation}
+                selected={false}
             >
                 <TagIcon icon={getIcon('Electrical')} legendColor={'#FFF'} />
             </TagContextMenu>
