@@ -25,9 +25,7 @@ exports[`renders ContextMenu with more info button correctly 1`] = `
           }
         }
       >
-        <svg
-          aria-label="signal"
-        />
+        Signal
       </div>
       <div
         className="tagText"
@@ -160,9 +158,7 @@ exports[`renders ContextMenu without more info button correctly 1`] = `
           }
         }
       >
-        <svg
-          aria-label="signal"
-        />
+        Signal
       </div>
       <div
         className="tagText"
