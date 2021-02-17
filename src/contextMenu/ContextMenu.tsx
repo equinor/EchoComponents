@@ -1,11 +1,10 @@
 import React, { CSSProperties } from 'react';
-import { getIcon } from '../helpers/getIcon';
 import TagContextMenu from '../tagContextMenu/TagContextMenu';
 import TagIcon from '../tagIcon/TagIcon';
 import style from './contextMenu.module.css';
 
 interface ContextMenuProps {
-    icon: string;
+    icon: JSX.Element;
     legendColor: string;
     expanded: boolean;
     setExpanded: (expanded: boolean) => void;
@@ -22,7 +21,7 @@ interface ContextMenuProps {
  * With the ability to provide more information button and related popover that should be wrapped with the context menu
  *
  * @param {ContextMenuProps} {
- *     icon: name of tag type icon to be displayed
+ *     icon: icon to be displayed
  *     expanded: flag to determine if context menu should be expanded or not
  *     legendColor: color used for the tag icon
  *     setExpanded: method to update expanded flag
@@ -60,7 +59,7 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({
                 selected={selected}
                 selectedClassName={selectedClassName}
             >
-                <TagIcon icon={getIcon(icon)} legendColor={legendColor}></TagIcon>
+                <TagIcon icon={icon} legendColor={legendColor}></TagIcon>
             </TagContextMenu>
             {expanded && children}
         </div>

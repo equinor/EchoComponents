@@ -1,4 +1,5 @@
 import React, { CSSProperties, useState } from 'react';
+import { getIcon } from '../../../src';
 import ButtonWithPopover from '../../../src/buttonWithPopover/ButtonWithPopover';
 import ContextMenu from '../../../src/contextMenu/ContextMenu';
 import { DataInformation } from '../../../src/types/dataInformation';
@@ -44,7 +45,7 @@ const ContextMenuWrapper: React.FC<ContextMenuWrapperProps> = ({
 
     return (
         <ContextMenu
-            icon={icon}
+            icon={getIcon(icon)}
             legendColor={legendColor}
             expanded={expanded}
             setExpanded={setExpanded}
