@@ -1,9 +1,9 @@
-export { ButtonWithPopover } from './buttonWithPopover/ButtonWithPopover';
-export { ContextMenu } from './contextMenu/ContextMenu';
-export { DataInfoButton } from './contextMenuPopover/DataInfoButton';
+export { ButtonWithPopover } from './components/buttonWithPopover/ButtonWithPopover';
+export { ContextMenu } from './components/contextMenu/ContextMenu';
+export { DataInfoButton } from './components/contextMenuPopover/DataInfoButton';
+export { TagContextMenu } from './components/tagContextMenu/TagContextMenu';
+export { Icon } from './elements/icon/Icon';
+export { TagIcon } from './elements/tagIcon/TagIcon';
+export { TagIconShadowWrapper } from './elements/tagIcon/TagIconShadow';
 export { getIcon } from './helpers/getIcon';
-export { Icon } from './icon/Icon';
-export { TagContextMenu } from './tagContextMenu/TagContextMenu';
-export { TagIcon } from './tagIcon/TagIcon';
-export { TagIconShadowWrapper } from './tagIcon/TagIconShadow';
 export * from './types';

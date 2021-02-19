@@ -1,8 +1,8 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { TagContextMenu } from '../..';
+import TagIcon from '../../elements/tagIcon/TagIcon';
 import { getIcon } from '../../helpers/getIcon';
-import TagIcon from '../../tagIcon/TagIcon';
+import renderer from 'react-test-renderer';
 
 it('renders closed TagContextMenu correctly', () => {
     const setExpanded = jest.fn();
