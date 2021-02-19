@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import TagContextMenu from '../../../src/components/tagContextMenu/TagContextMenu';
 import TagIcon from '../../../src/elements/tagIcon/TagIcon';
 import { getIcon } from '../../../src/helpers/getIcon';

@@ -1,6 +1,5 @@
-import * as icons from '@equinor/eds-icons';
-
 import { Icon as EdsIcon } from '@equinor/eds-core-react';
+import * as icons from '@equinor/eds-icons';
 import React from 'react';
 
 export interface IconProps {

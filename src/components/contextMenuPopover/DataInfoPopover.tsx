@@ -1,11 +1,10 @@
+import { themeConst } from '@equinor/echo-framework';
 import { Banner, DotProgress } from '@equinor/eds-core-react';
 import React, { useEffect, useState } from 'react';
-
-import DataInfoButton from './DataInfoButton';
-import { DataInformation } from '../../types/dataInformation';
 import { Icon } from '../../elements/icon/Icon';
+import { DataInformation } from '../../types/dataInformation';
+import DataInfoButton from './DataInfoButton';
 import style from './dataInfoPopover.module.css';
-import { themeConst } from '@equinor/echo-framework';
 
 export interface DataInfoPopoverProps {
     dataToShow: DataInformation[];
