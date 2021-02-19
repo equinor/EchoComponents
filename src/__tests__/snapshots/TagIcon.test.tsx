@@ -1,8 +1,8 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import TagIcon from '../../elements/tagIcon/TagIcon';
+import TagIconShadowWrapper from '../../elements/tagIcon/TagIconShadow';
 import { getIcon } from '../../helpers/getIcon';
-import TagIcon from '../../tagIcon/TagIcon';
-import TagIconShadowWrapper from '../../tagIcon/TagIconShadow';
+import renderer from 'react-test-renderer';
 
 it('renders TagIcon correctly', () => {
     const tree = renderer.create(<TagIcon icon={getIcon('Tag')} legendColor={'#FFF'} />).toJSON();

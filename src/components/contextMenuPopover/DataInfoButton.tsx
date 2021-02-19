@@ -1,6 +1,6 @@
 import { Button } from '@equinor/eds-core-react';
+import { DataInformation } from '../../types/dataInformation';
 import React from 'react';
-import { DataInformation } from '../types/dataInformation';
 import style from './dataInfoButton.module.css';
 
 export interface DataInfoButtonProps {

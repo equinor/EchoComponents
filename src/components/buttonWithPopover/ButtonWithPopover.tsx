@@ -1,10 +1,11 @@
-import { themeConst } from '@equinor/echo-framework';
 import { Button, CircularProgress } from '@equinor/eds-core-react';
 import React, { useState } from 'react';
+
 import DataInfoPopover from '../contextMenuPopover/DataInfoPopover';
-import { Icon } from '../icon/Icon';
-import { DataInformation } from '../types/dataInformation';
+import { DataInformation } from '../../types/dataInformation';
+import { Icon } from '../../elements/icon/Icon';
 import style from './buttonWithPopover.module.css';
+import { themeConst } from '@equinor/echo-framework';
 
 export interface ButtonWithPopoverProps {
     fetchDataToShow: () => void;

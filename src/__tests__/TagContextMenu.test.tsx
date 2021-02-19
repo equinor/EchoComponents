@@ -1,8 +1,9 @@
-import { screen } from '@testing-library/dom';
+import { TagIcon, getIcon } from '..';
 import { fireEvent, render } from '@testing-library/react';
+
 import React from 'react';
-import { getIcon, TagIcon } from '..';
-import TagContextMenu from '../tagContextMenu/TagContextMenu';
+import TagContextMenu from '../components/tagContextMenu/TagContextMenu';
+import { screen } from '@testing-library/dom';
 
 test('should click show more and popover button should show open state', () => {
     let expanded = false;

@@ -1,7 +1,7 @@
 import React from 'react';
+import TagIcon from '../../../src/elements/tagIcon/TagIcon';
+import TagIconShadowWrapper from '../../../src/elements/tagIcon/TagIconShadow';
 import { getIcon } from '../../../src/helpers/getIcon';
-import TagIcon from '../../../src/tagIcon/TagIcon';
-import TagIconShadowWrapper from '../../../src/tagIcon/TagIconShadow';
 
 export interface TagIconWrapperProps {
     icon: string;
