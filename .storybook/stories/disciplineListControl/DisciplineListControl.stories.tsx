@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { CSSProperties } from 'react';
-import { Discipline, DisciplineSelected } from '../../../src/structure/disciplineListControl/DisciplineListControl';
+import { Discipline } from '../../../src/structure/disciplineListControl/DisciplineListControl';
 import DisciplineListControlWrapper from './DisciplineListControlWrapper';
 
 export interface DisciplineListControlWrapperProps {
@@ -24,50 +24,42 @@ Default.args = {
         {
             title: 'All',
             color: '#C4C4C4',
-            selected: 'show',
-            onSelected: (selected: DisciplineSelected): void => {}
+            selected: 'show'
         },
         {
             title: 'Structure',
             color: '#926338',
-            selected: 'show',
-            onSelected: (selected: DisciplineSelected): void => {}
+            selected: 'show'
         },
         {
             title: 'Electric',
             color: '#00727A',
-            selected: 'transparent',
-            onSelected: (selected: DisciplineSelected): void => {}
+            selected: 'transparent'
         },
         {
             title: 'Instrument',
             color: '#1E003D',
-            selected: 'show',
-            onSelected: (selected: DisciplineSelected): void => {}
+            selected: 'show'
         },
         {
             title: 'Mechanical',
             color: '#155515',
-            selected: 'show',
-            onSelected: (selected: DisciplineSelected): void => {}
+            selected: 'show'
         },
         {
             title: 'Pipe',
             color: '#727272',
-            selected: 'hide',
-            onSelected: (selected: DisciplineSelected): void => {}
+            selected: 'hide'
         },
         {
             title: 'Pipe Sup.',
             color: '#646464',
-            selected: 'show',
-            onSelected: (selected: DisciplineSelected): void => {}
+            selected: 'show'
         },
         {
             title: 'Safety',
             color: '#990000',
-            selected: 'show',
-            onSelected: (selected: DisciplineSelected): void => {}
+            selected: 'show'
         }
     ] as Discipline[],
     width: { width: '354px' } as CSSProperties

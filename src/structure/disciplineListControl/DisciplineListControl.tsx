@@ -11,7 +11,7 @@ export interface Discipline {
     color: string;
     title: string;
     selected: 'hide' | 'transparent' | 'show';
-    onSelected: (selected: DisciplineSelected) => void;
+    onSelected: (index: number, selected: DisciplineSelected) => void;
 }
 
 export enum DisciplineSelected {
@@ -73,7 +73,7 @@ export const DisciplineListControl: React.FC<DisciplineListControlProps> = ({
                                     label=""
                                     checked={discipline.selected === DisciplineSelected.hide}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-                                        if (event.target.value) discipline.onSelected(DisciplineSelected.hide);
+                                        if (event.target.value) discipline.onSelected(index, DisciplineSelected.hide);
                                     }}
                                 />
                             </div>
@@ -82,7 +82,8 @@ export const DisciplineListControl: React.FC<DisciplineListControlProps> = ({
                                     label=""
                                     checked={discipline.selected === DisciplineSelected.transparent}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-                                        if (event.target.value) discipline.onSelected(DisciplineSelected.transparent);
+                                        if (event.target.value)
+                                            discipline.onSelected(index, DisciplineSelected.transparent);
                                     }}
                                 />
                             </div>
@@ -91,7 +92,7 @@ export const DisciplineListControl: React.FC<DisciplineListControlProps> = ({
                                     label=""
                                     checked={discipline.selected === DisciplineSelected.show}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-                                        if (event.target.value) discipline.onSelected(DisciplineSelected.show);
+                                        if (event.target.value) discipline.onSelected(index, DisciplineSelected.show);
                                     }}
                                 />
                             </div>

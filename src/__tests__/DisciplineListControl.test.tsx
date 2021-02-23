@@ -11,16 +11,16 @@ test('should click on a radio button and a new value is selected', () => {
                     title: 'Mechanical',
                     color: '#155515',
                     selected: 'show',
-                    onSelected: (selected: DisciplineSelected): void => {
-                        console.log(selected);
+                    onSelected: (index: number, selected: DisciplineSelected): void => {
+                        console.log(index, selected);
                     }
                 },
                 {
                     title: 'Pipe',
                     color: '#727272',
                     selected: 'hide',
-                    onSelected: (selected: DisciplineSelected): void => {
-                        console.log(selected);
+                    onSelected: (index: number, selected: DisciplineSelected): void => {
+                        console.log(index, selected);
                     }
                 }
             ]}
