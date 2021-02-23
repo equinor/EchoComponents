@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders DisciplineListControl correctly 1`] = `
+<div
+  className="disciplineListControl"
+  style={
+    Object {
+      "width": "350px",
+    }
+  }
+>
+  <div
+    className="head"
+  >
+    <span
+      className="title"
+    >
+      <p
+        className="sc-dlfnbm iUSuLV"
+      >
+        Disciplines
+      </p>
+    </span>
+    <span
+      className="radio"
+    >
+      <p
+        className="sc-dlfnbm iUSuLV"
+      >
+        Hide
+      </p>
+    </span>
+    <span
+      className="radio"
+    >
+      <p
+        className="sc-dlfnbm iUSuLV"
+      >
+        Transp.
+      </p>
+    </span>
+    <span
+      className="radio"
+    >
+      <p
+        className="sc-dlfnbm iUSuLV"
+      >
+        Show
+      </p>
+    </span>
+  </div>
+  <div
+    className="body"
+  >
+    <div
+      className="item"
+    >
+      <div
+        className="title"
+      >
+        <div
+          className="circle"
+          style={
+            Object {
+              "backgroundColor": "#155515",
+            }
+          }
+        />
+        <p
+          className="sc-dlfnbm kAruaX"
+        >
+          Mechanical
+        </p>
+      </div>
+      <div
+        className="radio"
+      >
+        <label
+          className="sc-dFJsGO kaIEmQ"
+          disabled={false}
+        >
+          <span
+            className="sc-fHuLdG eZemct"
+            disabled={false}
+          >
+            <input
+              checked={false}
+              className="sc-ctaXAZ ejicEN"
+              disabled={false}
+              onChange={[Function]}
+              type="radio"
+            />
+            <svg
+              aria-hidden={true}
+              className="sc-gInsOo"
+              fill="rgba(0, 112, 121, 1)"
+              height={24}
+              name={null}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-8a5 5 0 1110 0 5 5 0 01-10 0z"
+                fillRule="evenodd"
+                name="selected"
+              />
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm2 0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8-8 3.58-8 8z"
+                fillRule="evenodd"
+                name="unselected"
+              />
+            </svg>
+          </span>
+          <span
+            className="sc-euMpXR fGgjLE"
+          >
+            
+          </span>
+        </label>
+      </div>
+      <div
+        className="radio"
+      >
+        <label
+          className="sc-dFJsGO kaIEmQ"
+          disabled={false}
+        >
+          <span
+            className="sc-fHuLdG eZemct"
+            disabled={false}
+          >
+            <input
+              checked={false}
+              className="sc-ctaXAZ ejicEN"
+              disabled={false}
+              onChange={[Function]}
+              type="radio"
+            />
+            <svg
+              aria-hidden={true}
+              className="sc-gInsOo"
+              fill="rgba(0, 112, 121, 1)"
+              height={24}
+              name={null}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-8a5 5 0 1110 0 5 5 0 01-10 0z"
+                fillRule="evenodd"
+                name="selected"
+              />
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm2 0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8-8 3.58-8 8z"
+                fillRule="evenodd"
+                name="unselected"
+              />
+            </svg>
+          </span>
+          <span
+            className="sc-euMpXR fGgjLE"
+          >
+            
+          </span>
+        </label>
+      </div>
+      <div
+        className="radio"
+      >
+        <label
+          className="sc-dFJsGO kaIEmQ"
+          disabled={false}
+        >
+          <span
+            className="sc-fHuLdG eZemct"
+            disabled={false}
+          >
+            <input
+              checked={true}
+              className="sc-ctaXAZ ejicEN"
+              disabled={false}
+              onChange={[Function]}
+              type="radio"
+            />
+            <svg
+              aria-hidden={true}
+              className="sc-gInsOo"
+              fill="rgba(0, 112, 121, 1)"
+              height={24}
+              name={null}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-8a5 5 0 1110 0 5 5 0 01-10 0z"
+                fillRule="evenodd"
+                name="selected"
+              />
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm2 0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8-8 3.58-8 8z"
+                fillRule="evenodd"
+                name="unselected"
+              />
+            </svg>
+          </span>
+          <span
+            className="sc-euMpXR fGgjLE"
+          >
+            
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      className="item"
+    >
+      <div
+        className="title"
+      >
+        <div
+          className="circle"
+          style={
+            Object {
+              "backgroundColor": "#727272",
+            }
+          }
+        />
+        <p
+          className="sc-dlfnbm kAruaX"
+        >
+          Pipe
+        </p>
+      </div>
+      <div
+        className="radio"
+      >
+        <label
+          className="sc-dFJsGO kaIEmQ"
+          disabled={false}
+        >
+          <span
+            className="sc-fHuLdG eZemct"
+            disabled={false}
+          >
+            <input
+              checked={true}
+              className="sc-ctaXAZ ejicEN"
+              disabled={false}
+              onChange={[Function]}
+              type="radio"
+            />
+            <svg
+              aria-hidden={true}
+              className="sc-gInsOo"
+              fill="rgba(0, 112, 121, 1)"
+              height={24}
+              name={null}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-8a5 5 0 1110 0 5 5 0 01-10 0z"
+                fillRule="evenodd"
+                name="selected"
+              />
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm2 0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8-8 3.58-8 8z"
+                fillRule="evenodd"
+                name="unselected"
+              />
+            </svg>
+          </span>
+          <span
+            className="sc-euMpXR fGgjLE"
+          >
+            
+          </span>
+        </label>
+      </div>
+      <div
+        className="radio"
+      >
+        <label
+          className="sc-dFJsGO kaIEmQ"
+          disabled={false}
+        >
+          <span
+            className="sc-fHuLdG eZemct"
+            disabled={false}
+          >
+            <input
+              checked={false}
+              className="sc-ctaXAZ ejicEN"
+              disabled={false}
+              onChange={[Function]}
+              type="radio"
+            />
+            <svg
+              aria-hidden={true}
+              className="sc-gInsOo"
+              fill="rgba(0, 112, 121, 1)"
+              height={24}
+              name={null}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-8a5 5 0 1110 0 5 5 0 01-10 0z"
+                fillRule="evenodd"
+                name="selected"
+              />
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm2 0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8-8 3.58-8 8z"
+                fillRule="evenodd"
+                name="unselected"
+              />
+            </svg>
+          </span>
+          <span
+            className="sc-euMpXR fGgjLE"
+          >
+            
+          </span>
+        </label>
+      </div>
+      <div
+        className="radio"
+      >
+        <label
+          className="sc-dFJsGO kaIEmQ"
+          disabled={false}
+        >
+          <span
+            className="sc-fHuLdG eZemct"
+            disabled={false}
+          >
+            <input
+              checked={false}
+              className="sc-ctaXAZ ejicEN"
+              disabled={false}
+              onChange={[Function]}
+              type="radio"
+            />
+            <svg
+              aria-hidden={true}
+              className="sc-gInsOo"
+              fill="rgba(0, 112, 121, 1)"
+              height={24}
+              name={null}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-8a5 5 0 1110 0 5 5 0 01-10 0z"
+                fillRule="evenodd"
+                name="selected"
+              />
+              <path
+                className="sc-bsipQr"
+                clipRule="evenodd"
+                d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm2 0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8-8 3.58-8 8z"
+                fillRule="evenodd"
+                name="unselected"
+              />
+            </svg>
+          </span>
+          <span
+            className="sc-euMpXR fGgjLE"
+          >
+            
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;

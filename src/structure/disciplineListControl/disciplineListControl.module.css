@@ -1,0 +1,46 @@
+.disciplineListControl {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+}
+
+.head {
+    display: flex;
+    height: 48px;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item > div {
+    display: flex;
+}
+
+.title {
+    width: 100%;
+    align-items: center;
+}
+
+.radio {
+    width: 67px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    margin: 0 25px 0 0;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
