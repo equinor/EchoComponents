@@ -1,6 +1,6 @@
 import { Typography } from '@equinor/eds-core-react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { DialogGeneratorProps } from '../../../src/components/dialogGenerator/DialogGenerator';
 import DialogGeneratorWrapper from './DialogGeneratorWrapper';
 
@@ -15,10 +15,12 @@ const Template: Story<DialogGeneratorProps> = (args) => <DialogGeneratorWrapper 
 export const Default = Template.bind({});
 
 Default.args = {
+    dialogStyle: { width: '400px' } as CSSProperties,
     content: (
         <Typography variant="body_long">
             I accept that flow direction is an indication, and should not be used for safety critical tasks.
-            <br> </br>This is because flow-direction is not a condition of the Tecnhical Requirements (TR) for 3D-models
+            <br></br>
+            <br></br>This is because flow-direction is not a condition of the Tecnhical Requirements (TR) for 3D-models
             in Equinor.
         </Typography>
     ),

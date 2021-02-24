@@ -1,8 +1,9 @@
 import { Button, Dialog } from '@equinor/eds-core-react';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import styles from './dialogGenerator.module.css';
 
 export interface DialogGeneratorProps {
+    dialogStyle?: CSSProperties;
     content: JSX.Element[] | JSX.Element;
     title: string;
     actionButton?: DialogButton;
@@ -15,25 +16,24 @@ export interface DialogButton {
 }
 
 export const DialogGenerator: React.FC<DialogGeneratorProps> = ({
+    dialogStyle,
     title,
     content,
     actionButton,
     cancelButton
 }: DialogGeneratorProps): JSX.Element => {
     return (
-        <Dialog>
+        <Dialog style={dialogStyle}>
             <Dialog.Title>{title}</Dialog.Title>
             <Dialog.CustomContent>{content}</Dialog.CustomContent>
             {(actionButton || cancelButton) && (
-                <Dialog.Actions>
-                    <div className={styles.footer}>
-                        {actionButton && <Button onClick={actionButton.onClick}>{actionButton.title}</Button>}
-                        {cancelButton && (
-                            <Button onClick={cancelButton.onClick} variant="outlined">
-                                {cancelButton.title}
-                            </Button>
-                        )}
-                    </div>
+                <Dialog.Actions className={styles.footer}>
+                    {actionButton && <Button onClick={actionButton.onClick}>{actionButton.title}</Button>}
+                    {cancelButton && (
+                        <Button onClick={cancelButton.onClick} variant="outlined">
+                            {cancelButton.title}
+                        </Button>
+                    )}
                 </Dialog.Actions>
             )}
         </Dialog>

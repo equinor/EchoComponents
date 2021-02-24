@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DialogGenerator, DialogGeneratorProps } from '../../../src/components/dialogGenerator/DialogGenerator';
 
 const FormGeneratorWrapper: React.FC<DialogGeneratorProps> = ({
+    dialogStyle,
     content,
     title,
     actionButton,
@@ -22,12 +23,15 @@ const FormGeneratorWrapper: React.FC<DialogGeneratorProps> = ({
             >
                 Show dialog
             </span>
-            <DialogGenerator
-                content={content}
-                title={title}
-                actionButton={actionButton}
-                cancelButton={cancelButton}
-            ></DialogGenerator>
+            {dialog && (
+                <DialogGenerator
+                    dialogStyle={dialogStyle}
+                    content={content}
+                    title={title}
+                    actionButton={actionButton}
+                    cancelButton={cancelButton}
+                ></DialogGenerator>
+            )}
         </div>
     );
 };
