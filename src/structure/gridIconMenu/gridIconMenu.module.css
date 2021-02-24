@@ -1,0 +1,35 @@
+.gridIconMenu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.item:hover {
+    background-color: #c3f3d2;
+}
+
+.item:active {
+    background-color: #e6faec;
+}
+
+.item svg {
+    height: 40px;
+    width: 40px;
+    margin: 0 0 2px 0;
+}
+
+.item p {
+    text-align: center;
+}
