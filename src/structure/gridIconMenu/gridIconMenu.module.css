@@ -14,6 +14,23 @@
     cursor: pointer;
     border-radius: 5px;
     padding: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    display: none;
+}
+
+.item.active {
+    background-color: #e6faec;
 }
 
 .item:hover {
@@ -21,15 +38,23 @@
 }
 
 .item:active {
-    background-color: #e6faec;
+    background-color: #ffffff;
+}
+
+.item:active .circle {
+    display: block;
 }
 
 .item svg {
     height: 40px;
     width: 40px;
     margin: 0 0 2px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .item p {
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
