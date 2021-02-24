@@ -11,6 +11,7 @@ export interface FormGeneratorProps {
 
 export enum FieldTypes {
     text = 'text',
+    number = 'number',
     note = 'note'
 }
 
@@ -19,8 +20,10 @@ export interface FormTextField {
     label: string;
     placeholder: string;
     value: string;
-    onChange: (value: string) => void;
+    onChange: (index: number, value: string | number) => void;
     type: FieldTypes;
+    style: CSSProperties;
+    meta?: string;
 }
 
 export interface FormNoteField {
@@ -28,9 +31,10 @@ export interface FormNoteField {
     label: string;
     placeholder: string;
     value: string;
-    onChange: (value: string) => void;
+    onChange: (index: number, value: string) => void;
     type: FieldTypes;
     style: CSSProperties;
+    meta?: string;
 }
 
 export interface FormSubmit {
@@ -48,18 +52,24 @@ export const FormGenerator: React.FC<FormGeneratorProps> = ({
         <div className={styles.formGenerator} style={widthStyle}>
             <div className={styles.fields}>
                 {fields.map((field, index) => {
-                    if (field.type === FieldTypes.text) {
+                    if (field.type === FieldTypes.text || field.type === FieldTypes.number) {
                         const textField: FormTextField = field as FormTextField;
                         return (
-                            <div className={styles.field} key={index}>
+                            <div className={styles.field} key={index} style={textField.style}>
                                 <TextField
                                     id={textField.id}
                                     placeholder={textField.placeholder}
                                     label={textField.label}
                                     autoComplete="off"
                                     onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
-                                        textField.onChange(e.target.value);
+                                        if (field.type === FieldTypes.text) {
+                                            textField.onChange(index, e.target.value);
+                                        } else {
+                                            textField.onChange(index, parseFloat(e.target.value));
+                                        }
                                     }}
+                                    type={textField.type === FieldTypes.number ? 'number' : 'text'}
+                                    meta={textField.meta}
                                 />
                             </div>
                         );
@@ -75,8 +85,9 @@ export const FormGenerator: React.FC<FormGeneratorProps> = ({
                                     multiline
                                     style={noteField.style}
                                     onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
-                                        noteField.onChange(e.target.value);
+                                        noteField.onChange(index, e.target.value);
                                     }}
+                                    meta={noteField.meta}
                                 />
                             </div>
                         );

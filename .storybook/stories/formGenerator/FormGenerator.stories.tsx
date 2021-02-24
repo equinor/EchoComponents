@@ -32,6 +32,15 @@ Default.args = {
         },
         {
             id: '2',
+            label: 'Time at waypoint',
+            placeholder: 'Placeholder input text',
+            value: '',
+            type: 'number',
+            style: { width: '200px' },
+            meta: 'Sec'
+        },
+        {
+            id: '3',
             label: 'Description',
             placeholder: 'Placeholder input text',
             value: '',

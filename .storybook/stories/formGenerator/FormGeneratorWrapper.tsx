@@ -1,3 +1,4 @@
+import * as _ from 'lodash';
 import React, { useState } from 'react';
 import { FormGenerator, FormNoteField, FormTextField } from '../../../src/structure/formGenerator/FormGenerator';
 import { FormGeneratorWrapperProps } from './FormGenerator.stories';
@@ -13,13 +14,17 @@ const FormGeneratorWrapper: React.FC<FormGeneratorWrapperProps> = ({
         f.onChange = setValue;
     }
 
-    function setValue(value: string) {
-        console.log('Value', value);
+    function setValue(index: number, value: string | number) {
+        const updatedFields = _.clone(fs);
+        const updatedField = updatedFields[index];
+        updatedField.value = value;
+        setFs(updatedFields);
+        console.log('Value', value, updatedFields);
     }
 
     return (
         <div className={'DisciplineListControl'}>
-            <FormGenerator widthStyle={width} fields={fields} submit={submit}></FormGenerator>
+            <FormGenerator widthStyle={width} fields={fs} submit={submit}></FormGenerator>
         </div>
     );
 };
