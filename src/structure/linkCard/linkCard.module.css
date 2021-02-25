@@ -1,0 +1,53 @@
+.linkCard {
+    min-height: 535px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 247px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.header {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 15px;
+}
+
+.header h3 {
+    line-height: 1em;
+}
+
+.header h3:nth-child(1) {
+    color: var(--equiGreen1);
+    margin: 0 0 5px 0;
+}
+
+.header h3:nth-child(2) {
+    color: var(--black);
+}
+
+.links {
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.link {
+    border-bottom: 1px solid #dcdcdc;
+    color: #3d3d3d;
+    padding: 15px;
+}
+
+.link p {
+    font-size: 16px;
+}

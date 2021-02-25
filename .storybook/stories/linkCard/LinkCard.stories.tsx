@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { LinkCardProps } from '../../../src/structure/linkCard/LinkCard';
 import LinkCardWrapper from './LinkCardWrapper';
 
@@ -14,4 +14,27 @@ const Template: Story<LinkCardProps> = (args) => <LinkCardWrapper {...args} />;
 
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+    style: { width: '310px' } as CSSProperties,
+    title: 'Johan Sverdrup',
+    subTitle: 'Processing Platform 2',
+    links: [
+        {
+            title: 'Full',
+            url: '#'
+        },
+        {
+            title: 'HVDC',
+            url: '#'
+        },
+        {
+            title: 'MSF',
+            url: '#'
+        },
+        {
+            title: 'UPM',
+            url: '#'
+        }
+    ],
+    image: 'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRLqgF0OqRHg/v0/1200x900.jpg'
+};
