@@ -4,7 +4,7 @@ import { Icon } from '../../elements/icon/Icon';
 import styles from './formGenerator.module.css';
 
 export interface FormGeneratorProps {
-    widthStyle: CSSProperties;
+    style: CSSProperties;
     fields: (FormTextField | FormNoteField)[];
     submit: FormSubmit;
 }
@@ -44,12 +44,12 @@ export interface FormSubmit {
 }
 
 export const FormGenerator: React.FC<FormGeneratorProps> = ({
-    widthStyle,
+    style,
     fields,
     submit
 }: FormGeneratorProps): JSX.Element => {
     return (
-        <div className={styles.formGenerator} style={widthStyle}>
+        <div className={styles.formGenerator} style={style}>
             <div className={styles.fields}>
                 {fields.map((field, index) => {
                     if (field.type === FieldTypes.text || field.type === FieldTypes.number) {

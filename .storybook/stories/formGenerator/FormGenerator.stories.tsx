@@ -1,13 +1,12 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { CSSProperties } from 'react';
-import { FormNoteField, FormSubmit, FormTextField } from '../../../src/structure/formGenerator/FormGenerator';
+import {
+    FormNoteField,
+    FormSubmit,
+    FormTextField,
+    FormGeneratorProps
+} from '../../../src/structure/formGenerator/FormGenerator';
 import FormGeneratorWrapper from './FormGeneratorWrapper';
-
-export interface FormGeneratorWrapperProps {
-    width: CSSProperties;
-    fields: (FormTextField | FormNoteField)[];
-    submit: FormSubmit;
-}
 
 export default {
     title: 'FormGenerator',
@@ -16,12 +15,12 @@ export default {
     argTypes: {}
 } as Meta;
 
-const Template: Story<FormGeneratorWrapperProps> = (args) => <FormGeneratorWrapper {...args} />;
+const Template: Story<FormGeneratorProps> = (args) => <FormGeneratorWrapper {...args} />;
 
 export const Default = Template.bind({});
 
 Default.args = {
-    width: { width: '354px' } as CSSProperties,
+    style: { width: '354px' } as CSSProperties,
     fields: [
         {
             id: '1',

@@ -1,10 +1,10 @@
 import React from 'react';
 import { SettingsConfig, SettingsConfigProps } from '../../../src/structure/settingsConfig/SettingsConfig';
 
-const SettingsConfigWrapper: React.FC<SettingsConfigProps> = ({ test }: SettingsConfigProps) => {
+const SettingsConfigWrapper: React.FC<SettingsConfigProps> = ({ style, fields }: SettingsConfigProps) => {
     return (
         <div className={'SettingsConfig'}>
-            <SettingsConfig test={test}></SettingsConfig>
+            <SettingsConfig style={style} fields={fields}></SettingsConfig>
         </div>
     );
 };

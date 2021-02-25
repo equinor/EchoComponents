@@ -1,13 +1,13 @@
 import * as _ from 'lodash';
 import React, { useState } from 'react';
-import { FormGenerator, FormNoteField, FormTextField } from '../../../src/structure/formGenerator/FormGenerator';
-import { FormGeneratorWrapperProps } from './FormGenerator.stories';
+import {
+    FormGenerator,
+    FormGeneratorProps,
+    FormNoteField,
+    FormTextField
+} from '../../../src/structure/formGenerator/FormGenerator';
 
-const FormGeneratorWrapper: React.FC<FormGeneratorWrapperProps> = ({
-    width,
-    fields,
-    submit
-}: FormGeneratorWrapperProps) => {
+const FormGeneratorWrapper: React.FC<FormGeneratorProps> = ({ style, fields, submit }: FormGeneratorProps) => {
     const [fs, setFs] = useState<(FormTextField | FormNoteField)[]>(fields);
 
     for (let f of fs) {
@@ -24,7 +24,7 @@ const FormGeneratorWrapper: React.FC<FormGeneratorWrapperProps> = ({
 
     return (
         <div className={'DisciplineListControl'}>
-            <FormGenerator widthStyle={width} fields={fs} submit={submit}></FormGenerator>
+            <FormGenerator style={style} fields={fs} submit={submit}></FormGenerator>
         </div>
     );
 };
