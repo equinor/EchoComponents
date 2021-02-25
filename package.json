@@ -88,7 +88,8 @@
         "ts-jest": "^26.4.4",
         "typescript": "^4.1.2",
         "worker-loader": "^3.0.7",
-        "classnames": "2.2.6"
+        "classnames": "2.2.6",
+        "@types/classnames": "2.2.11"
     },
     "files": [
         "dist/"
