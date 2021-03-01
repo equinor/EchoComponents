@@ -8,7 +8,7 @@ import {
 import { DisciplineListControlWrapperProps } from './DisciplineListControl.stories';
 
 const DisciplineListControlWrapper: React.FC<DisciplineListControlWrapperProps> = ({
-    width,
+    style,
     disciplines
 }: DisciplineListControlWrapperProps) => {
     const [disc, setDisc] = useState<Discipline[]>(disciplines);
@@ -26,7 +26,7 @@ const DisciplineListControlWrapper: React.FC<DisciplineListControlWrapperProps> 
 
     return (
         <div className={'DisciplineListControl'}>
-            <DisciplineListControl disciplines={disc} widthStyle={width}></DisciplineListControl>
+            <DisciplineListControl disciplines={disc} style={style}></DisciplineListControl>
         </div>
     );
 };

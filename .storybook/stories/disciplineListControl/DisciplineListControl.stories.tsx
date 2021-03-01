@@ -4,7 +4,7 @@ import { Discipline } from '../../../src/structure/disciplineListControl/Discipl
 import DisciplineListControlWrapper from './DisciplineListControlWrapper';
 
 export interface DisciplineListControlWrapperProps {
-    width: CSSProperties;
+    style: CSSProperties;
     disciplines: Discipline[];
 }
 
@@ -62,5 +62,5 @@ Default.args = {
             selected: 'show'
         }
     ] as Discipline[],
-    width: { width: '354px' } as CSSProperties
+    style: { width: '354px' } as CSSProperties
 };

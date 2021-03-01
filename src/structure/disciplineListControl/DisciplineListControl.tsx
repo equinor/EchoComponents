@@ -3,7 +3,7 @@ import React, { CSSProperties } from 'react';
 import styles from './disciplineListControl.module.css';
 
 export interface DisciplineListControlProps {
-    widthStyle: CSSProperties;
+    style: CSSProperties;
     disciplines: Discipline[];
 }
 
@@ -25,17 +25,17 @@ export enum DisciplineSelected {
  * The minimal width is 320px, UX source is 352px
  *
  * @param {DisciplineListControlProps} {
- *     widthStyle: sets the width of the component
+ *     style: sets the style of the component
  *     disciplines: array of disciplines to be rendered and controlled (color: circle color, title: shown title, selected: visibility variant, onSelected: callback function on new selection)
  * }
  * @return {*}  {JSX.Element} a controlled discipline list
  */
 export const DisciplineListControl: React.FC<DisciplineListControlProps> = ({
     disciplines,
-    widthStyle
+    style
 }: DisciplineListControlProps): JSX.Element => {
     return (
-        <div className={styles.disciplineListControl} style={widthStyle}>
+        <div className={styles.disciplineListControl} style={style}>
             <div className={styles.head}>
                 <span className={styles.title}>
                     <Typography group="table" variant="cell_text" bold>
