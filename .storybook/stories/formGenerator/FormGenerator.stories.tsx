@@ -1,11 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { CSSProperties } from 'react';
-import {
-    FormNoteField,
-    FormSubmit,
-    FormTextField,
-    FormGeneratorProps
-} from '../../../src/structure/formGenerator/FormGenerator';
+import { FormGeneratorProps, FormSubmit, FormTextField } from '../../../src/structure/formGenerator/FormGenerator';
 import FormGeneratorWrapper from './FormGeneratorWrapper';
 
 export default {
@@ -35,7 +30,8 @@ Default.args = {
             placeholder: 'Placeholder input text',
             value: '',
             type: 'number',
-            style: { width: '200px' },
+            wrapperStyle: { width: '200px' },
+            fieldStyle: { width: '200px' },
             meta: 'Sec'
         },
         {
@@ -43,10 +39,10 @@ Default.args = {
             label: 'Description',
             placeholder: 'Placeholder input text',
             value: '',
-            style: { height: '300px' },
+            fieldStyle: { height: '300px' },
             type: 'note'
         }
-    ] as (FormTextField | FormNoteField)[],
+    ] as FormTextField[],
     submit: {
         icon: 'save',
         title: 'Save',

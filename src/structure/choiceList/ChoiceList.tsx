@@ -1,20 +1,21 @@
 import { Radio, Typography } from '@equinor/eds-core-react';
 import React, { CSSProperties } from 'react';
-import styles from './disciplineListControl.module.css';
+import styles from './choiceList.module.css';
 
-export interface DisciplineListControlProps {
+export interface ChoiceListProps {
     style: CSSProperties;
-    disciplines: Discipline[];
+    items: ChoiceItem[];
+    titles: string[];
 }
 
-export interface Discipline {
-    color: string;
+export interface ChoiceItem {
+    color?: string;
     title: string;
     selected: 'hide' | 'transparent' | 'show';
-    onSelected: (index: number, selected: DisciplineSelected) => void;
+    onSelected: (index: number, selected: ChoiceSelected) => void;
 }
 
-export enum DisciplineSelected {
+export enum ChoiceSelected {
     hide = 'hide',
     transparent = 'transparent',
     show = 'show'
@@ -24,75 +25,73 @@ export enum DisciplineSelected {
  * Component that renders a discipline list with a control of visibility
  * The minimal width is 320px, UX source is 352px
  *
- * @param {DisciplineListControlProps} {
+ * @param {ChoiceListProps} {
  *     style: sets the style of the component
- *     disciplines: array of disciplines to be rendered and controlled (color: circle color, title: shown title, selected: visibility variant, onSelected: callback function on new selection)
+ *     items: array of items to be rendered and controlled (color: circle color, title: shown title, selected: visibility variant, onSelected: callback function on new selection)
  * }
  * @return {*}  {JSX.Element} a controlled discipline list
  */
-export const DisciplineListControl: React.FC<DisciplineListControlProps> = ({
-    disciplines,
-    style
-}: DisciplineListControlProps): JSX.Element => {
+export const ChoiceList: React.FC<ChoiceListProps> = ({ items, style, titles }: ChoiceListProps): JSX.Element => {
     return (
-        <div className={styles.disciplineListControl} style={style}>
+        <div className={styles.choiceList} style={style}>
             <div className={styles.head}>
                 <span className={styles.title}>
                     <Typography group="table" variant="cell_text" bold>
-                        Disciplines
+                        {titles[0]}
                     </Typography>
                 </span>
                 <span className={styles.radio}>
                     <Typography group="table" variant="cell_text" bold>
-                        Hide
+                        {titles[1]}
                     </Typography>
                 </span>
                 <span className={styles.radio}>
                     <Typography group="table" variant="cell_text" bold>
-                        Transp.
+                        {titles[2]}
                     </Typography>
                 </span>
                 <span className={styles.radio}>
                     <Typography group="table" variant="cell_text" bold>
-                        Show
+                        {titles[3]}
                     </Typography>
                 </span>
             </div>
             <div className={styles.body}>
-                {disciplines.map((discipline, index) => {
+                {items.map((item, index) => {
                     return (
                         <div className={styles.item} key={index}>
                             <div className={styles.title}>
-                                <div className={styles.circle} style={{ backgroundColor: discipline.color }}></div>
+                                {item.color && (
+                                    <div className={styles.circle} style={{ backgroundColor: item.color }}></div>
+                                )}
                                 <Typography group="table" variant="cell_text">
-                                    {discipline.title}
+                                    {item.title}
                                 </Typography>
                             </div>
                             <div className={styles.radio}>
                                 <Radio
                                     label=""
-                                    checked={discipline.selected === DisciplineSelected.hide}
+                                    checked={item.selected === ChoiceSelected.hide}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-                                        if (event.target.value) discipline.onSelected(index, DisciplineSelected.hide);
+                                        if (event.target.value) item.onSelected(index, ChoiceSelected.hide);
                                     }}
                                 />
                             </div>
                             <div className={styles.radio}>
                                 <Radio
                                     label=""
-                                    checked={discipline.selected === DisciplineSelected.transparent}
+                                    checked={item.selected === ChoiceSelected.transparent}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-                                        if (event.target.value)
-                                            discipline.onSelected(index, DisciplineSelected.transparent);
+                                        if (event.target.value) item.onSelected(index, ChoiceSelected.transparent);
                                     }}
                                 />
                             </div>
                             <div className={styles.radio}>
                                 <Radio
                                     label=""
-                                    checked={discipline.selected === DisciplineSelected.show}
+                                    checked={item.selected === ChoiceSelected.show}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-                                        if (event.target.value) discipline.onSelected(index, DisciplineSelected.show);
+                                        if (event.target.value) item.onSelected(index, ChoiceSelected.show);
                                     }}
                                 />
                             </div>

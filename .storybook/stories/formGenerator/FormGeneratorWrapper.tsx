@@ -1,14 +1,9 @@
 import * as _ from 'lodash';
 import React, { useState } from 'react';
-import {
-    FormGenerator,
-    FormGeneratorProps,
-    FormNoteField,
-    FormTextField
-} from '../../../src/structure/formGenerator/FormGenerator';
+import { FormGenerator, FormGeneratorProps, FormTextField } from '../../../src/structure/formGenerator/FormGenerator';
 
 const FormGeneratorWrapper: React.FC<FormGeneratorProps> = ({ style, fields, submit }: FormGeneratorProps) => {
-    const [fs, setFs] = useState<(FormTextField | FormNoteField)[]>(fields);
+    const [fs, setFs] = useState<FormTextField[]>(fields);
 
     for (let f of fs) {
         f.onChange = setValue;

@@ -1,26 +1,21 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { CSSProperties } from 'react';
-import { Discipline } from '../../../src/structure/disciplineListControl/DisciplineListControl';
-import DisciplineListControlWrapper from './DisciplineListControlWrapper';
-
-export interface DisciplineListControlWrapperProps {
-    style: CSSProperties;
-    disciplines: Discipline[];
-}
+import { ChoiceItem, ChoiceListProps } from '../../../src/structure/choiceList/ChoiceList';
+import ChoiceListWrapper from './ChoiceListWrapper';
 
 export default {
-    title: 'DisciplineListControl',
+    title: 'ChoiceList',
 
-    component: DisciplineListControlWrapper,
+    component: ChoiceListWrapper,
     argTypes: {}
 } as Meta;
 
-const Template: Story<DisciplineListControlWrapperProps> = (args) => <DisciplineListControlWrapper {...args} />;
+const Template: Story<ChoiceListProps> = (args) => <ChoiceListWrapper {...args} />;
 
 export const Default = Template.bind({});
 
 Default.args = {
-    disciplines: [
+    items: [
         {
             title: 'All',
             color: '#C4C4C4',
@@ -43,7 +38,7 @@ Default.args = {
         },
         {
             title: 'Mechanical',
-            color: '#155515',
+            // color: '#155515',
             selected: 'show'
         },
         {
@@ -61,6 +56,7 @@ Default.args = {
             color: '#990000',
             selected: 'show'
         }
-    ] as Discipline[],
-    style: { width: '354px' } as CSSProperties
+    ] as ChoiceItem[],
+    style: { width: '354px' } as CSSProperties,
+    titles: ['Disciplines', 'Show', 'Transp.', 'Hide']
 };
