@@ -1,0 +1,54 @@
+.textIcon {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    display: none;
+}
+
+.textIcon.active {
+    background-color: #e6faec;
+}
+
+.textIcon:hover {
+    background-color: #c3f3d2;
+}
+
+.textIcon:active {
+    background-color: #ffffff;
+}
+
+.textIcon:active .circle {
+    display: block;
+}
+
+.textIcon svg {
+    height: 40px;
+    width: 40px;
+    margin: 0 0 2px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.textIcon p {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
