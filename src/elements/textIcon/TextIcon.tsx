@@ -17,8 +17,7 @@ export const TextIcon: React.FC<TextIconProps> = ({
     title,
     onClick,
     active,
-    style,
-    index
+    style
 }: TextIconProps): JSX.Element => {
     return (
         <div className={cx(styles.textIcon, active ? styles.active : '')} onClick={onClick} style={style}>

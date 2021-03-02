@@ -47,20 +47,20 @@ Default.args = {
             choices: [
                 {
                     title: 'Left',
-                    value: true,
-                    onSelected: () => {}
+                    value: true
                 },
                 {
                     title: 'Right',
-                    value: false,
-                    onSelected: () => {}
+                    value: false
                 },
                 {
                     title: 'Hidden',
-                    value: false,
-                    onSelected: () => {}
+                    value: false
                 }
-            ]
+            ],
+            onSelected: (index: number) => {
+                console.log('Selected', index);
+            }
         },
         {
             type: 'choice',
@@ -68,15 +68,16 @@ Default.args = {
             choices: [
                 {
                     title: 'Standard',
-                    value: true,
-                    onSelected: () => {}
+                    value: true
                 },
                 {
                     title: 'Inverted',
-                    value: false,
-                    onSelected: () => {}
+                    value: false
                 }
-            ]
+            ],
+            onSelected: (index: number) => {
+                console.log('Selected', index);
+            }
         }
     ]
 };

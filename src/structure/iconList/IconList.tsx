@@ -83,7 +83,6 @@ export const IconList: React.FC<IconListProps> = ({
                                             }}
                                         >
                                             <Icon name="more_vertical" title="Expand" color={themeConst.asBuilt}></Icon>
-                                            ;
                                         </div>
                                     )}
                                 </div>
