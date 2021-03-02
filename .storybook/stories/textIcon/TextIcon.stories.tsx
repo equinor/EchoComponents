@@ -15,7 +15,6 @@ const Template: Story<TextIconProps> = (args) => <TextIconWrapper {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-    index: 1,
     icon: 'cut',
     title: 'Saved slices',
     onClick: () => {},

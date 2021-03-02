@@ -10,7 +10,6 @@ export interface TextIconProps {
     onClick: () => void;
     active?: boolean;
     style?: CSSProperties;
-    index?: number;
 }
 
 export const TextIcon: React.FC<TextIconProps> = ({
@@ -22,7 +21,7 @@ export const TextIcon: React.FC<TextIconProps> = ({
     index
 }: TextIconProps): JSX.Element => {
     return (
-        <div className={cx(styles.textIcon, active ? styles.active : '')} key={index} onClick={onClick} style={style}>
+        <div className={cx(styles.textIcon, active ? styles.active : '')} onClick={onClick} style={style}>
             <Icon name={icon} title={title} color="#007079"></Icon>
             <Typography color="primary">{title}</Typography>
             <div className={styles.circle}></div>

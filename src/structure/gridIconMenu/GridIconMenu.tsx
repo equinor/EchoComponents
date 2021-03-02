@@ -1,7 +1,5 @@
-import { Typography } from '@equinor/eds-core-react';
-import cx from 'classnames';
 import React, { CSSProperties } from 'react';
-import { Icon } from '../../elements/icon/Icon';
+import { TextIcon } from '../../elements/textIcon/TextIcon';
 import styles from './gridIconMenu.module.css';
 
 export interface GridIconMenuProps {
@@ -26,15 +24,14 @@ export const GridIconMenu: React.FC<GridIconMenuProps> = ({
         <div className={styles.gridIconMenu} style={gridStyle}>
             {items.map((item, index) => {
                 return (
-                    <div
-                        className={cx(styles.item, item.index === activeIndex ? styles.active : '')}
-                        key={index}
+                    <TextIcon
+                        icon={item.icon}
+                        title={item.title}
                         onClick={item.onClick}
-                    >
-                        <Icon name={item.icon} title={item.title} color="#007079"></Icon>
-                        <Typography color="primary">{item.title}</Typography>
-                        <div className={styles.circle}></div>
-                    </div>
+                        active={item.index === activeIndex}
+                        key={index}
+                        style={{ margin: '5px' }}
+                    ></TextIcon>
                 );
             })}
         </div>
