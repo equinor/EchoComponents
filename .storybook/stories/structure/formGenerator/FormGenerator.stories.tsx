@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { CSSProperties } from 'react';
-import { FormGeneratorProps, FormSubmit, FormTextField } from '../../../src/structure/formGenerator/FormGenerator';
+import { FormGeneratorProps, FormSubmit, FormTextField } from '../../../../src/structure/formGenerator/FormGenerator';
 import FormGeneratorWrapper from './FormGeneratorWrapper';
 
 export default {

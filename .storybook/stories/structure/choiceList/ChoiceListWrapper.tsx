@@ -1,6 +1,11 @@
 import * as _ from 'lodash';
 import React, { useState } from 'react';
-import { ChoiceItem, ChoiceList, ChoiceListProps, ChoiceSelected } from '../../../src/structure/choiceList/ChoiceList';
+import {
+    ChoiceItem,
+    ChoiceList,
+    ChoiceListProps,
+    ChoiceSelected
+} from '../../../../src/structure/choiceList/ChoiceList';
 
 const ChoiceListWrapper: React.FC<ChoiceListProps> = ({ style, items, titles }: ChoiceListProps) => {
     const [disc, setDisc] = useState<ChoiceItem[]>(items);

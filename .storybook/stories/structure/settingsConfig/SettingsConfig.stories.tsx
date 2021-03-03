@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { CSSProperties } from 'react';
-import { SettingsConfigProps } from '../../../src/structure/settingsConfig/SettingsConfig';
+import { SettingsConfigProps } from '../../../../src/structure/settingsConfig/SettingsConfig';
 import SettingsConfigWrapper from './SettingsConfigWrapper';
 
 export default {

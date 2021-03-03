@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridIconMenu, GridIconMenuProps } from '../../../src/structure/gridIconMenu/GridIconMenu';
+import { GridIconMenu, GridIconMenuProps } from '../../../../src/structure/gridIconMenu/GridIconMenu';
 
 const GridIconMenuWrapper: React.FC<GridIconMenuProps> = ({ activeIndex, gridStyle, items }: GridIconMenuProps) => {
     return (

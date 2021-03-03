@@ -1,5 +1,5 @@
 import React from 'react';
-import { SettingsConfig, SettingsConfigProps } from '../../../src/structure/settingsConfig/SettingsConfig';
+import { SettingsConfig, SettingsConfigProps } from '../../../../src/structure/settingsConfig/SettingsConfig';
 
 const SettingsConfigWrapper: React.FC<SettingsConfigProps> = ({ style, fields }: SettingsConfigProps) => {
     return (

@@ -15,5 +15,11 @@
         "noEmit": true,
         "jsx": "react"
     },
-    "include": ["src", ".storybook/stories/tagInfoButton", ".storybook/stories/tagIcon", ".storybook/stories/tagContextMenu", ".storybook/stories/contextMenu"]
+    "include": [
+        "src",
+        ".storybook/stories/components/tagInfoButton",
+        ".storybook/stories/tagIcon",
+        ".storybook/stories/components/tagContextMenu",
+        ".storybook/stories/contextMenu"
+    ]
 }

@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import TagIcon from '../../elements/tagIcon/TagIcon';
+import TagIcon from '../../elements/icons/tagIcon/TagIcon';
 import TagContextMenu from '../tagContextMenu/TagContextMenu';
 import style from './contextMenu.module.css';
 

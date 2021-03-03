@@ -1,7 +1,7 @@
 import { Typography } from '@equinor/eds-core-react';
 import * as _ from 'lodash';
 import React, { CSSProperties, useState } from 'react';
-import { DialogButton, DialogGenerator } from '../../../src/components/dialogGenerator/DialogGenerator';
+import { DialogButton, DialogGenerator } from '../../../../src/components/dialogGenerator/DialogGenerator';
 
 export interface DialogGeneratorWrapperProps {
     dialogStyle?: CSSProperties;

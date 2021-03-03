@@ -1,6 +1,10 @@
 import * as _ from 'lodash';
 import React, { useState } from 'react';
-import { FormGenerator, FormGeneratorProps, FormTextField } from '../../../src/structure/formGenerator/FormGenerator';
+import {
+    FormGenerator,
+    FormGeneratorProps,
+    FormTextField
+} from '../../../../src/structure/formGenerator/FormGenerator';
 
 const FormGeneratorWrapper: React.FC<FormGeneratorProps> = ({ style, fields, submit }: FormGeneratorProps) => {
     const [fs, setFs] = useState<FormTextField[]>(fields);
