@@ -1,7 +1,6 @@
 import React, { CSSProperties, useEffect, useState } from 'react';
 import { ReactSortable } from 'react-sortablejs';
 import styles from './draggableOrder.module.css';
-
 export interface DraggableOrderProps {
     elements: JSX.Element[];
     style?: CSSProperties;
@@ -37,6 +36,7 @@ export const DraggableOrder: React.FC<DraggableOrderProps> = ({
         <div className={styles.draggableOrder} style={style}>
             {dragItems.length > 0 && (
                 <ReactSortable
+                    handle=".draggableHandle"
                     list={dragItems}
                     onEnd={(): void => {
                         const newElements: JSX.Element[] = [];

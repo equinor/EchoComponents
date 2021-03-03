@@ -19,8 +19,8 @@ Default.args = {
     title: 'Private animations',
     items: [
         {
-            title: 'Scaffold',
-            subTitle: 'veims@equinor.com',
+            title: 'Item 0',
+            subTitle: 'Subtitle 0',
             icons: [
                 {
                     icon: 'link',
@@ -33,8 +33,8 @@ Default.args = {
             ]
         },
         {
-            title: 'Scaffold2',
-            subTitle: 'veims@equinor.com2',
+            title: 'Item 1',
+            subTitle: 'Subtitle 1',
             icons: [
                 {
                     icon: 'link',
@@ -47,8 +47,27 @@ Default.args = {
             ]
         },
         {
-            title: 'Scaffold3',
-            subTitle: 'veims@equinor.com3',
+            title: 'Item 2',
+            subTitle: 'Subtitle 2',
+            icons: [
+                {
+                    icon: 'link',
+                    onClick: () => {}
+                },
+                {
+                    icon: 'delete_to_trash',
+                    onClick: () => {}
+                }
+            ]
+        },
+        {
+            title: 'Item 3',
+            subTitle: 'Subtitle 3',
+            icons: []
+        },
+        {
+            title: 'Item 4',
+            subTitle: 'Subtitle 4',
             icons: [
                 {
                     icon: 'link',

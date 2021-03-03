@@ -36,14 +36,19 @@
 }
 
 .moveable {
-    margin: 0 10px;
+    margin: 0 10px 0 10px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .info {
     display: flex;
     flex-direction: column;
+}
+
+.infoMargin {
+    margin: 0 0 0 20px;
 }
 
 .info p {
