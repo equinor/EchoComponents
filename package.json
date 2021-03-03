@@ -28,7 +28,9 @@
         "@equinor/eds-core-react": "^0.8.3",
         "styled-components": "^5.2.1",
         "@equinor/echo-framework": "0.0.18",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "react-sortablejs": "^6.0.0",
+        "sortablejs": "^1.13.0"
     },
     "dependencies": {},
     "devDependencies": {
@@ -50,12 +52,15 @@
         "@svgr/webpack": "^5.5.0",
         "@testing-library/dom": "^7.29.4",
         "@testing-library/react": "^11.2.3",
+        "@types/classnames": "2.2.11",
         "@types/jest": "^26.0.20",
         "@types/react": "^17.0.0",
         "@types/react-test-renderer": "^17.0.0",
+        "@types/sortablejs": "^1.10.6",
         "@typescript-eslint/eslint-plugin": "^2.34.0",
         "@typescript-eslint/parser": "^2.34.0",
         "babel-loader": "^8.2.2",
+        "classnames": "2.2.6",
         "css-loader": "^5.0.1",
         "eslint": "^6.6.0",
         "eslint-config-prettier": "^6.11.0",
@@ -87,9 +92,7 @@
         "styled-components": "^5.2.1",
         "ts-jest": "^26.4.4",
         "typescript": "^4.1.2",
-        "worker-loader": "^3.0.7",
-        "classnames": "2.2.6",
-        "@types/classnames": "2.2.11"
+        "worker-loader": "^3.0.7"
     },
     "files": [
         "dist/"

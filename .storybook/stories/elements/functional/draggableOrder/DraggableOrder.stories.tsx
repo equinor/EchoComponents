@@ -15,6 +15,5 @@ const Template: Story<DraggableOrderProps> = (args) => <DraggableOrderWrapper {.
 export const Default = Template.bind({});
 
 Default.args = {
-    items: [],
     style: { width: '350px' }
 };
