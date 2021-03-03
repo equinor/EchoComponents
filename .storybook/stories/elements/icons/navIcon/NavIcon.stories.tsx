@@ -4,7 +4,7 @@ import { NavIconProps } from '../../../../../src/elements/icons/navIcon/NavIcon'
 import NavIconWrapper from './NavIconWrapper';
 
 export default {
-    title: 'NavIcon',
+    title: 'Elements/Icons/NavIcon',
 
     component: NavIconWrapper,
     argTypes: {}

@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/dom';
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import ButtonWithPopover from '../components/buttonWithPopover/ButtonWithPopover';
+import ButtonWithPopover from '../components/tags/buttonWithPopover/ButtonWithPopover';
 import { DataInformation } from '../types/dataInformation';
 
 test('should click show more and popover button should show open state', () => {

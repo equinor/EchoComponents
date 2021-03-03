@@ -4,7 +4,7 @@ import { TextIconProps } from '../../../../../src/elements/icons/textIcon/TextIc
 import TextIconWrapper from './TextIconWrapper';
 
 export default {
-    title: 'TextIcon',
+    title: 'Elements/Icons/TextIcon',
 
     component: TextIconWrapper,
     argTypes: {}

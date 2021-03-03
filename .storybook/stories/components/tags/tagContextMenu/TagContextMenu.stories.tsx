@@ -1,14 +1,12 @@
-import { themeConst } from '@equinor/echo-framework';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import TagIconWrapper, { TagIconWrapperProps } from './TagIconWrapper';
+import TagContextMenuWrapper, { TagContextMenuWrapperProps } from './TagContextMenuWrapper';
 
 export default {
-    title: 'Elements/Icons/TagIcon',
+    title: 'Components/Tags/TagContextMenu',
 
-    component: TagIconWrapper,
+    component: TagContextMenuWrapper,
     argTypes: {
-        shadow: { table: { disable: true } },
         legendColor: { control: 'color' },
         icon: {
             control: {
@@ -33,19 +31,15 @@ export default {
     }
 } as Meta;
 
-const Template: Story<TagIconWrapperProps> = (args) => <TagIconWrapper {...args} shadow={false} />;
+const Template: Story<TagContextMenuWrapperProps> = (args) => <TagContextMenuWrapper {...args} />;
 
 export const Default = Template.bind({});
 
 Default.args = {
     icon: 'Electrical',
-    legendColor: themeConst.asBuilt
-};
-
-const TemplateShadow: Story<TagIconWrapperProps> = (args) => <TagIconWrapper {...args} shadow={true} />;
-export const Shadow = TemplateShadow.bind({});
-
-Shadow.args = {
-    icon: 'Electrical',
-    legendColor: themeConst.asBuilt
+    legendColor: '#007079',
+    tagNo: 'D-11PSSV0803',
+    description: 'CEMENT UNIT',
+    selectedClassName: '',
+    selected: false
 };

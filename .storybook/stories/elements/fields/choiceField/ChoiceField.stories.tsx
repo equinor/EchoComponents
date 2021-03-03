@@ -4,7 +4,7 @@ import { ChoiceFieldProps } from '../../../../../src/elements/fields/choiceField
 import ChoiceFieldWrapper from './ChoiceFieldWrapper';
 
 export default {
-    title: 'ChoiceField',
+    title: 'Elements/Fields/ChoiceField',
 
     component: ChoiceFieldWrapper,
     argTypes: {}

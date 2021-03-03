@@ -4,7 +4,7 @@ import { SliderFieldProps } from '../../../../../src/elements/fields/sliderField
 import SliderFieldWrapper from './SliderFieldWrapper';
 
 export default {
-    title: 'SliderField',
+    title: 'Elements/Fields/SliderField',
 
     component: SliderFieldWrapper,
     argTypes: {}
