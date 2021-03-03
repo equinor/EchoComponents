@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { NavIconProps } from '../../../src/elements/navIcon/NavIcon';
+import { NavIconProps } from '../../../../../src/elements/icons/navIcon/NavIcon';
 import NavIconWrapper from './NavIconWrapper';
 
 export default {

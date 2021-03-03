@@ -1,6 +1,6 @@
 import { Button, TextField } from '@equinor/eds-core-react';
 import React, { CSSProperties } from 'react';
-import { Icon } from '../../elements/icon/Icon';
+import { Icon } from '../../elements/icons/icon/Icon';
 import styles from './formGenerator.module.css';
 
 export interface FormGeneratorProps {

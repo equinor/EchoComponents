@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChoiceField, ChoiceFieldProps } from '../../../src/elements/choiceField/ChoiceField';
+import { ChoiceField, ChoiceFieldProps } from '../../../../../src/elements/fields/choiceField/ChoiceField';
 
 const SliderFieldWrapper: React.FC<ChoiceFieldProps> = ({ title, choices, style, onSelected }: ChoiceFieldProps) => {
     return (

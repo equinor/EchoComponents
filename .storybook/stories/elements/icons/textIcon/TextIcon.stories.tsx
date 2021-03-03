@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { TextIconProps } from '../../../src/elements/textIcon/TextIcon';
+import { TextIconProps } from '../../../../../src/elements/icons/textIcon/TextIcon';
 import TextIconWrapper from './TextIconWrapper';
 
 export default {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextIcon, TextIconProps } from '../../../src/elements/textIcon/TextIcon';
+import { TextIcon, TextIconProps } from '../../../../../src/elements/icons/textIcon/TextIcon';
 
 const TextIconWrapper: React.FC<TextIconProps> = ({ icon, title, onClick, active, style }: TextIconProps) => {
     return (

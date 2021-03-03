@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { TextIcon } from '../../elements/textIcon/TextIcon';
+import { TextIcon } from '../../elements/icons/textIcon/TextIcon';
 import styles from './gridIconMenu.module.css';
 
 export interface GridIconMenuProps {

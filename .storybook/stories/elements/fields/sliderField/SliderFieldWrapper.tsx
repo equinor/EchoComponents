@@ -1,5 +1,5 @@
 import React from 'react';
-import { SliderField, SliderFieldProps } from '../../../src/elements/sliderField/SliderField';
+import { SliderField, SliderFieldProps } from '../../../../../src/elements/fields/sliderField/SliderField';
 
 const SliderFieldWrapper: React.FC<SliderFieldProps> = ({
     value,

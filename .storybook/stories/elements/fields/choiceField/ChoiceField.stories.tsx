@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { ChoiceFieldProps } from '../../../src/elements/choiceField/ChoiceField';
+import { ChoiceFieldProps } from '../../../../../src/elements/fields/choiceField/ChoiceField';
 import ChoiceFieldWrapper from './ChoiceFieldWrapper';
 
 export default {

@@ -1,7 +1,7 @@
 import { themeConst } from '@equinor/echo-framework';
 import cx from 'classnames';
 import React from 'react';
-import { Icon } from '../../elements/icon/Icon';
+import { Icon } from '../icon/Icon';
 import styles from './navIcon.module.css';
 
 export interface NavIconProps {

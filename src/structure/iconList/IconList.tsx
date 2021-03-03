@@ -1,7 +1,7 @@
 import { themeConst } from '@equinor/echo-framework';
 import { Typography } from '@equinor/eds-core-react';
 import React, { CSSProperties, useState } from 'react';
-import { Icon } from '../../elements/icon/Icon';
+import { Icon } from '../../elements/icons/icon/Icon';
 import styles from './iconList.module.css';
 
 export interface IconListProps {

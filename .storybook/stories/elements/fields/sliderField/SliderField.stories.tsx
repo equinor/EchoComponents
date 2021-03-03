@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { SliderFieldProps } from '../../../src/elements/sliderField/SliderField';
+import { SliderFieldProps } from '../../../../../src/elements/fields/sliderField/SliderField';
 import SliderFieldWrapper from './SliderFieldWrapper';
 
 export default {
