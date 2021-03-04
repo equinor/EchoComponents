@@ -1,7 +1,7 @@
 import { themeConst } from '@equinor/echo-framework';
 import { Typography } from '@equinor/eds-core-react';
 import cx from 'classnames';
-import React, { CSSProperties, useCallback, useEffect, useState } from 'react';
+import React, { CSSProperties, useCallback, useEffect, useRef, useState } from 'react';
 import {
     DraggableHandleSelector,
     DraggableOrder,
@@ -37,10 +37,10 @@ export const IconList: React.FC<IconListProps> = ({
     expanded
 }: IconListProps): JSX.Element => {
     const [orderedItems, setOrderedItems] = useState<IconListItem[]>(items);
-    const [expandedIndex, setExpandedIndex] = useState<number>();
+    const expandedIndex = useRef<number>();
+    const [redraw, setRedraw] = useState<boolean>(false);
     const [rowElements, setRowElements] = useState<JSX.Element[]>([]);
     useEffect(() => {
-        console.log('Props items', items);
         setOrderedItems(items);
     }, [items]);
 
@@ -71,22 +71,21 @@ export const IconList: React.FC<IconListProps> = ({
             }
         }
 
-        console.log('Reordered', updatedOrder, oldIndex, newIndex);
         updateExpandedIndex();
         setOrderedItems(updatedOrder);
 
         function updateExpandedIndex(): void {
-            if (typeof expandedIndex === 'undefined') return;
-            console.log('exp', oldIndex, newIndex, expandedIndex);
-            if (oldIndex === expandedIndex) {
-                setExpandedIndex(newIndex);
+            if (typeof expandedIndex.current === 'undefined') return;
+
+            if (oldIndex === expandedIndex.current) {
+                expandedIndex.current = newIndex;
             } else if (newIndex > oldIndex) {
-                if (oldIndex < expandedIndex && newIndex >= expandedIndex) {
-                    setExpandedIndex(expandedIndex - 1);
+                if (oldIndex < expandedIndex.current && newIndex >= expandedIndex.current) {
+                    expandedIndex.current = expandedIndex.current - 1;
                 }
             } else if (newIndex < oldIndex) {
-                if (oldIndex > expandedIndex && newIndex <= expandedIndex) {
-                    setExpandedIndex(expandedIndex + 1);
+                if (oldIndex > expandedIndex.current && newIndex <= expandedIndex.current) {
+                    expandedIndex.current = expandedIndex.current + 1;
                 }
             }
         }
@@ -98,7 +97,6 @@ export const IconList: React.FC<IconListProps> = ({
             rows.push(createRow(i));
         }
         setRowElements(rows);
-        console.log('Redraw', rows);
 
         function createRow(index: number): JSX.Element {
             return (
@@ -135,8 +133,8 @@ export const IconList: React.FC<IconListProps> = ({
                                 <div
                                     className={styles.expandable}
                                     onClick={(): void => {
-                                        console.log('Expand', index);
-                                        setExpandedIndex(index);
+                                        expandedIndex.current = index;
+                                        setRedraw(!redraw);
                                     }}
                                 >
                                     <Icon name="more_vertical" title="Expand" color={themeConst.asBuilt}></Icon>
@@ -144,7 +142,7 @@ export const IconList: React.FC<IconListProps> = ({
                             )}
                         </div>
                     </div>
-                    {expandedIndex == index && (
+                    {expandedIndex.current == index && (
                         <div className={styles.row2}>
                             {expanded.map((icon, index3) => {
                                 return (
@@ -162,7 +160,8 @@ export const IconList: React.FC<IconListProps> = ({
                             <div
                                 className={styles.close}
                                 onClick={(): void => {
-                                    setExpandedIndex(undefined);
+                                    expandedIndex.current = undefined;
+                                    setRedraw(!redraw);
                                 }}
                             >
                                 <Icon name={'close'} title={'Close'} color={themeConst.asBuilt}></Icon>
@@ -172,7 +171,7 @@ export const IconList: React.FC<IconListProps> = ({
                 </div>
             );
         }
-    }, [orderedItems, isMovable, expanded, expandedIndex]);
+    }, [orderedItems, isMovable, expanded, redraw]);
 
     useEffect(() => {
         createRows();
