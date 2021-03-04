@@ -25,7 +25,6 @@ const DraggableOrderWrapper: React.FC<DraggableOrderProps> = ({ style }: Draggab
                     elements={testElements}
                     style={style}
                     onChange={(newDragItems: DragItem[], newElements: JSX.Element[]) => {
-                        console.log('Reordered', newDragItems, newElements);
                         setTestElements(newElements);
                     }}
                 ></DraggableOrder>

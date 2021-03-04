@@ -47,7 +47,6 @@ export const DraggableOrder: React.FC<DraggableOrderProps> = ({
                     handle={'.' + DraggableHandleSelector}
                     list={dragItems}
                     onEnd={(evt: SortableEvent): void => {
-                        console.log(evt);
                         const newElements: JSX.Element[] = [];
                         for (const dragItem of dragItems) {
                             newElements.push(dragItem.element);
