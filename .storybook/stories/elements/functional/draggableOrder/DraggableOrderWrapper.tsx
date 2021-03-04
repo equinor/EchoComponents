@@ -1,5 +1,7 @@
+import cx from 'classnames';
 import React, { useState } from 'react';
 import {
+    DraggableHandleSelector,
     DraggableOrder,
     DraggableOrderProps,
     DragItem
@@ -8,12 +10,12 @@ import styles from './draggableOrderWrapper.module.css';
 
 const DraggableOrderWrapper: React.FC<DraggableOrderProps> = ({ style }: DraggableOrderProps) => {
     const [testElements, setTestElements] = useState<JSX.Element[]>([
-        <span className={styles.draggableItem}>1</span>,
-        <span className={styles.draggableItem}>2</span>,
-        <span className={styles.draggableItem}>3</span>,
-        <span className={styles.draggableItem}>4</span>,
-        <span className={styles.draggableItem}>5</span>,
-        <span className={styles.draggableItem}>6</span>
+        <span className={cx(styles.draggableItem, DraggableHandleSelector)}>1</span>,
+        <span className={cx(styles.draggableItem, DraggableHandleSelector)}>2</span>,
+        <span className={cx(styles.draggableItem, DraggableHandleSelector)}>3</span>,
+        <span className={cx(styles.draggableItem, DraggableHandleSelector)}>4</span>,
+        <span className={cx(styles.draggableItem, DraggableHandleSelector)}>5</span>,
+        <span className={cx(styles.draggableItem, DraggableHandleSelector)}>6</span>
     ]);
 
     return (

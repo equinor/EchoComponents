@@ -1,10 +1,18 @@
 import React, { CSSProperties, useEffect, useState } from 'react';
-import { ReactSortable } from 'react-sortablejs';
+import { ReactSortable, SortableEvent } from 'react-sortablejs';
 import styles from './draggableOrder.module.css';
+
+export const DraggableHandleSelector = 'globalDraggableHandle';
+
 export interface DraggableOrderProps {
     elements: JSX.Element[];
     style?: CSSProperties;
-    onChange: (newDragItems: DragItem[], newElements: JSX.Element[]) => void;
+    onChange: (
+        newDragItems: DragItem[],
+        newElements: JSX.Element[],
+        oldIndex: number | undefined,
+        newIndex: number | undefined
+    ) => void;
 }
 
 export interface DragItem {
@@ -36,14 +44,15 @@ export const DraggableOrder: React.FC<DraggableOrderProps> = ({
         <div className={styles.draggableOrder} style={style}>
             {dragItems.length > 0 && (
                 <ReactSortable
-                    handle=".draggableHandle"
+                    handle={'.' + DraggableHandleSelector}
                     list={dragItems}
-                    onEnd={(): void => {
+                    onEnd={(evt: SortableEvent): void => {
+                        console.log(evt);
                         const newElements: JSX.Element[] = [];
                         for (const dragItem of dragItems) {
                             newElements.push(dragItem.element);
                         }
-                        onChange(dragItems, newElements);
+                        onChange(dragItems, newElements, evt.oldIndex, evt.newIndex);
                     }}
                     setList={(dragItems: DragItem[]): void => {
                         setDragItems(dragItems);

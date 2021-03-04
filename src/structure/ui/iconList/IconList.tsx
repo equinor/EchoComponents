@@ -2,7 +2,11 @@ import { themeConst } from '@equinor/echo-framework';
 import { Typography } from '@equinor/eds-core-react';
 import cx from 'classnames';
 import React, { CSSProperties, useCallback, useEffect, useState } from 'react';
-import { DraggableOrder, DragItem } from '../../../elements/functional/draggableOrder/DraggableOrder';
+import {
+    DraggableHandleSelector,
+    DraggableOrder,
+    DragItem
+} from '../../../elements/functional/draggableOrder/DraggableOrder';
 import { Icon } from '../../../elements/icons/icon/Icon';
 import styles from './iconList.module.css';
 
@@ -32,45 +36,89 @@ export const IconList: React.FC<IconListProps> = ({
     isMovable,
     expanded
 }: IconListProps): JSX.Element => {
+    const [orderedItems, setOrderedItems] = useState<IconListItem[]>(items);
     const [expandedIndex, setExpandedIndex] = useState<number>();
     const [rowElements, setRowElements] = useState<JSX.Element[]>([]);
-    const [order, setOrder] = useState<number[]>([]);
+    useEffect(() => {
+        console.log('Props items', items);
+        setOrderedItems(items);
+    }, [items]);
+
+    function reorderOnChange(oldIndex: number, newIndex: number): void {
+        const updatedOrder = [];
+
+        if (newIndex > oldIndex) {
+            for (let i = 0; i < oldIndex; i++) {
+                updatedOrder[i] = orderedItems[i];
+            }
+            for (let i = oldIndex; i < newIndex; i++) {
+                updatedOrder[i] = orderedItems[i + 1];
+            }
+            updatedOrder[newIndex] = orderedItems[oldIndex];
+            for (let i = newIndex + 1; i < orderedItems.length; i++) {
+                updatedOrder[i] = orderedItems[i];
+            }
+        } else if (newIndex < oldIndex) {
+            for (let i = orderedItems.length - 1; i > oldIndex; i--) {
+                updatedOrder[i] = orderedItems[i];
+            }
+            for (let i = oldIndex; i > newIndex; i--) {
+                updatedOrder[i] = orderedItems[i - 1];
+            }
+            updatedOrder[newIndex] = orderedItems[oldIndex];
+            for (let i = newIndex - 1; i >= 0; i--) {
+                updatedOrder[i] = orderedItems[i];
+            }
+        }
+
+        console.log('Reordered', updatedOrder, oldIndex, newIndex);
+        updateExpandedIndex();
+        setOrderedItems(updatedOrder);
+
+        function updateExpandedIndex(): void {
+            if (typeof expandedIndex === 'undefined') return;
+            console.log('exp', oldIndex, newIndex, expandedIndex);
+            if (oldIndex === expandedIndex) {
+                setExpandedIndex(newIndex);
+            } else if (newIndex > oldIndex) {
+                if (oldIndex < expandedIndex && newIndex >= expandedIndex) {
+                    setExpandedIndex(expandedIndex - 1);
+                }
+            } else if (newIndex < oldIndex) {
+                if (oldIndex > expandedIndex && newIndex <= expandedIndex) {
+                    setExpandedIndex(expandedIndex + 1);
+                }
+            }
+        }
+    }
 
     const createRows = useCallback(() => {
         const rows: JSX.Element[] = [];
-        if (order.length === 0) {
-            for (let i = 0; i < items.length; i++) {
-                rows.push(createRow(i, i));
-            }
-        } else {
-            console.log('Order', order);
-            let index = 0;
-            for (const i of order) {
-                rows.push(createRow(i, index));
-                index++;
-            }
+        for (let i = 0; i < orderedItems.length; i++) {
+            rows.push(createRow(i));
         }
         setRowElements(rows);
-        console.log('Rows', rows);
-        function createRow(index: number, order: number): JSX.Element {
+        console.log('Redraw', rows);
+
+        function createRow(index: number): JSX.Element {
             return (
-                <div className={styles.item} key={order}>
+                <div className={styles.item} key={index}>
                     <div className={styles.row1}>
                         <div className={styles.col1}>
                             {isMovable && (
-                                <div className={cx(styles.moveable, 'draggableHandle')}>
+                                <div className={cx(styles.moveable, DraggableHandleSelector)}>
                                     <Icon name="unfold_more" title="Move" color={themeConst.asBuilt}></Icon>
                                 </div>
                             )}
                             <div className={cx(styles.info, isMovable ? '' : styles.infoMargin)}>
                                 <Typography variant="body_short" bold>
-                                    {items[index].title}
+                                    {orderedItems[index].title}
                                 </Typography>
-                                <Typography variant="body_short">{items[index].subTitle}</Typography>
+                                <Typography variant="body_short">{orderedItems[index].subTitle}</Typography>
                             </div>
                         </div>
                         <div className={styles.col2}>
-                            {items[index].icons.map((icon, index2) => {
+                            {orderedItems[index].icons.map((icon, index2) => {
                                 return (
                                     <div
                                         className={styles.iconWrapper}
@@ -87,7 +135,7 @@ export const IconList: React.FC<IconListProps> = ({
                                 <div
                                     className={styles.expandable}
                                     onClick={(): void => {
-                                        console.log('Expanding', order, index);
+                                        console.log('Expand', index);
                                         setExpandedIndex(index);
                                     }}
                                 >
@@ -124,11 +172,11 @@ export const IconList: React.FC<IconListProps> = ({
                 </div>
             );
         }
-    }, [order, items, isMovable, expanded, expandedIndex]);
+    }, [orderedItems, isMovable, expanded, expandedIndex]);
 
     useEffect(() => {
         createRows();
-    }, [items, isMovable, createRows, order]);
+    }, [items, createRows]);
 
     return (
         <div className={styles.iconList} style={style}>
@@ -140,14 +188,16 @@ export const IconList: React.FC<IconListProps> = ({
             <DraggableOrder
                 elements={rowElements}
                 style={style}
-                onChange={(newDragItems: DragItem[], newElements: JSX.Element[]): void => {
-                    console.log('Reordered', newDragItems, newElements);
+                onChange={(
+                    newDragItems: DragItem[],
+                    newElements: JSX.Element[],
+                    oldIndex: number | undefined,
+                    newIndex: number | undefined
+                ): void => {
                     setRowElements(newElements);
-                    const ord = [];
-                    for (const dragItem of newDragItems) {
-                        ord.push(dragItem.id);
+                    if (typeof oldIndex !== 'undefined' && typeof newIndex !== 'undefined' && newIndex !== oldIndex) {
+                        reorderOnChange(oldIndex, newIndex);
                     }
-                    setOrder(ord);
                 }}
             ></DraggableOrder>
         </div>
