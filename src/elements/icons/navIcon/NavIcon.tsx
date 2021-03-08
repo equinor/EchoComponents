@@ -11,10 +11,7 @@ export interface NavIconProps {
     title: string;
 }
 
-export enum Size {
-    standard = 'standard',
-    smaller = 'smaller'
-}
+type Size = 'standard' | 'smaller';
 
 export const NavIcon: React.FC<NavIconProps> = ({ icon, selected, size, title }: NavIconProps): JSX.Element => {
     return (
