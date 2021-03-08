@@ -11,14 +11,14 @@ export interface ChoiceListProps {
 export interface ChoiceItem {
     color?: string;
     title: string;
-    selected: 'hide' | 'transparent' | 'show';
+    selected: ChoiceSelected;
     onSelected: (index: number, selected: ChoiceSelected) => void;
 }
 
 export enum ChoiceSelected {
-    hide = 'hide',
-    transparent = 'transparent',
-    show = 'show'
+    option1 = 'option1',
+    option2 = 'option2',
+    option3 = 'option3'
 }
 
 /**
@@ -71,27 +71,27 @@ export const ChoiceList: React.FC<ChoiceListProps> = ({ items, style, titles }: 
                             <div className={styles.radio}>
                                 <Radio
                                     label=""
-                                    checked={item.selected === ChoiceSelected.hide}
+                                    checked={item.selected === ChoiceSelected.option1}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-                                        if (event.target.value) item.onSelected(index, ChoiceSelected.hide);
+                                        if (event.target.value) item.onSelected(index, ChoiceSelected.option1);
                                     }}
                                 />
                             </div>
                             <div className={styles.radio}>
                                 <Radio
                                     label=""
-                                    checked={item.selected === ChoiceSelected.transparent}
+                                    checked={item.selected === ChoiceSelected.option2}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-                                        if (event.target.value) item.onSelected(index, ChoiceSelected.transparent);
+                                        if (event.target.value) item.onSelected(index, ChoiceSelected.option2);
                                     }}
                                 />
                             </div>
                             <div className={styles.radio}>
                                 <Radio
                                     label=""
-                                    checked={item.selected === ChoiceSelected.show}
+                                    checked={item.selected === ChoiceSelected.option3}
                                     onChange={(event: React.ChangeEvent<HTMLInputElement>): void => {
-                                        if (event.target.value) item.onSelected(index, ChoiceSelected.show);
+                                        if (event.target.value) item.onSelected(index, ChoiceSelected.option3);
                                     }}
                                 />
                             </div>
