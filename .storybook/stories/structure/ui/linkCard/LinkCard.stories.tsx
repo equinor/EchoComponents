@@ -25,7 +25,8 @@ Default.args = {
         },
         {
             title: 'HVDC',
-            url: '#'
+            url: 'https://yahoo.com',
+            target: '_blank'
         },
         {
             title: 'MSF',

@@ -13,6 +13,7 @@ export interface LinkCardProps {
 export interface LinkCardItem {
     title: string;
     url: string;
+    target?: '_blank' | '_self';
 }
 
 export const LinkCard: React.FC<LinkCardProps> = ({
@@ -37,10 +38,8 @@ export const LinkCard: React.FC<LinkCardProps> = ({
             <div className={styles.links}>
                 {links.map((link, index) => {
                     return (
-                        <a href={link.url} key={index}>
-                            <div className={styles.link}>
-                                <Typography variant="body_short">{link.title}</Typography>
-                            </div>
+                        <a href={link.url} key={index} target={link.target ? link.target : '_self'}>
+                            <Typography variant="body_short">{link.title}</Typography>
                         </a>
                     );
                 })}

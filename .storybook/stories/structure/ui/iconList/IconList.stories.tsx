@@ -20,7 +20,6 @@ Default.args = {
     items: [
         {
             title: 'Item 0',
-            subTitle: 'Subtitle 0',
             icons: [
                 {
                     icon: 'link',
@@ -33,7 +32,6 @@ Default.args = {
             ]
         },
         {
-            title: 'Item 1',
             subTitle: 'Subtitle 1',
             icons: [
                 {
@@ -47,8 +45,6 @@ Default.args = {
             ]
         },
         {
-            title: 'Item 2',
-            subTitle: 'Subtitle 2',
             icons: [
                 {
                     icon: 'link',
@@ -81,7 +77,7 @@ Default.args = {
         }
     ],
     isMovable: true,
-    expanded: [
+    expandedIcons: [
         {
             icon: 'cloud_upload',
             onClick: () => {}

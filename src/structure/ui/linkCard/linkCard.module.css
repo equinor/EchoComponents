@@ -35,19 +35,18 @@
     color: var(--black);
 }
 
-.links {
+.links a:last-child .link {
+    border-bottom: none;
 }
 
 .links a {
     text-decoration: none;
 }
 
-.link {
+.links p {
     border-bottom: 1px solid #dcdcdc;
     color: #3d3d3d;
     padding: 15px;
-}
 
-.link p {
     font-size: 16px;
 }

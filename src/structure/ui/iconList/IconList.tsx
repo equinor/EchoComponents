@@ -15,12 +15,12 @@ export interface IconListProps {
     title: string;
     items: IconListItem[];
     isMovable: boolean;
-    expanded: IconItem[];
+    expandedIcons: IconItem[];
 }
 
 export interface IconListItem {
-    title: string;
-    subTitle: string;
+    title?: string;
+    subTitle?: string;
     icons: IconItem[];
 }
 
@@ -34,7 +34,7 @@ export const IconList: React.FC<IconListProps> = ({
     title,
     items,
     isMovable,
-    expanded
+    expandedIcons
 }: IconListProps): JSX.Element => {
     const [orderedItems, setOrderedItems] = useState<IconListItem[]>(items);
     const expandedIndex = useRef<number>();
@@ -109,10 +109,14 @@ export const IconList: React.FC<IconListProps> = ({
                                 </div>
                             )}
                             <div className={cx(styles.info, isMovable ? '' : styles.infoMargin)}>
-                                <Typography variant="body_short" bold>
-                                    {orderedItems[index].title}
-                                </Typography>
-                                <Typography variant="body_short">{orderedItems[index].subTitle}</Typography>
+                                {orderedItems[index].title && (
+                                    <Typography variant="body_short" bold>
+                                        {orderedItems[index].title}
+                                    </Typography>
+                                )}
+                                {orderedItems[index].subTitle && (
+                                    <Typography variant="body_short">{orderedItems[index].subTitle}</Typography>
+                                )}
                             </div>
                         </div>
                         <div className={styles.col2}>
@@ -129,7 +133,7 @@ export const IconList: React.FC<IconListProps> = ({
                                     </div>
                                 );
                             })}
-                            {expanded && (
+                            {expandedIcons && (
                                 <div
                                     className={styles.expandable}
                                     onClick={(): void => {
@@ -144,7 +148,7 @@ export const IconList: React.FC<IconListProps> = ({
                     </div>
                     {expandedIndex.current == index && (
                         <div className={styles.row2}>
-                            {expanded.map((icon, index3) => {
+                            {expandedIcons.map((icon, index3) => {
                                 return (
                                     <div
                                         className={styles.iconWrapper}
@@ -171,7 +175,7 @@ export const IconList: React.FC<IconListProps> = ({
                 </div>
             );
         }
-    }, [orderedItems, isMovable, expanded, redraw]);
+    }, [orderedItems, isMovable, expandedIcons, redraw]);
 
     useEffect(() => {
         createRows();
