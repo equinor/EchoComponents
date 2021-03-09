@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
-import { ChoiceField } from '../../../elements/fields/choiceField/ChoiceField';
-import { SliderField } from '../../../elements/fields/sliderField/SliderField';
+import { ChoiceField } from '../../elements/fields/choiceField/ChoiceField';
+import { SliderField } from '../../elements/fields/sliderField/SliderField';
 import styles from './settingsConfig.module.css';
 export interface SettingsConfigProps {
     style: CSSProperties;
