@@ -30,6 +30,13 @@
     align-items: center;
 }
 
+.columnTitle {
+    width: 67px;
+    align-items: center;
+    flex-shrink: 0;
+    text-align: center;
+}
+
 .radio {
     width: 67px;
     display: flex;

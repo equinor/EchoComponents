@@ -19,44 +19,45 @@ Default.args = {
         {
             title: 'All',
             color: '#C4C4C4',
-            selected: 'option1'
+            selectedColumnIndex: 0
         },
         {
             title: 'Structure',
             color: '#926338',
-            selected: 'option1'
+            selectedColumnIndex: 1
         },
         {
             title: 'Electric',
             color: '#00727A',
-            selected: 'option2'
+            selectedColumnIndex: 1
         },
         {
             title: 'Instrument',
             color: '#1E003D',
-            selected: 'option1'
+            selectedColumnIndex: 3
         },
         {
             title: 'Mechanical',
             // color: '#155515',
-            selected: 'option1'
+            selectedColumnIndex: 1
         },
         {
             title: 'Pipe',
             color: '#727272',
-            selected: 'option3'
+            selectedColumnIndex: 0
         },
         {
             title: 'Pipe Sup.',
             color: '#646464',
-            selected: 'option1'
+            selectedColumnIndex: 0
         },
         {
             title: 'Safety',
             color: '#990000',
-            selected: 'option3'
+            selectedColumnIndex: 1
         }
     ] as ChoiceItem[],
-    style: { width: '354px' } as CSSProperties,
-    titles: ['Disciplines', 'Show', 'Transp.', 'Hide']
+    style: { width: '454px' } as CSSProperties,
+    titles: ['Disciplines', 'Show', 'Transp.', 'Hide', 'Another'],
+    columns: 4
 };
