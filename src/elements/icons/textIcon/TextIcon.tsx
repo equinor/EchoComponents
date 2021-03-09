@@ -20,7 +20,7 @@ export const TextIcon: React.FC<TextIconProps> = ({
     style
 }: TextIconProps): JSX.Element => {
     return (
-        <div className={cx(styles.textIcon, active ? styles.active : '')} onClick={onClick} style={style}>
+        <div className={cx(styles.textIcon, active ? styles.active : '')} onClick={onClick} style={style} tabIndex={0}>
             <Icon name={icon} title={title} color="#007079"></Icon>
             <Typography color="primary">{title}</Typography>
             <div className={styles.circle}></div>

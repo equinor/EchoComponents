@@ -62,6 +62,7 @@ export const ListRow: React.FC<ListRowProps> = ({
                                 onClick={(): void => {
                                     icon.onClick();
                                 }}
+                                tabIndex={0}
                             >
                                 <Icon name={icon.icon} title={icon.icon} color={themeConst.asBuilt}></Icon>
                             </div>
@@ -75,6 +76,7 @@ export const ListRow: React.FC<ListRowProps> = ({
                                     onExpand(true);
                                 }
                             }}
+                            tabIndex={0}
                         >
                             <Icon name="more_vertical" title="Expand" color={themeConst.asBuilt}></Icon>
                         </div>
@@ -91,6 +93,7 @@ export const ListRow: React.FC<ListRowProps> = ({
                                 onClick={(): void => {
                                     icon.onClick();
                                 }}
+                                tabIndex={0}
                             >
                                 <Icon name={icon.icon} title={icon.icon} color={themeConst.asBuilt}></Icon>
                             </div>
@@ -103,6 +106,7 @@ export const ListRow: React.FC<ListRowProps> = ({
                                 onExpand(false);
                             }
                         }}
+                        tabIndex={0}
                     >
                         <Icon name={'close'} title={'Close'} color={themeConst.asBuilt}></Icon>
                     </div>

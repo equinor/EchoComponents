@@ -8,12 +8,12 @@ export { ListRow } from './components/ui/listRow/ListRow';
 //elements
 export { ChoiceField } from './elements/fields/choiceField/ChoiceField';
 export { SliderField } from './elements/fields/sliderField/SliderField';
-export { DraggableOrder } from './elements/functional/draggableOrder/DraggableOrder';
+export { DraggableHandleSelector, DraggableOrder } from './elements/functional/draggableOrder/DraggableOrder';
 //helpers
 export { getIcon } from './helpers/getIcon';
 //structure
 export { ChoiceList } from './structure/input/choiceList/ChoiceList';
-export { FormGenerator } from './structure/input/formGenerator/FormGenerator';
+export { FieldTypes, FormGenerator } from './structure/input/formGenerator/FormGenerator';
 export { GridIconMenu } from './structure/ui/gridIconMenu/GridIconMenu';
 export { IconList } from './structure/ui/iconList/IconList';
 export { LinkCard } from './structure/ui/linkCard/LinkCard';

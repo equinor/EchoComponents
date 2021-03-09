@@ -15,7 +15,7 @@ type Size = 'standard' | 'smaller';
 
 export const NavIcon: React.FC<NavIconProps> = ({ icon, selected, size, title }: NavIconProps): JSX.Element => {
     return (
-        <div className={cx(styles.navIcon, selected ? styles.selected : '', styles[size])}>
+        <div className={cx(styles.navIcon, selected ? styles.selected : '', styles[size])} tabIndex={0}>
             <Icon name={icon} title={title} color={selected ? themeConst.white : themeConst.equiGreen1}></Icon>
         </div>
     );
