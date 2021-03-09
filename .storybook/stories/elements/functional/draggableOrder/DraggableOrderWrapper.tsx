@@ -22,12 +22,13 @@ const DraggableOrderWrapper: React.FC<DraggableOrderProps> = ({ style }: Draggab
         <div className={styles.draggableOrderWrapper}>
             <div className={styles.list}>
                 <DraggableOrder
-                    elements={testElements}
                     style={style}
                     onChange={(newDragItems: DragItem[], newElements: JSX.Element[]) => {
                         setTestElements(newElements);
                     }}
-                ></DraggableOrder>
+                >
+                    {testElements}
+                </DraggableOrder>
             </div>
             {testElements.map((el, index) => {
                 return <span key={index}>{el}</span>;

@@ -116,7 +116,6 @@ export const IconList: React.FC<IconListProps> = ({
                 </Typography>
             </div>
             <DraggableOrder
-                elements={rowElements}
                 style={style}
                 onChange={(
                     newDragItems: DragItem[],
@@ -129,7 +128,9 @@ export const IconList: React.FC<IconListProps> = ({
                         reorderOnChange(oldIndex, newIndex);
                     }
                 }}
-            ></DraggableOrder>
+            >
+                {rowElements}
+            </DraggableOrder>
         </div>
     );
 };

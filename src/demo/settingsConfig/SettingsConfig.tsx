@@ -50,6 +50,7 @@ export const SettingsConfig: React.FC<SettingsConfigProps> = ({ style, fields }:
                                     sliderField.onChange(value);
                                 }}
                                 style={{ margin: '0 0 30px 0' }}
+                                key={index}
                             ></SliderField>
                         );
                     } else if (field.type === ConfigTypes.choice) {
@@ -62,6 +63,7 @@ export const SettingsConfig: React.FC<SettingsConfigProps> = ({ style, fields }:
                                     choiceField.onSelected(index);
                                 }}
                                 style={{ margin: '0 0 25px 0' }}
+                                key={index}
                             ></ChoiceField>
                         );
                     }

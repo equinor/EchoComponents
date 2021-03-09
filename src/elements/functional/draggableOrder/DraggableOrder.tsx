@@ -5,7 +5,6 @@ import styles from './draggableOrder.module.css';
 export const DraggableHandleSelector = 'globalDraggableHandle';
 
 export interface DraggableOrderProps {
-    elements: JSX.Element[];
     style?: CSSProperties;
     onChange: (
         newDragItems: DragItem[],
@@ -13,6 +12,7 @@ export interface DraggableOrderProps {
         oldIndex: number | undefined,
         newIndex: number | undefined
     ) => void;
+    children?: React.ReactNode[];
 }
 
 export interface DragItem {
@@ -21,24 +21,41 @@ export interface DragItem {
 }
 
 export const DraggableOrder: React.FC<DraggableOrderProps> = ({
-    elements,
     style,
-    onChange
+    onChange,
+    children
 }: DraggableOrderProps): JSX.Element => {
     const [dragItems, setDragItems] = useState<DragItem[]>([]);
 
     useEffect(() => {
         const dragItemsTemp: DragItem[] = [];
         let index = 0;
-        for (const element of elements) {
-            dragItemsTemp.push({
-                id: index,
-                element: element
-            });
-            index++;
+        if (children) {
+            for (const element of children) {
+                dragItemsTemp.push({
+                    id: index,
+                    element: element as JSX.Element
+                });
+                index++;
+            }
         }
         setDragItems(dragItemsTemp);
-    }, [elements]);
+    }, [children]);
+
+    useEffect(() => {
+        const dragItemsTemp: DragItem[] = [];
+        let index = 0;
+        if (children) {
+            for (const element of children) {
+                dragItemsTemp.push({
+                    id: index,
+                    element: element as JSX.Element
+                });
+                index++;
+            }
+        }
+        setDragItems(dragItemsTemp);
+    }, [children]);
 
     return (
         <div className={styles.draggableOrder} style={style}>
