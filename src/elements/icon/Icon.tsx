@@ -6,6 +6,8 @@ export interface IconProps {
     name: string;
     title: string;
     color: string;
+    className?: string;
+    size?: 16 | 24 | 32 | 40 | 48;
 }
 /**
  * Component that work's as a eds icon wrapper, it imports all eds possible icons
@@ -17,8 +19,8 @@ export interface IconProps {
  * }
  * @return {*} {JSX.Element} A icon for the provided information
  */
-export const Icon: React.FC<IconProps> = ({ name, title, color }: IconProps): JSX.Element => {
+export const Icon: React.FC<IconProps> = ({ name, title, color, className, size }: IconProps): JSX.Element => {
     EdsIcon.add(icons);
 
-    return <EdsIcon name={name} title={title} color={color} />;
+    return <EdsIcon name={name} title={title} color={color} className={className} size={size} />;
 };

@@ -1,0 +1,182 @@
+.dropdownToggleHome {
+    display: inline-block;
+    background-color: var(--dropDownButtonBackground);
+    width: auto;
+    min-width: 224px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem;
+    color: var(--echoText);
+    text-align: left;
+    border: 1px solid var(--equiGreen1);
+    margin: 2.5rem 0;
+}
+
+@media screen and (min-width: 640px) {
+    .dropdownToggleHome {
+        margin: 1.25rem 0;
+    }
+}
+
+.dropdownToggleHome + .dropdownDownShow {
+    max-height: 50vh;
+    padding: var(--small) var(--small) 0 var(--small);
+    display: block;
+    position: absolute;
+    top: 83px;
+    left: 0;
+    background: white;
+    z-index: 60;
+    min-width: 170px;
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
+    width: auto !important;
+    max-width: 25rem;
+}
+
+.dropdownSelected + .dropdownDownShow {
+    left: 0;
+    top: 43px;
+}
+
+@media screen and (min-width: 360px) {
+    .dropdownToggleHome + .dropdownDownShow {
+        max-height: 60vh;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .dropdownToggleHome + .dropdownDownShow {
+        top: 62px;
+    }
+
+    .dropdownSelected {
+        line-height: 56px;
+    }
+
+    .dropdownSelected > svg {
+        height: 56px;
+    }
+}
+
+.dropdownSelected {
+    border: 1px solid transparent;
+    background: none;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.dropdownToggleHomeActive {
+    outline: none;
+    background-color: var(--equiGray4);
+    border: 1px solid var(--equiGreen1);
+}
+
+.dropdownToggleHome:disabled {
+    cursor: not-allowed;
+    color: var(--disabledColor);
+}
+
+.dropdownToggle {
+    width: 100%;
+    background-color: rgba(247, 247, 247, 1);
+    border: none;
+    text-align: left;
+    padding: 8px;
+    color: var(--echoText);
+}
+
+.dropdownToggle:focus {
+    padding: 7px;
+    border: 1px solid rgba(0, 112, 121, 1);
+    outline: none;
+}
+
+.dropdownToggle:disabled {
+    cursor: not-allowed;
+    color: var(--disabledColor);
+}
+
+.dropdown {
+    display: none;
+    margin-top: 8px;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    background: var(--searchBarBackground);
+}
+
+.dropdownUpShow {
+    max-height: 60vh;
+    padding: var(--small) var(--small) 0 var(--small);
+    display: block;
+    position: absolute;
+    bottom: calc(100% - 14px);
+    background: white;
+    box-shadow: 0px -7px 8px rgba(0, 0, 0, 0.2), 0px -5px 22px rgba(0, 0, 0, 0.12), 0px -12px 17px rgba(0, 0, 0, 0.14);
+}
+
+.dropdownDownShow {
+    max-height: 60vh;
+    padding: var(--small) var(--small) 0 var(--small);
+    display: block;
+    position: absolute;
+    background: white;
+    z-index: 60;
+    min-width: 170px;
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
+    max-width: 25rem;
+}
+
+.options {
+    min-width: 99%;
+}
+
+.optionsItem {
+    width: 100%;
+    padding: var(--small);
+    border: none;
+    background: transparent;
+    text-align: left;
+    margin-bottom: var(--small);
+    padding-left: var(--medium);
+    box-sizing: border-box;
+    color: var(--echoText);
+    word-break: break-word;
+    white-space: normal;
+}
+
+.optionsItem:hover,
+.optionsItem:focus {
+    background-color: #e6faec;
+    color: #007079;
+}
+
+.optionsItem:focus {
+    border: 1px solid rgba(0, 112, 121, 1);
+    box-sizing: border-box;
+}
+
+.filteredDataList {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: var(--small);
+}
+
+.filteredDataListWithSearch {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: var(--small);
+}
+
+@media screen and (min-width: 360px) {
+    .filteredDataListWithSearch {
+        max-height: 300px;
+    }
+}
+
+.searchWrapper {
+    padding: var(--medium);
+}
+
+.searchWrapper input {
+    outline: none !important;
+}
