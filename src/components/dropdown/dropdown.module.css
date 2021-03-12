@@ -1,5 +1,7 @@
 .dropdownToggleHome {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: var(--dropDownButtonBackground);
     width: auto;
     min-width: 224px;
@@ -14,7 +16,7 @@
 
 @media screen and (min-width: 640px) {
     .dropdownToggleHome {
-        margin: 1.25rem 0;
+        margin: 0;
     }
 }
 
@@ -23,7 +25,7 @@
     padding: var(--small) var(--small) 0 var(--small);
     display: block;
     position: absolute;
-    top: 83px;
+    top: 10px;
     left: 0;
     background: white;
     z-index: 60;
@@ -35,7 +37,6 @@
 
 .dropdownSelected + .dropdownDownShow {
     left: 0;
-    top: 43px;
 }
 
 @media screen and (min-width: 360px) {
@@ -45,10 +46,6 @@
 }
 
 @media screen and (min-width: 640px) {
-    .dropdownToggleHome + .dropdownDownShow {
-        top: 62px;
-    }
-
     .dropdownSelected {
         line-height: 56px;
     }
@@ -77,6 +74,9 @@
 }
 
 .dropdownToggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     background-color: rgba(247, 247, 247, 1);
     border: none;
@@ -179,4 +179,8 @@
 
 .searchWrapper input {
     outline: none !important;
+}
+
+.floatRight {
+    float: right;
 }

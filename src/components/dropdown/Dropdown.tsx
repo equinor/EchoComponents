@@ -152,7 +152,6 @@ const Dropdown: React.FC<DropdownItemProps> = ({
                 </div>
                 <Icon
                     name="arrow_drop_down"
-                    className="float-right"
                     title="Choose options"
                     color={isDisabled ? disabledColor : asBuiltColor}
                     size={24}
