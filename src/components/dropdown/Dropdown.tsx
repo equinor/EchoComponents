@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { themeConst } from '@equinor/echo-framework';
 import { useFocus, useOnOutsideClick } from '@equinor/echo-utils';
 import { Search as EdsSearch } from '@equinor/eds-core-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { Icon } from '../../elements/icon/Icon';
-import { themeConst } from '../../theme/themeConst';
 import styles from './dropdown.module.css';
 
 interface DropdownItemProps {
@@ -18,7 +18,7 @@ interface DropdownItemProps {
     disabledText?: string;
     styleClass?: 'compact' | 'default';
     showSearch: boolean;
-    relativeDropdown?: boolean;
+    position?: 'relative' | 'absolute';
     triggerOpen?: (value: boolean) => void;
 }
 
@@ -36,7 +36,7 @@ interface DropdownItemProps {
  *     disabledText: The title text that displays when the dropdown is disabled.
  *     styleClass: Decides which style the dropdown should have. Either default or home.
  *     showSearch: Flag which decides whether we should include the search field or not.
- *     relativeDropdown: Flag which decides if the dropdown position should be relative or absolute.
+ *     position: Determines if the dropdown position should be relative or absolute.
  *     triggerOpen: Callback to trigger when the dropdown is opened.
  * }
  * @return {*} {JSX.Element} The dropdown component.
@@ -52,7 +52,7 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
     disabledText,
     styleClass,
     showSearch,
-    relativeDropdown,
+    position,
     triggerOpen
 }: DropdownItemProps) => {
     Dropdown.defaultProps = {
@@ -113,7 +113,7 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
                         buttonRef && buttonRef.current && buttonRef.current?.offsetWidth
                             ? `${buttonRef.current?.offsetWidth}px`
                             : '100%',
-                    position: relativeDropdown ? 'relative' : 'absolute'
+                    position: position
                 }}
                 className={isOpen ? dropdownShow : styles.dropdown}
             >

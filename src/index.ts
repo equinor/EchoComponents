@@ -1,4 +1,3 @@
-import './theme/theme.css';
 export { ButtonWithPopover } from './components/buttonWithPopover/ButtonWithPopover';
 export { ContextMenu } from './components/contextMenu/ContextMenu';
 export { DataInfoButton } from './components/contextMenuPopover/DataInfoButton';

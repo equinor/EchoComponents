@@ -9,7 +9,7 @@ export interface DropdownWrapperProps {
     isDisabled?: boolean;
     disabledText?: string;
     styleClass?: 'compact' | 'default';
-    relativeDropdown?: boolean;
+    position?: 'relative' | 'absolute';
 }
 
 const TagContextMenuWrapper: React.FC<DropdownWrapperProps> = ({
@@ -20,7 +20,7 @@ const TagContextMenuWrapper: React.FC<DropdownWrapperProps> = ({
     disabledText,
     styleClass,
     showSearch,
-    relativeDropdown
+    position
 }: DropdownWrapperProps) => {
     const [selected, setSelected] = useState('');
     const filterPlants = (data: string[], filter: string): string[] => {
@@ -40,7 +40,7 @@ const TagContextMenuWrapper: React.FC<DropdownWrapperProps> = ({
                     disabledText={disabledText}
                     styleClass={styleClass}
                     showSearch={showSearch}
-                    relativeDropdown={relativeDropdown}
+                    position={position}
                     filterFunc={filterPlants}
                 />
             </div>

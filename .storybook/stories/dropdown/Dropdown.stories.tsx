@@ -36,5 +36,5 @@ Default.args = {
     showSearch: true,
     isDisabled: false,
     disabledText: 'Disabled while syncing or loading data',
-    relativeDropdown: true
+    position: 'absolute'
 };
