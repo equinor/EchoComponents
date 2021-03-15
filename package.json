@@ -30,11 +30,11 @@
         "@equinor/echo-framework": "0.0.18"
     },
     "dependencies": {
-        "react-sortablejs": "^6.0.0",
-        "sortablejs": "^1.13.0"
+        "react-sortablejs": "^6.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.12.10",
+        "sortablejs": "^1.10.0",
         "@babel/preset-env": "^7.12.11",
         "@babel/preset-react": "^7.12.10",
         "@babel/preset-typescript": "^7.12.7",
@@ -57,7 +57,7 @@
         "@types/lodash": "^4.14.168",
         "@types/react": "^17.0.0",
         "@types/react-test-renderer": "^17.0.0",
-        "@types/sortablejs": "^1.10.6",
+        "@types/sortablejs": "1.10.0",
         "@typescript-eslint/eslint-plugin": "^2.34.0",
         "@typescript-eslint/parser": "^2.34.0",
         "babel-loader": "^8.2.2",
