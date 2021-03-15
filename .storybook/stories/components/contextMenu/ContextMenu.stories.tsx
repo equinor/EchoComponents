@@ -4,7 +4,7 @@ import React, { CSSProperties } from 'react';
 import ContextMenuWrapper, { ContextMenuWrapperProps } from './ContextMenuWrapper';
 
 export default {
-    title: 'ContextMenu',
+    title: 'Components/ContextMenu',
 
     component: ContextMenuWrapper,
     argTypes: {
