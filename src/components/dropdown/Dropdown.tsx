@@ -49,15 +49,12 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
     filterFunc,
     setSelected,
     isDisabled,
-    disabledText,
+    disabledText = 'Disabled',
     styleClass,
     showSearch,
-    position,
+    position = 'absolute',
     triggerOpen
 }: DropdownItemProps) => {
-    Dropdown.defaultProps = {
-        disabledText: 'Disabled'
-    };
     const [isOpen, setIsOpen] = useState(false);
     const buttonRef = useRef<HTMLButtonElement>(null);
     const [filter, setFilter] = useState('');
