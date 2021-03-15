@@ -8,6 +8,10 @@
     max-width: 250px;
 }
 
+.Dropdown {
+    max-width: 450px;
+}
+
 /* This is useful when predicting what a component will look like in echo infield, since this code is part of bootstrap and thus Echo Infield
  *,
 ::after,
