@@ -10,7 +10,6 @@ exports[`renders dropdown with Default style and not showSearch correctly 1`] = 
     title="Choose an option"
   >
     <div
-      className="d-inline-block"
       data-testid="display-text"
     >
       Placeholder text
@@ -18,7 +17,7 @@ exports[`renders dropdown with Default style and not showSearch correctly 1`] = 
     </div>
     <svg
       aria-labelledby="eds-arrow_drop_down-8"
-      className="sc-idOhPF bqIcIz float-right"
+      className="sc-idOhPF bqIcIz"
       fill="#007079"
       height="24px"
       name={null}
@@ -72,7 +71,6 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
     title="Choose an option"
   >
     <div
-      className="d-inline-block"
       data-testid="display-text"
     >
       Placeholder text
@@ -80,7 +78,7 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
     </div>
     <svg
       aria-labelledby="eds-arrow_drop_down-4"
-      className="sc-idOhPF bqIcIz float-right"
+      className="sc-idOhPF bqIcIz"
       fill="#007079"
       height="24px"
       name={null}

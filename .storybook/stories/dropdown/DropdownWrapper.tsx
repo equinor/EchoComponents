@@ -7,13 +7,9 @@ export interface DropdownWrapperProps {
     placeholder: string;
     showSearch: boolean;
     isDisabled?: boolean;
-    styleClass?: DropdownStyleClass;
+    disabledText?: string;
+    styleClass?: 'compact' | 'default';
     relativeDropdown?: boolean;
-}
-
-export enum DropdownStyleClass {
-    Default = 'default',
-    Home = 'home'
 }
 
 const TagContextMenuWrapper: React.FC<DropdownWrapperProps> = ({
@@ -21,6 +17,7 @@ const TagContextMenuWrapper: React.FC<DropdownWrapperProps> = ({
     openDownWards,
     placeholder,
     isDisabled,
+    disabledText,
     styleClass,
     showSearch,
     relativeDropdown
@@ -40,6 +37,7 @@ const TagContextMenuWrapper: React.FC<DropdownWrapperProps> = ({
                     openDownWards={openDownWards}
                     placeholder={placeholder}
                     isDisabled={isDisabled}
+                    disabledText={disabledText}
                     styleClass={styleClass}
                     showSearch={showSearch}
                     relativeDropdown={relativeDropdown}

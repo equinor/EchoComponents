@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import DropdownWrapper, { DropdownStyleClass, DropdownWrapperProps } from './DropdownWrapper';
+import DropdownWrapper, { DropdownWrapperProps } from './DropdownWrapper';
 
 export default {
     title: 'Dropdown',
@@ -10,7 +10,7 @@ export default {
         styleClass: {
             control: {
                 type: 'select',
-                options: [DropdownStyleClass.Home, DropdownStyleClass.Default]
+                options: ['compact', 'default']
             }
         }
     }
@@ -21,10 +21,20 @@ const Template: Story<DropdownWrapperProps> = (args) => <DropdownWrapper {...arg
 export const Default = Template.bind({});
 
 Default.args = {
-    data: ['Aasta Hanseen', 'Johan Sverdrup', 'Johan Castberg', 'Mongstad'],
+    data: [
+        'Aasta Hanseen',
+        'Johan Sverdrup',
+        'Johan Castberg',
+        'Mongstad',
+        'Aasta Hanseen',
+        'Johan Sverdrup',
+        'Johan Castberg',
+        'Mongstad'
+    ],
     placeholder: 'Select a plant',
     openDownWards: true,
     showSearch: true,
     isDisabled: false,
+    disabledText: 'Disabled while syncing or loading data',
     relativeDropdown: true
 };

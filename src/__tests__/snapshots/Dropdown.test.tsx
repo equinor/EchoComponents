@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Dropdown, { DropdownStyleClass } from '../../components/dropdown/Dropdown';
+import Dropdown from '../../components/dropdown/Dropdown';
 
 it('renders dropdown with Home style and showSearch correctly', () => {
     let selected = '';
@@ -18,7 +18,7 @@ it('renders dropdown with Home style and showSearch correctly', () => {
                 placeholder="Placeholder text"
                 showSearch={true}
                 isDisabled={false}
-                styleClass={DropdownStyleClass.Home}
+                styleClass={'compact'}
             />
         )
         .toJSON();
@@ -41,7 +41,6 @@ it('renders dropdown with Default style and not showSearch correctly', () => {
                 placeholder="Placeholder text"
                 showSearch={false}
                 isDisabled={false}
-                styleClass={DropdownStyleClass.Default}
             />
         )
         .toJSON();

@@ -4,6 +4,7 @@ import { useFocus, useOnOutsideClick } from '@equinor/echo-utils';
 import { Search as EdsSearch } from '@equinor/eds-core-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { Icon } from '../../elements/icon/Icon';
+import { themeConst } from '../../theme/themeConst';
 import styles from './dropdown.module.css';
 
 interface DropdownItemProps {
@@ -14,17 +15,33 @@ interface DropdownItemProps {
     placeholder: string;
     filterFunc?: (data: any[], filter: string) => any[];
     isDisabled?: boolean;
-    styleClass?: DropdownStyleClass;
+    disabledText?: string;
+    styleClass?: 'compact' | 'default';
     showSearch: boolean;
     relativeDropdown?: boolean;
     triggerOpen?: (value: boolean) => void;
 }
 
-export enum DropdownStyleClass {
-    Default = 'default',
-    Home = 'home'
-}
-const Dropdown: React.FC<DropdownItemProps> = ({
+/**
+ * Component that renders a dropdown menu, e.g., for a plant selector.
+ * Additional possibility to make the list searchable by adding a search field.
+ * @param {DropdownItemProps} {
+ *     selected: The item that is currently selected from the list.
+ *     data: The list of data items to be displayed in the dropdown.
+ *     placeholder: Placeholder text to be displayed when no item is selected.
+ *     openDownWards: Flag which decides if the menu is opened downwards or upwards.
+ *     filterFunc: Function which filters the list of data based on the value of the search field.
+ *     setSelected: Function for setting the selected item.
+ *     isDisabled: Flag which disables the dropdown.
+ *     disabledText: The title text that displays when the dropdown is disabled.
+ *     styleClass: Decides which style the dropdown should have. Either default or home.
+ *     showSearch: Flag which decides whether we should include the search field or not.
+ *     relativeDropdown: Flag which decides if the dropdown position should be relative or absolute.
+ *     triggerOpen: Callback to trigger when the dropdown is opened.
+ * }
+ * @return {*} {JSX.Element} The dropdown component.
+ */
+export const Dropdown: React.FC<DropdownItemProps> = ({
     selected,
     data,
     placeholder,
@@ -32,17 +49,20 @@ const Dropdown: React.FC<DropdownItemProps> = ({
     filterFunc,
     setSelected,
     isDisabled,
+    disabledText,
     styleClass,
     showSearch,
     relativeDropdown,
     triggerOpen
 }: DropdownItemProps) => {
-    const disabledColor = '#6f6f6f';
-    const asBuiltColor = '#007079';
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+    Dropdown.defaultProps = {
+        disabledText: 'Disabled'
+    };
+    const [isOpen, setIsOpen] = useState(false);
     const buttonRef = useRef<HTMLButtonElement>(null);
-    const [filter, setFilter] = useState<string>('');
-    const [filteredData, setFilteredData] = useState<any>(null);
+    const [filter, setFilter] = useState('');
+    const [filteredData, setFilteredData] = useState<any[]>([]);
+
     const wrapperRef = useOnOutsideClick(() => {
         if (triggerOpen) triggerOpen(false);
         setIsOpen(false);
@@ -119,11 +139,7 @@ const Dropdown: React.FC<DropdownItemProps> = ({
                                   className={styles.options}
                                   onClick={(event: React.MouseEvent): void => handleItemSelected(event, item)}
                               >
-                                  {item !== '' ? (
-                                      <div className={styles.optionsItem}>{item}</div>
-                                  ) : (
-                                      <div className={styles.optionsItem}>None</div>
-                                  )}
+                                  <div className={styles.optionsItem}>{item}</div>
                               </button>
                           ))
                         : null}
@@ -140,20 +156,18 @@ const Dropdown: React.FC<DropdownItemProps> = ({
                 disabled={isDisabled}
                 ref={buttonRef}
                 className={[
-                    styleClass === DropdownStyleClass.Home ? styles.dropdownToggleHome : styles.dropdownToggle,
-                    styleClass === DropdownStyleClass.Home && isOpen === true ? styles.dropdownToggleHomeActive : '',
-                    styleClass === DropdownStyleClass.Home && selected ? styles.dropdownSelected : ''
+                    styleClass === 'compact' ? styles.dropdownToggleHome : styles.dropdownToggle,
+                    styleClass === 'compact' && isOpen === true ? styles.dropdownToggleHomeActive : '',
+                    styleClass === 'compact' && selected ? styles.dropdownSelected : ''
                 ].join(' ')}
                 onClick={(event: React.MouseEvent): void => handleIsOpenToggle(event)}
-                title={isDisabled ? 'Disabled while syncing or loading data' : 'Choose an option'}
+                title={isDisabled ? disabledText : 'Choose an option'}
             >
-                <div data-testid="display-text" className="d-inline-block">
-                    {selected.length > 0 ? selected : placeholder}{' '}
-                </div>
+                <div data-testid="display-text">{selected.length > 0 ? selected : placeholder} </div>
                 <Icon
                     name="arrow_drop_down"
                     title="Choose options"
-                    color={isDisabled ? disabledColor : asBuiltColor}
+                    color={isDisabled ? themeConst.disabledColor : themeConst.asBuilt}
                     size={24}
                 ></Icon>
             </button>

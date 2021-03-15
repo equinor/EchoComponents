@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/dom';
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import Dropdown, { DropdownStyleClass } from '../components/dropdown/Dropdown';
+import Dropdown from '../components/dropdown/Dropdown';
 
 const setSelected = jest.fn();
 const DefaultDropdown: React.FC = () => {
@@ -61,7 +61,7 @@ test('should click on dropdown to open it', () => {
             openDownWards={true}
             placeholder=""
             showSearch={true}
-            styleClass={DropdownStyleClass.Home}
+            styleClass={'compact'}
         />
     );
 
