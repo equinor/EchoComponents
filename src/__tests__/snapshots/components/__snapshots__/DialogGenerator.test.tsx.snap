@@ -73,7 +73,7 @@ exports[`renders full DialogGenerator 1`] = `
       <span
         className="sc-bdfBwQ ibGDsh"
       >
-        I agree
+        I changed my mind
       </span>
     </button>
     <button
@@ -86,7 +86,7 @@ exports[`renders full DialogGenerator 1`] = `
       <span
         className="sc-bdfBwQ ibGDsh"
       >
-        I changed my mind
+        I agree
       </span>
     </button>
   </div>

@@ -5,11 +5,8 @@ import styles from './dialogGenerator.module.css';
 
 export interface DialogGeneratorProps {
     dialogStyle?: CSSProperties;
-    // todo: should be children
-    // check how it looks with children
     children: React.ReactNode;
     title: string;
-    // should be list of action buttons with variant
     actionButtons: ActionButton[];
 }
 

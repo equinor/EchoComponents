@@ -7,11 +7,14 @@ it('renders full DialogGenerator', () => {
         .create(
             <DialogGenerator
                 dialogStyle={{ width: '300px' }}
-                content={<p>Hello from the inside</p>}
                 title={'This is the title'}
-                actionButton={{ title: 'I agree', onClick: jest.fn() }}
-                cancelButton={{ title: 'I changed my mind', onClick: jest.fn() }}
-            ></DialogGenerator>
+                actionButtons={[
+                    { title: 'I changed my mind', onClick: jest.fn() },
+                    { title: 'I agree', onClick: jest.fn(), variant: 'outlined' }
+                ]}
+            >
+                <p>Hello from the inside</p>
+            </DialogGenerator>
         )
         .toJSON();
     expect(tree).toMatchSnapshot();
@@ -19,7 +22,11 @@ it('renders full DialogGenerator', () => {
 
 it('renders DialogGenerator without buttons', () => {
     const tree = renderer
-        .create(<DialogGenerator content={<p>Hello from the inside</p>} title={'This is the title'}></DialogGenerator>)
+        .create(
+            <DialogGenerator title={'This is the title'} actionButtons={[]}>
+                <p>Hello from the inside</p>
+            </DialogGenerator>
+        )
         .toJSON();
     expect(tree).toMatchSnapshot();
 });
