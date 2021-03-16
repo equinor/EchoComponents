@@ -5,31 +5,33 @@ import styles from './dialogGenerator.module.css';
 
 export interface DialogGeneratorProps {
     dialogStyle?: CSSProperties;
-    content: JSX.Element[] | JSX.Element;
+    // todo: should be children
+    // check how it looks with children
+    children: React.ReactNode;
     title: string;
-    actionButton?: ActionButton;
-    cancelButton?: ActionButton;
+    // should be list of action buttons with variant
+    actionButtons: ActionButton[];
 }
 
 export const DialogGenerator: React.FC<DialogGeneratorProps> = ({
     dialogStyle,
     title,
-    content,
-    actionButton,
-    cancelButton
+    children,
+    actionButtons
 }: DialogGeneratorProps): JSX.Element => {
     return (
         <Dialog style={dialogStyle}>
             <Dialog.Title>{title}</Dialog.Title>
-            <Dialog.CustomContent>{content}</Dialog.CustomContent>
-            {(actionButton || cancelButton) && (
+            <Dialog.CustomContent>{children}</Dialog.CustomContent>
+            {actionButtons.length > 0 && (
                 <Dialog.Actions className={styles.footer}>
-                    {actionButton && <Button onClick={actionButton.onClick}>{actionButton.title}</Button>}
-                    {cancelButton && (
-                        <Button onClick={cancelButton.onClick} variant="outlined">
-                            {cancelButton.title}
-                        </Button>
-                    )}
+                    {actionButtons.map((actionButton, index) => {
+                        return (
+                            <Button key={index} onClick={actionButton.onClick} variant={actionButton.variant}>
+                                {actionButton.title}
+                            </Button>
+                        );
+                    })}
                 </Dialog.Actions>
             )}
         </Dialog>

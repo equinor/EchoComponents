@@ -17,11 +17,13 @@ Default.args = {
     sampleContentText: 'This sample only shows text as content. But this component accept any JSX.Elements.',
     actionButton: {
         title: 'Accept',
+
         onClick: () => {
             console.log('Action');
         }
     },
     cancelButton: {
+        variant: 'outlined',
         title: 'Cancel',
         onClick: () => {
             console.log('Cancel');

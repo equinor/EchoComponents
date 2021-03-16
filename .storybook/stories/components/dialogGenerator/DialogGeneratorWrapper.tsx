@@ -12,7 +12,7 @@ export interface DialogGeneratorWrapperProps {
     cancelButton?: ActionButton;
 }
 
-const FormGeneratorWrapper: React.FC<DialogGeneratorWrapperProps> = ({
+const DialogGeneratorWrapper: React.FC<DialogGeneratorWrapperProps> = ({
     dialogStyle,
     sampleContentText,
     title,
@@ -28,13 +28,20 @@ const FormGeneratorWrapper: React.FC<DialogGeneratorWrapperProps> = ({
     } else {
         actionButton = null;
     }
-    if (cancelButton) {
+    if (!_.isEmpty(cancelButton)) {
         cancelButton.onClick = () => {
             setDialog(false);
         };
     } else {
         cancelButton = null;
     }
+
+    const getButtons = () => {
+        const buttons = [];
+        if (cancelButton) buttons.push(cancelButton);
+        if (actionButton) buttons.push(actionButton);
+        return buttons;
+    };
 
     return (
         <div className={'DialogGenerator'}>
@@ -48,16 +55,13 @@ const FormGeneratorWrapper: React.FC<DialogGeneratorWrapperProps> = ({
                 </span>
             )}
             {dialog && (
-                <DialogGenerator
-                    dialogStyle={dialogStyle}
-                    content={<Typography variant="body_long">{sampleContentText}</Typography>}
-                    title={title}
-                    actionButton={actionButton}
-                    cancelButton={cancelButton}
-                ></DialogGenerator>
+                <DialogGenerator dialogStyle={dialogStyle} title={title} actionButtons={getButtons()}>
+                    <Typography variant="body_long">{sampleContentText}</Typography>
+                    <Typography>This one can not be edited</Typography>
+                </DialogGenerator>
             )}
         </div>
     );
 };
 
-export default FormGeneratorWrapper;
+export default DialogGeneratorWrapper;
