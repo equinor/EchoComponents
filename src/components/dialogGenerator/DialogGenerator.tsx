@@ -1,18 +1,14 @@
 import { Button, Dialog } from '@equinor/eds-core-react';
 import React, { CSSProperties } from 'react';
+import { ActionButton } from '../../types/actionButton';
 import styles from './dialogGenerator.module.css';
 
 export interface DialogGeneratorProps {
     dialogStyle?: CSSProperties;
     content: JSX.Element[] | JSX.Element;
     title: string;
-    actionButton?: DialogButton;
-    cancelButton?: DialogButton;
-}
-
-export interface DialogButton {
-    title: string;
-    onClick: () => void;
+    actionButton?: ActionButton;
+    cancelButton?: ActionButton;
 }
 
 export const DialogGenerator: React.FC<DialogGeneratorProps> = ({

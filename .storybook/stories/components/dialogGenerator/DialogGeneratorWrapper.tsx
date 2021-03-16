@@ -1,14 +1,15 @@
 import { Typography } from '@equinor/eds-core-react';
 import * as _ from 'lodash';
 import React, { CSSProperties, useState } from 'react';
-import { DialogButton, DialogGenerator } from '../../../../src/components/dialogGenerator/DialogGenerator';
+import { DialogGenerator } from '../../../../src/components/dialogGenerator/DialogGenerator';
+import { ActionButton } from '../../../../src/types/actionButton';
 
 export interface DialogGeneratorWrapperProps {
     dialogStyle?: CSSProperties;
     sampleContentText: string;
     title: string;
-    actionButton?: DialogButton;
-    cancelButton?: DialogButton;
+    actionButton?: ActionButton;
+    cancelButton?: ActionButton;
 }
 
 const FormGeneratorWrapper: React.FC<DialogGeneratorWrapperProps> = ({
