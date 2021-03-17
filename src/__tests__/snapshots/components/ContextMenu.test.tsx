@@ -1,9 +1,7 @@
 import { themeConst } from '@equinor/echo-framework';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ButtonWithPopover, ContextMenu } from '../..';
-import { getIcon } from '../../helpers/getIcon';
-import { DataInformation } from '../../types/dataInformation';
+import { ButtonWithPopover, ContextMenu, DataInformation, getIcon } from '../../..';
 
 it('renders ContextMenu without more info button correctly', () => {
     const setExpanded = jest.fn();

@@ -1,8 +1,8 @@
 import React, { CSSProperties, useState } from 'react';
-import { getIcon } from '../../../src';
-import ButtonWithPopover from '../../../src/components/buttonWithPopover/ButtonWithPopover';
-import ContextMenu from '../../../src/components/contextMenu/ContextMenu';
-import { DataInformation } from '../../../src/types/dataInformation';
+import ButtonWithPopover from '../../../../src/components/buttonWithPopover/ButtonWithPopover';
+import ContextMenu from '../../../../src/components/contextMenu/ContextMenu';
+import { getIcon } from '../../../../src/helpers/getIcon';
+import { DataInformation } from '../../../../src/types/dataInformation';
 
 export interface ContextMenuWrapperProps {
     dataToShow: DataInformation[];

@@ -1,8 +1,8 @@
 import { screen, waitFor } from '@testing-library/dom';
 import { act, render } from '@testing-library/react';
 import React from 'react';
-import { DataInformation } from '..';
-import DataInfoPopover from '../components/contextMenuPopover/DataInfoPopover';
+import { DataInformation } from '../..';
+import DataInfoPopover from '../../components/contextMenuPopover/DataInfoPopover';
 
 beforeAll(() => {
     jest.useFakeTimers();

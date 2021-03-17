@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { DataInfoButton } from '../..';
+import { DataInfoButton } from '../../..';
 
 it('renders open DataInfoButton with badge correctly', () => {
     const data = {
