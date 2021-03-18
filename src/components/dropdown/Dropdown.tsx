@@ -16,7 +16,7 @@ interface DropdownItemProps {
     filterFunc?: (data: any[], filter: string) => any[];
     isDisabled?: boolean;
     disabledText?: string;
-    styleClass?: 'compact' | 'default';
+    variant?: 'compact' | 'default';
     showSearch: boolean;
     position?: 'relative' | 'absolute';
     triggerOpen?: (value: boolean) => void;
@@ -50,7 +50,7 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
     setSelected,
     isDisabled,
     disabledText = 'Disabled',
-    styleClass,
+    variant,
     showSearch,
     position = 'absolute',
     triggerOpen
@@ -153,9 +153,9 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
                 disabled={isDisabled}
                 ref={buttonRef}
                 className={[
-                    styleClass === 'compact' ? styles.dropdownToggleHome : styles.dropdownToggle,
-                    styleClass === 'compact' && isOpen === true ? styles.dropdownToggleHomeActive : '',
-                    styleClass === 'compact' && selected ? styles.dropdownSelected : ''
+                    variant === 'compact' ? styles.dropdownToggleHome : styles.dropdownToggle,
+                    variant === 'compact' && isOpen === true ? styles.dropdownToggleHomeActive : '',
+                    variant === 'compact' && selected ? styles.dropdownSelected : ''
                 ].join(' ')}
                 onClick={(event: React.MouseEvent): void => handleIsOpenToggle(event)}
                 title={isDisabled ? disabledText : 'Choose an option'}

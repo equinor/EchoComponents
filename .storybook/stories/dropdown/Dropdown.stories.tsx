@@ -7,7 +7,7 @@ export default {
 
     component: DropdownWrapper,
     argTypes: {
-        styleClass: {
+        variant: {
             control: {
                 type: 'select',
                 options: ['compact', 'default']

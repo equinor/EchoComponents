@@ -61,7 +61,7 @@ test('should click on dropdown to open it', () => {
             openDownWards={true}
             placeholder=""
             showSearch={true}
-            styleClass={'compact'}
+            variant={'compact'}
         />
     );
 
