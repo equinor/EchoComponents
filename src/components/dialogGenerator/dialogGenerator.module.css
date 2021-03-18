@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer button:nth-child(2) {
+    margin: 0 0 0 15px;
+}

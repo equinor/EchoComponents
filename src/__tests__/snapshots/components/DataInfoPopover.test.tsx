@@ -1,7 +1,7 @@
-import DataInfoPopover from '../../components/contextMenuPopover/DataInfoPopover';
-import { DataInformation } from '../../types/dataInformation';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { DataInformation } from '../../..';
+import DataInfoPopover from '../../../components/contextMenuPopover/DataInfoPopover';
 
 it('renders DataInfoPopover without data correctly', () => {
     const dataToShow: DataInformation[] = [];

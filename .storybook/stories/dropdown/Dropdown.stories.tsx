@@ -3,7 +3,7 @@ import React from 'react';
 import DropdownWrapper, { DropdownWrapperProps } from './DropdownWrapper';
 
 export default {
-    title: 'Dropdown',
+    title: 'Components/Dropdown',
 
     component: DropdownWrapper,
     argTypes: {

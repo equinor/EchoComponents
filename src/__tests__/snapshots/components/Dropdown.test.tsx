@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Dropdown from '../../components/dropdown/Dropdown';
+import Dropdown from '../../../components/dropdown/Dropdown';
 
 it('renders dropdown with Home style and showSearch correctly', () => {
     let selected = '';
