@@ -1,8 +1,8 @@
-import { themeConst } from '@equinor/echo-framework';
 import { Button, Typography } from '@equinor/eds-core-react';
 import React from 'react';
 import { Icon } from '../../elements/icon/Icon';
 import { TagIconShadowWrapper } from '../../elements/tagIcon/TagIconShadow';
+import { themeConst } from '../../theme/themeConst';
 import styles from './tagContextMenu.module.css';
 
 interface TagContextMenuProps {

@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/dom';
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import Dropdown from '../components/dropdown/Dropdown';
+import Dropdown from '../../components/dropdown/Dropdown';
 
 const setSelected = jest.fn();
 const DefaultDropdown: React.FC = () => {

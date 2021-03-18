@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { themeConst } from '@equinor/echo-framework';
 import { useFocus, useOnOutsideClick } from '@equinor/echo-utils';
 import { Search as EdsSearch } from '@equinor/eds-core-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { Icon } from '../../elements/icon/Icon';
+import { themeConst } from '../../theme/themeConst';
 import styles from './dropdown.module.css';
 
 interface DropdownItemProps {

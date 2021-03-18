@@ -50,6 +50,15 @@ export default [
                 format: 'es'
             }
         ],
-        plugins: [dt()]
+        plugins: [
+            dt(),
+            postcss({
+                extract: true,
+                modules: false,
+                minimize: true,
+                include: 'src/theme/theme.css',
+                exclude: ' /.module.css$/'
+            })
+        ]
     }
 ];

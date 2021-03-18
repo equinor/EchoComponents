@@ -1,7 +1,7 @@
-import { themeConst } from '@equinor/echo-framework';
 import { Banner, DotProgress } from '@equinor/eds-core-react';
 import React, { useEffect, useState } from 'react';
 import { Icon } from '../../elements/icon/Icon';
+import { themeConst } from '../../theme/themeConst';
 import { DataInformation } from '../../types/dataInformation';
 import DataInfoButton from './DataInfoButton';
 import style from './dataInfoPopover.module.css';

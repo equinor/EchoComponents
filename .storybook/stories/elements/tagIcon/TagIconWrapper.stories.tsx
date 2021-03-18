@@ -1,6 +1,6 @@
-import { themeConst } from '@equinor/echo-framework';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
+import { themeConst } from '../../../../src/theme/themeConst';
 import TagIconWrapper, { TagIconWrapperProps } from './TagIconWrapper';
 
 export default {
