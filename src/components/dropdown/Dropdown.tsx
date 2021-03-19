@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { themeConst } from '@equinor/echo-framework';
 import { useFocus, useOnOutsideClick } from '@equinor/echo-utils';
 import { Search as EdsSearch } from '@equinor/eds-core-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { Icon } from '../../elements/icon/Icon';
+import { themeConst } from '../../theme/themeConst';
 import styles from './dropdown.module.css';
 
 interface DropdownItemProps {
@@ -16,7 +16,7 @@ interface DropdownItemProps {
     filterFunc?: (data: any[], filter: string) => any[];
     isDisabled?: boolean;
     disabledText?: string;
-    styleClass?: 'compact' | 'default';
+    variant?: 'compact' | 'default';
     showSearch: boolean;
     position?: 'relative' | 'absolute';
     triggerOpen?: (value: boolean) => void;
@@ -34,7 +34,7 @@ interface DropdownItemProps {
  *     setSelected: Function for setting the selected item.
  *     isDisabled: Flag which disables the dropdown.
  *     disabledText: The title text that displays when the dropdown is disabled.
- *     styleClass: Decides which style the dropdown should have. Either default or home.
+ *     variant: Decides which style the dropdown should have. Either default or compact.
  *     showSearch: Flag which decides whether we should include the search field or not.
  *     position: Determines if the dropdown position should be relative or absolute.
  *     triggerOpen: Callback to trigger when the dropdown is opened.
@@ -50,7 +50,7 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
     setSelected,
     isDisabled,
     disabledText = 'Disabled',
-    styleClass,
+    variant,
     showSearch,
     position = 'absolute',
     triggerOpen
@@ -153,9 +153,9 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
                 disabled={isDisabled}
                 ref={buttonRef}
                 className={[
-                    styleClass === 'compact' ? styles.dropdownToggleHome : styles.dropdownToggle,
-                    styleClass === 'compact' && isOpen === true ? styles.dropdownToggleHomeActive : '',
-                    styleClass === 'compact' && selected ? styles.dropdownSelected : ''
+                    variant === 'compact' ? styles.dropdownToggleHome : styles.dropdownToggle,
+                    variant === 'compact' && isOpen === true ? styles.dropdownToggleHomeActive : '',
+                    variant === 'compact' && selected ? styles.dropdownSelected : ''
                 ].join(' ')}
                 onClick={(event: React.MouseEvent): void => handleIsOpenToggle(event)}
                 title={isDisabled ? disabledText : 'Choose an option'}

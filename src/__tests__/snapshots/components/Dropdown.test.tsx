@@ -18,7 +18,7 @@ it('renders dropdown with Home style and showSearch correctly', () => {
                 placeholder="Placeholder text"
                 showSearch={true}
                 isDisabled={false}
-                styleClass={'compact'}
+                variant={'compact'}
             />
         )
         .toJSON();

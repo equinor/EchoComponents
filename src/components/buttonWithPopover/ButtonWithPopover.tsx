@@ -1,7 +1,7 @@
-import { themeConst } from '@equinor/echo-framework';
 import { Button, CircularProgress } from '@equinor/eds-core-react';
 import React, { useState } from 'react';
 import { Icon } from '../../elements/icon/Icon';
+import { themeConst } from '../../theme/themeConst';
 import { DataInformation } from '../../types/dataInformation';
 import DataInfoPopover from '../contextMenuPopover/DataInfoPopover';
 import style from './buttonWithPopover.module.css';
