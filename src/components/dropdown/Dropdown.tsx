@@ -34,7 +34,7 @@ interface DropdownItemProps {
  *     setSelected: Function for setting the selected item.
  *     isDisabled: Flag which disables the dropdown.
  *     disabledText: The title text that displays when the dropdown is disabled.
- *     styleClass: Decides which style the dropdown should have. Either default or home.
+ *     variant: Decides which style the dropdown should have. Either default or compact.
  *     showSearch: Flag which decides whether we should include the search field or not.
  *     position: Determines if the dropdown position should be relative or absolute.
  *     triggerOpen: Callback to trigger when the dropdown is opened.
