@@ -7,8 +7,8 @@ export { TagContextMenu } from './components/tagContextMenu/TagContextMenu';
 export { Icon } from './elements/icon/Icon';
 export { TagIcon } from './elements/tagIcon/TagIcon';
 export { TagIconShadowWrapper } from './elements/tagIcon/TagIconShadow';
+export { TextIconButton } from './elements/textIconButton/TextIconButton';
 export { getIcon } from './helpers/getIcon';
 export { themeConst } from './theme/themeConst';
 export * from './types';
 import './theme/theme.css';
-
