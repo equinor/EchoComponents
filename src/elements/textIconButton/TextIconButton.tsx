@@ -18,10 +18,11 @@ export const TextIconButton: React.FC<TextIconButtonProps> = ({
     style
 }: TextIconButtonProps): JSX.Element => {
     return (
-        <button className={styles.textIcon} onClick={onClick} style={style}>
+        <button className={styles.button} onClick={onClick} style={style}>
             <Icon name={icon} title={title} color={themeConst.asBuilt} size={40}></Icon>
-            <Typography color={themeConst.asBuilt}>{title}</Typography>
-            <div className={styles.circle}></div>
+            <Typography className={styles.text} color={themeConst.asBuilt}>
+                {title}
+            </Typography>
         </button>
     );
 };

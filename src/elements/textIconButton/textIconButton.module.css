@@ -1,4 +1,4 @@
-.textIcon {
+.button {
     width: 93px;
     height: 93px;
     display: flex;
@@ -11,37 +11,22 @@
     position: relative;
 }
 
-.circle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-color: #d1d5d8;
-    position: absolute;
-    top: 45px;
-    z-index: 1;
-    display: none;
+.button:active,
+.button:focus {
+    background-color: var(--equiGreen3);
 }
 
-.textIcon:active,
-.textIcon:focus {
-    background-color: #e6faec;
-}
-
-.textIcon:hover {
+.button:hover {
     background-color: #c3f3d2;
 }
 
-.textIcon:active .circle {
-    display: block;
-}
-
-.textIcon svg {
+.button svg {
     margin: 0 0 2px 0;
     z-index: 2;
 }
 
-.textIcon p {
-    text-align: center;
+.text {
+    text-align: center !important;
     position: relative;
     z-index: 2;
 }

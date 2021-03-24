@@ -2,7 +2,7 @@
 
 exports[`renders TextIconButton correctly 1`] = `
 <button
-  className="textIcon"
+  className="button"
   onClick={[MockFunction]}
 >
   <svg
@@ -34,20 +34,17 @@ exports[`renders TextIconButton correctly 1`] = `
     />
   </svg>
   <p
-    className="sc-dlfnbm dyohtM"
+    className="sc-dlfnbm dyohtM text"
     color="#007079"
   >
     saved slices
   </p>
-  <div
-    className="circle"
-  />
 </button>
 `;
 
 exports[`renders TextIconButton with input style 1`] = `
 <button
-  className="textIcon"
+  className="button"
   onClick={[MockFunction]}
   style={
     Object {
@@ -84,13 +81,10 @@ exports[`renders TextIconButton with input style 1`] = `
     />
   </svg>
   <p
-    className="sc-dlfnbm dyohtM"
+    className="sc-dlfnbm dyohtM text"
     color="#007079"
   >
     saved slices
   </p>
-  <div
-    className="circle"
-  />
 </button>
 `;

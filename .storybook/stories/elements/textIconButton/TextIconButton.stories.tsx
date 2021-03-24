@@ -1,12 +1,11 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { TextIconButtonProps } from '../../../../src/elements/textIconButton/TextIconButton';
-import TextIconButtonWrapper from './TextIconButtonWrapper';
+import { TextIconButton, TextIconButtonProps } from '../../../../src/elements/textIconButton/TextIconButton';
 
 export default {
     title: 'Elements/Icons/TextIconButton',
 
-    component: TextIconButtonWrapper,
+    component: TextIconButton,
     argTypes: {
         icon: {
             control: {
@@ -27,7 +26,7 @@ export default {
     }
 } as Meta;
 
-const Template: Story<TextIconButtonProps> = (args) => <TextIconButtonWrapper {...args} />;
+const Template: Story<TextIconButtonProps> = (args) => <TextIconButton {...args} />;
 
 export const Default = Template.bind({});
 
@@ -35,6 +34,5 @@ Default.args = {
     icon: 'cut',
     title: 'Saved slices',
     onClick: () => {},
-    style: {},
-    active: false
+    style: {}
 };
