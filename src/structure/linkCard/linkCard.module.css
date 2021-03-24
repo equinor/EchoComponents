@@ -1,0 +1,75 @@
+.wrapper {
+    width: 310px;
+    height: 582px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    background-color: var(--white);
+    border: 1px solid var(--default);
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 247px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.header {
+    border-bottom: 1px solid var(--default);
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 96px;
+}
+
+.title {
+    color: var(--equiGreen1) !important;
+    margin: 0 0 15px 0 !important;
+    line-height: 1em !important;
+}
+
+.subTitle {
+    color: var(--black) !important;
+    line-height: 1em !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.links {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.links a:last-child p {
+    border-bottom: none;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links p {
+    line-height: 23px;
+    border-bottom: 1px solid var(--default);
+    color: var(--defaultSeverityText);
+    padding: 16px;
+    font-size: 16px;
+}
+
+.link:hover {
+    background-color: var(--searchBarBackground);
+}
+
+.link:active {
+    background-color: var(--equiGreen3);
+}
