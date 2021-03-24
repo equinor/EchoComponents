@@ -31,18 +31,14 @@ const DraggableItemsWrapperContainer: React.FC<DraggableItemsWrapperProps> = ({
     ]);
 
     return (
-        <div className={styles.draggableOrderWrapper}>
-            <div className={styles.list}>
-                <DraggableItemsWrapper
-                    style={style}
-                    onChange={(newDragItems: DraggableItem[]) => {
-                        setTestElements(newDragItems.map((n) => n.element));
-                    }}
-                >
-                    {testElements}
-                </DraggableItemsWrapper>
-            </div>
-        </div>
+        <DraggableItemsWrapper
+            style={style}
+            onChange={(newDragItems: DraggableItem[]) => {
+                setTestElements(newDragItems.map((n) => n.element));
+            }}
+        >
+            {testElements}
+        </DraggableItemsWrapper>
     );
 };
 

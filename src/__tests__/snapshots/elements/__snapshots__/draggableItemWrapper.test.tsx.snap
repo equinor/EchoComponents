@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders DraggableItemsWrapper correctly 1`] = `
+<div
+  className="draggableOrder"
+>
+  <div>
+    <div
+      className="globalDraggableHandle"
+      data-id="0"
+    >
+      <span>
+        1
+      </span>
+    </div>
+    <div
+      className="globalDraggableHandle"
+      data-id="1"
+    >
+      <span>
+        2
+      </span>
+    </div>
+    <div
+      className="globalDraggableHandle"
+      data-id="2"
+    >
+      <span>
+        3
+      </span>
+    </div>
+    <div
+      className="globalDraggableHandle"
+      data-id="3"
+    >
+      <span>
+        4
+      </span>
+    </div>
+    <div
+      className="globalDraggableHandle"
+      data-id="4"
+    >
+      <span>
+        5
+      </span>
+    </div>
+    <div
+      className="globalDraggableHandle"
+      data-id="5"
+    >
+      <span>
+        6
+      </span>
+    </div>
+  </div>
+</div>
+`;
