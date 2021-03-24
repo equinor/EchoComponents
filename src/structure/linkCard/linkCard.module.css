@@ -7,7 +7,6 @@
     border-radius: 4px;
     background-color: var(--white);
     border: 1px solid var(--default);
-    overflow: hidden;
 }
 
 .image {
@@ -26,11 +25,11 @@
     margin-left: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
+    min-height: 93px;
 }
 
 .title {
     color: var(--equiGreen1) !important;
-    margin: 0 0 15px 0 !important;
     line-height: 1em !important;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -49,6 +48,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: break-word;
+    margin-top: 15px !important;
 }
 
 .links {

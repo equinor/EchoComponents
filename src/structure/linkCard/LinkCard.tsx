@@ -1,5 +1,5 @@
-import { Typography } from '@equinor/eds-core-react';
-import React, { CSSProperties } from 'react';
+import { Tooltip, Typography } from '@equinor/eds-core-react';
+import React, { CSSProperties, useEffect, useState } from 'react';
 import styles from './linkCard.module.css';
 
 export interface LinkCardProps {
@@ -23,6 +23,23 @@ export const LinkCard: React.FC<LinkCardProps> = ({
     subTitle,
     links
 }: LinkCardProps): JSX.Element => {
+    const titleRef = React.createRef<HTMLElement>();
+    const subTitleRef = React.createRef<HTMLElement>();
+    const [showTitleToolTip, setShowTitleToolTip] = useState<boolean>(false);
+    const [showSubTitleToolTip, setShowSubTitleToolTip] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (titleRef.current && titleRef.current.scrollHeight > 46) {
+            setShowTitleToolTip(true);
+        }
+    }, [titleRef]);
+
+    useEffect(() => {
+        if (subTitleRef.current && subTitleRef.current.scrollHeight > 46) {
+            setShowSubTitleToolTip(true);
+        }
+    }, [subTitleRef]);
+
     return (
         <div className={styles.wrapper} style={style}>
             <div
@@ -32,12 +49,28 @@ export const LinkCard: React.FC<LinkCardProps> = ({
                 }}
             ></div>
             <div className={styles.header}>
-                <Typography className={styles.title} variant="h3">
-                    {title}
-                </Typography>
-                <Typography className={styles.subTitle} variant="h3">
-                    {subTitle}
-                </Typography>
+                {showTitleToolTip ? (
+                    <Tooltip placement="bottomLeft" title={title}>
+                        <Typography variant="h3" className={styles.title} ref={titleRef}>
+                            {title}
+                        </Typography>
+                    </Tooltip>
+                ) : (
+                    <Typography className={styles.title} variant="h3" ref={titleRef}>
+                        {title}
+                    </Typography>
+                )}
+                {showSubTitleToolTip ? (
+                    <Tooltip placement="bottomLeft" title={subTitle}>
+                        <Typography className={styles.subTitle} variant="h3" ref={subTitleRef}>
+                            {subTitle}
+                        </Typography>
+                    </Tooltip>
+                ) : (
+                    <Typography className={styles.subTitle} variant="h3" ref={subTitleRef}>
+                        {subTitle}
+                    </Typography>
+                )}
             </div>
             <div className={styles.links}>
                 {links.map((link, index) => {
