@@ -1,5 +1,6 @@
 import { Tooltip, Typography } from '@equinor/eds-core-react';
 import React, { CSSProperties, useEffect, useState } from 'react';
+import { LinkCardItem } from '../../types/linkCardItem';
 import styles from './linkCard.module.css';
 
 export interface LinkCardProps {
@@ -7,13 +8,7 @@ export interface LinkCardProps {
     title: string;
     subTitle: string;
     links: LinkCardItem[];
-    style: CSSProperties;
-}
-
-export interface LinkCardItem {
-    title: string;
-    url: string;
-    target?: '_blank' | '_self';
+    style?: CSSProperties;
 }
 
 export const LinkCard: React.FC<LinkCardProps> = ({
