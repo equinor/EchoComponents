@@ -10,6 +10,17 @@ export interface TextIconButtonProps {
     onClick: () => void;
     style?: CSSProperties;
 }
+/**
+ * Component that renders a button with the icon and the text provided
+ *
+ * @param {TextIconButtonProps} {
+ *     icon: the name of the icon to display
+ *     title: the title text that the button should display
+ *     onClick: the function that will be called when user clicks the button
+ *     style: Optional parameter that will override the button style
+ * }
+ * @return {*}  {JSX.Element} A button with the provided icon and text
+ */
 
 export const TextIconButton: React.FC<TextIconButtonProps> = ({
     icon,
