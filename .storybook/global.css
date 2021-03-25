@@ -12,6 +12,10 @@
     max-width: 450px;
 }
 
+#root {
+    overflow: auto !important;
+}
+
 /* This is useful when predicting what a component will look like in echo infield, since this code is part of bootstrap and thus Echo Infield */
 /* *,
 ::after,

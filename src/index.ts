@@ -9,6 +9,7 @@ export { TagIcon } from './elements/tagIcon/TagIcon';
 export { TagIconShadowWrapper } from './elements/tagIcon/TagIconShadow';
 export { TextIconButton } from './elements/textIconButton/TextIconButton';
 export { getIcon } from './helpers/getIcon';
+export { LinkCard } from './structure/linkCard/LinkCard';
 export { themeConst } from './theme/themeConst';
 export * from './types';
 import './theme/theme.css';
