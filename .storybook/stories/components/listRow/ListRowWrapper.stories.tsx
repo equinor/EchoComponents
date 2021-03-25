@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import ListRowWrapper, { FormGeneratorWrapperProps } from './ListRowWrapper';
+import ListRowWrapper, { ListRowWrapperProps } from './ListRowWrapper';
 
 export default {
     title: 'Components/UI/ListRow',
@@ -21,7 +21,7 @@ export default {
     }
 } as Meta;
 
-const Template: Story<FormGeneratorWrapperProps> = (args) => <ListRowWrapper {...args} />;
+const Template: Story<ListRowWrapperProps> = (args) => <ListRowWrapper {...args} />;
 
 export const Default = Template.bind({});
 

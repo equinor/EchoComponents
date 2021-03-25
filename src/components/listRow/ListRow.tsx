@@ -56,9 +56,7 @@ export const ListRow: React.FC<ListRowProps> = ({
                         <button
                             className={expandable && expandable.expanded ? styles.activeIconButton : styles.iconButton}
                             onClick={(): void => {
-                                if (expandable) {
-                                    expandable.setExpanded(true);
-                                }
+                                expandable.setExpanded(true);
                             }}
                         >
                             <Icon name="more_vertical" title="Expand" color={themeConst.asBuilt}></Icon>
@@ -84,9 +82,7 @@ export const ListRow: React.FC<ListRowProps> = ({
                     <button
                         className={styles.iconButton}
                         onClick={(): void => {
-                            if (expandable) {
-                                expandable.setExpanded(false);
-                            }
+                            expandable.setExpanded(false);
                         }}
                     >
                         <Icon name={'close'} title={'Close'} color={themeConst.asBuilt}></Icon>

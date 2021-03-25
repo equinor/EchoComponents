@@ -1,7 +1,7 @@
 import React, { CSSProperties, useState } from 'react';
 import { ListRow } from '../../../../src/components/listRow/ListRow';
 
-export interface FormGeneratorWrapperProps {
+export interface ListRowWrapperProps {
     style: CSSProperties;
     isDraggable: boolean;
     title: string;
@@ -11,7 +11,7 @@ export interface FormGeneratorWrapperProps {
     expandable: boolean;
 }
 
-const FormGeneratorWrapper: React.FC<FormGeneratorWrapperProps> = ({
+const ListRowWrapper: React.FC<ListRowWrapperProps> = ({
     isDraggable,
     title,
     subTitle,
@@ -19,7 +19,7 @@ const FormGeneratorWrapper: React.FC<FormGeneratorWrapperProps> = ({
     expandedIcons,
     expandable,
     style
-}: FormGeneratorWrapperProps) => {
+}: ListRowWrapperProps) => {
     const [open, setOpen] = useState<boolean>(false);
 
     return (
@@ -63,4 +63,4 @@ const FormGeneratorWrapper: React.FC<FormGeneratorWrapperProps> = ({
     );
 };
 
-export default FormGeneratorWrapper;
+export default ListRowWrapper;
