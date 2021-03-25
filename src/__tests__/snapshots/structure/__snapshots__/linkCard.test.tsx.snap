@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders LinkCardItem correctly 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="image"
+    style={
+      Object {
+        "backgroundImage": "url(https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRLqgF0OqRHg/v0/1200x900.jpg)",
+      }
+    }
+  />
+  <div
+    className="header"
+  >
+    <h3
+      className="sc-dlfnbm liXfxL title"
+    >
+      Johan Sverdrup
+    </h3>
+    <h3
+      className="sc-dlfnbm liXfxL subTitle"
+    >
+      Processing Platform 2
+    </h3>
+  </div>
+  <div
+    className="links"
+  >
+    <a
+      href="#"
+      target="_self"
+    >
+      <p
+        className="sc-dlfnbm gsGDwC link"
+      >
+        Full
+      </p>
+    </a>
+    <a
+      href="https://yahoo.com"
+      target="_blank"
+    >
+      <p
+        className="sc-dlfnbm gsGDwC link"
+      >
+        HVDC
+      </p>
+    </a>
+    <a
+      href="#"
+      target="_self"
+    >
+      <p
+        className="sc-dlfnbm gsGDwC link"
+      >
+        MSF
+      </p>
+    </a>
+    <a
+      href="#"
+      target="_self"
+    >
+      <p
+        className="sc-dlfnbm gsGDwC link"
+      >
+        UPM
+      </p>
+    </a>
+  </div>
+</div>
+`;

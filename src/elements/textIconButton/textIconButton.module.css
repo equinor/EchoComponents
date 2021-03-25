@@ -1,0 +1,32 @@
+.button {
+    width: 93px;
+    height: 93px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.button:active,
+.button:focus {
+    background-color: var(--equiGreen3);
+}
+
+.button:hover {
+    background-color: #c3f3d2;
+}
+
+.button svg {
+    margin: 0 0 2px 0;
+    z-index: 2;
+}
+
+.text {
+    text-align: center !important;
+    position: relative;
+    z-index: 2;
+}
