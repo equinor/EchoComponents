@@ -1,7 +1,6 @@
 import React, { CSSProperties, useEffect, useState } from 'react';
 import { ReactSortable, SortableEvent } from 'react-sortablejs';
 import { DraggableItem } from '../../types/draggableItem';
-import styles from './draggableItemsWrapper.module.css';
 
 const DraggableHandleSelector = 'globalDraggableHandle';
 
@@ -41,7 +40,7 @@ export const DraggableItemsWrapper: React.FC<DraggableItemsWrapperProps> = ({
     }, [children]);
 
     return (
-        <div className={styles.draggableOrder} style={style}>
+        <div style={style}>
             {dragItems.length > 0 && (
                 <ReactSortable
                     animation={200}

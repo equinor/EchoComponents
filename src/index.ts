@@ -5,6 +5,7 @@ export { DialogGenerator } from './components/dialogGenerator/DialogGenerator';
 export { Dropdown } from './components/dropdown/Dropdown';
 export { ListRow } from './components/listRow/ListRow';
 export { TagContextMenu } from './components/tagContextMenu/TagContextMenu';
+export { DraggableItemsWrapper } from './elements/draggableItemsWrapper/DraggableItemsWrapper';
 export { Icon } from './elements/icon/Icon';
 export { TagIcon } from './elements/tagIcon/TagIcon';
 export { TagIconShadowWrapper } from './elements/tagIcon/TagIconShadow';
