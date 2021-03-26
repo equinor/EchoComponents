@@ -4,8 +4,8 @@ import React from 'react';
 
 export interface IconProps {
     name: string;
-    title: string;
     color: string;
+    title?: string;
     className?: string;
     size?: 16 | 24 | 32 | 40 | 48;
 }
