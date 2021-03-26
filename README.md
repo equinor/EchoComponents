@@ -11,12 +11,13 @@ Package for creating echo related components.
 
 /bundlephobia/:format/:packageName
 
-- [Echo-Components](#echo-components)
-- [Install](#install)
-    - [NPM](#npm)
-- [Development](#development)
-  - [Run](#run)
-  - [Test](#test)
+-   [Echo-Components](#echo-components)
+-   [Install](#install)
+    -   [NPM](#npm)
+-   [Development](#development)
+    -   [Run](#run)
+    -   [Test](#test)
+-   [Storybook](#storybook)
 
 # Install
 
@@ -48,4 +49,13 @@ For abetter overview, run tests with test coverage.
 
 ```sh-session
 npm run test-coverage
+```
+
+# Storybook
+
+You can see and test the components using storybook.
+Run:
+
+```sh-session
+npm run storybook
 ```
