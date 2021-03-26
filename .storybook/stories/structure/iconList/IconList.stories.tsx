@@ -3,7 +3,7 @@ import React from 'react';
 import IconListWrapper, { IconListWrapperProps } from './IconListWrapper';
 
 export default {
-    title: 'Structure/UI/IconList',
+    title: 'Structure/IconList',
 
     component: IconListWrapper,
     argTypes: {

@@ -3,7 +3,7 @@ import React from 'react';
 import ListRowWrapper, { ListRowWrapperProps } from './ListRowWrapper';
 
 export default {
-    title: 'Components/UI/ListRow',
+    title: 'Components/ListRow',
     component: ListRowWrapper,
     argTypes: {
         expandedIcons: {
