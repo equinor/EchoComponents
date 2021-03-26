@@ -14,6 +14,25 @@ export interface ListRowProps {
     style?: CSSProperties;
 }
 
+/**
+ * Component that renders one row in a list. The row can be marked as draggable and expandable
+ *
+ * @param {ListRowProps} {
+ *     isDraggable: flag to indicate that the row can be rearranged in a list
+ *     item: {      The item to be rendered in the row
+ *          title: the title of the item in the row
+ *          subtitle: the subtitle of the item in the row
+ *          icons: the icons that will be displayed on the same row, and their respective actions
+ *     }
+ *     expandable: { object with properties to handle if the row is expandable. If undefined the row cannot be expanded
+ *          iconItems: the items that will be displayed if row is expanded, and their respective actions
+ *          expanded: flag to indicate if the row is expanded or not
+ *          setExpanded: method that updates the expanded flag
+ *     }
+ *     style: style element to override wrapper style
+ * }
+ * @return {*}  {JSX.Element} a row element to be used in a list
+ */
 export const ListRow: React.FC<ListRowProps> = ({
     isDraggable,
     item,

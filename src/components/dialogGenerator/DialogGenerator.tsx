@@ -9,7 +9,17 @@ export interface DialogGeneratorProps {
     title: string;
     actionButtons: ActionButton[];
 }
-
+/**
+ * Component that renders a dialog box based on input properties
+ *
+ * @param {DialogGeneratorProps} {
+ *     dialogStyle: style property to override existing styling on the dialog wrapper
+ *     title: the title of the dialog
+ *     children: The main content of the dialog
+ *     actionButtons: the buttons to show in the dialog
+ * }
+ * @return {*}  {JSX.Element} Dialog component
+ */
 export const DialogGenerator: React.FC<DialogGeneratorProps> = ({
     dialogStyle,
     title,

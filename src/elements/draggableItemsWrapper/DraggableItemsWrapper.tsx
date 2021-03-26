@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState } from 'react';
+import React, { CSSProperties, useEffect, useState } from 'react';
 import { ReactSortable, SortableEvent } from 'react-sortablejs';
 import { DraggableItem } from '../../types/draggableItem';
 import styles from './draggableItemsWrapper.module.css';
@@ -11,6 +11,16 @@ export interface DraggableItemsWrapperProps {
     children: React.ReactNode[];
 }
 
+/**
+ * Component that renders a wrapper for items that are draggable
+ *
+ * @param {DraggableItemsWrapperProps} {
+ *     style: style element to override wrapper style
+ *     onChange: method that will be called when elements have be reordered inside the wrapper
+ *     children: list of elements that can be reordered
+ * }
+ * @return {*}  {JSX.Element}
+ */
 export const DraggableItemsWrapper: React.FC<DraggableItemsWrapperProps> = ({
     style,
     onChange,
@@ -22,10 +32,19 @@ export const DraggableItemsWrapper: React.FC<DraggableItemsWrapperProps> = ({
         })
     );
 
+    useEffect(() => {
+        setDragItems(
+            children.map((element, id) => {
+                return { id, element };
+            })
+        );
+    }, [children]);
+
     return (
         <div className={styles.draggableOrder} style={style}>
             {dragItems.length > 0 && (
                 <ReactSortable
+                    animation={200}
                     handle={`.${DraggableHandleSelector}`}
                     list={dragItems}
                     onEnd={(evt: SortableEvent): void => {

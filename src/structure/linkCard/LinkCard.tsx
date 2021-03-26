@@ -10,7 +10,22 @@ export interface LinkCardProps {
     links: LinkCardItem[];
     style?: CSSProperties;
 }
-
+/**
+ * Component that renders a card with an image and a list of links
+ *
+ * @param {LinkCardProps} {
+ *     style: style element to override wrapper style
+ *     image: the image scr of the image to be displayed
+ *     title: the title of the card
+ *     subTitle: the subtitle of the cars
+ *     links { A list of links to display
+ *          title: the text of the link
+ *          url: the url to the link
+ *          target: how the link should be opened. Possible values are '_blank' | '_self', default is '_self'
+ *     }
+ * }
+ * @return {*}  {JSX.Element} a card element with an image and some provided links
+ */
 export const LinkCard: React.FC<LinkCardProps> = ({
     style,
     image,
