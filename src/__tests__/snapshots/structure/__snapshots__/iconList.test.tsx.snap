@@ -13,9 +13,7 @@ exports[`renders IconList correctly 1`] = `
       This is the title
     </p>
   </div>
-  <div
-    className="draggableOrder"
-  >
+  <div>
     <div>
       <div
         className="globalDraggableHandle"
