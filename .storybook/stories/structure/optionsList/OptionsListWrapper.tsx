@@ -3,26 +3,26 @@ import { OptionsList, OptionsListProps } from '../../../../src/structure/options
 import { OptionsItem } from '../../../../src/types/optionsItem';
 
 const OptionsListWrapper: React.FC<OptionsListProps> = ({ style, items, titles, columns }: OptionsListProps) => {
-    const [disc, setDisc] = useState<OptionsItem[]>(items);
+    const [itemsToShow, setItemsToShow] = useState<OptionsItem[]>(items);
 
-    for (let d of disc) {
-        d.onSelected = setDiscipline;
+    for (let d of itemsToShow) {
+        d.onSelected = setSelected;
     }
 
-    function setDiscipline(rowIndex: number, columnIndex: number) {
+    function setSelected(rowIndex: number, columnIndex: number) {
         if (rowIndex === 0) {
-            const updatedDisciplines = [...disc];
-            updatedDisciplines.map((u) => (u.selectedColumnIndex = columnIndex));
-            setDisc(updatedDisciplines);
+            const updatedItemsToShow = [...itemsToShow];
+            updatedItemsToShow.map((u) => (u.selectedColumnIndex = columnIndex));
+            setItemsToShow(updatedItemsToShow);
         } else {
-            const updatedDisciplines = [...disc];
-            const updateDiscipline = updatedDisciplines[rowIndex];
-            updateDiscipline.selectedColumnIndex = columnIndex;
-            setDisc(updatedDisciplines);
+            const updatedItemsToShow = [...itemsToShow];
+            const updatedItem = updatedItemsToShow[rowIndex];
+            updatedItem.selectedColumnIndex = columnIndex;
+            setItemsToShow(updatedItemsToShow);
         }
     }
 
-    return <OptionsList items={disc} style={style} titles={titles} columns={columns}></OptionsList>;
+    return <OptionsList items={itemsToShow} style={style} titles={titles} columns={columns}></OptionsList>;
 };
 
 export default OptionsListWrapper;
