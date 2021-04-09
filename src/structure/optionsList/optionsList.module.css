@@ -1,0 +1,45 @@
+.wrapper {
+    display: table;
+    width: 100%;
+}
+
+.head {
+    display: table-row;
+}
+
+.row {
+    display: table-row;
+}
+
+.item {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.itemTitle {
+    display: inline-block !important;
+}
+
+.head > p:first-child {
+    text-align: left !important;
+}
+
+.columnTitle {
+    display: table-cell;
+    text-align: center !important;
+    padding: 14px 0px;
+}
+
+.radio {
+    display: table-cell !important;
+    text-align: center;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    margin: 0 25px -5px 0;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: inline-block;
+}
