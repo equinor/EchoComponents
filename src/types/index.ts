@@ -6,3 +6,4 @@ export * from './iconItem';
 export * from './iconListItem';
 export * from './linkCardItem';
 export * from './optionsItem';
+export * from './radioButtonItem';
