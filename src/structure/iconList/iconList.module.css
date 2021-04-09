@@ -1,0 +1,18 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--searchBarBackground);
+    height: 48px;
+    border-bottom: 2px solid var(--default);
+    display: flex;
+    align-items: center;
+}
+
+.header p {
+    margin-left: var(--medium) !important;
+}

@@ -1,0 +1,12 @@
+.draggableItem {
+    display: block;
+    width: 200px;
+    padding: 20px 0;
+    background-color: rgb(238, 238, 238);
+    margin: 10px 0;
+    border: 1px solid grey;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}

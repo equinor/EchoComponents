@@ -4,7 +4,12 @@ module.exports = {
         '\\.svg$': '<rootDir>/src/__mocks__/svgrMock.ts'
     },
     preset: 'ts-jest',
-    coveragePathIgnorePatterns: ['src/types/*', 'src/index.ts', 'src/typings/*'],
+    coveragePathIgnorePatterns: [
+        'src/types/*',
+        'src/index.ts',
+        'src/typings/*',
+        'src/structure/iconList/createListRow.tsx'
+    ],
     collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!<rootDir>/node_modules/'],
     coverageThreshold: {
         global: {

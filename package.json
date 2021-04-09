@@ -30,6 +30,9 @@
         "react-dom": "^16.13.1",
         "styled-components": "^5.2.1"
     },
+    "dependencies": {
+        "react-sortablejs": "^6.0.0"
+    },
     "devDependencies": {
         "@babel/core": "^7.12.10",
         "@babel/preset-env": "^7.12.11",
@@ -52,6 +55,7 @@
         "@types/jest": "^26.0.20",
         "@types/react": "^17.0.0",
         "@types/react-test-renderer": "^17.0.0",
+        "@types/sortablejs": "^1.10.6",
         "@typescript-eslint/eslint-plugin": "^2.34.0",
         "@typescript-eslint/parser": "^2.34.0",
         "babel-loader": "^8.2.2",
@@ -81,6 +85,7 @@
         "rollup-plugin-typescript-paths": "^1.2.2",
         "rollup-plugin-typescript2": "^0.29.0",
         "rollup-plugin-web-worker-loader": "^1.6.0",
+        "sortablejs": "^1.10.0",
         "storybook-css-modules-preset": "^1.0.5",
         "style-loader": "^2.0.0",
         "styled-components": "^5.2.1",
