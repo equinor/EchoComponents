@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders SliderField correctly  1`] = `
+<div
+  className="sliderField"
+>
+  <p
+    className="sc-dlfnbm gsGDwC"
+  >
+    New slider
+  </p>
+  <div
+    className="sliderWrapper"
+  >
+    <div
+      className="sc-gGmIRh iITkGT"
+      max={5}
+      min={0}
+      value={1}
+    >
+      <input
+        aria-labelledby="New slider"
+        className="sc-ehSCib hynGsq"
+        id="New slider-thumb"
+        max={5}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        onMouseUp={[Function]}
+        step={1}
+        type="range"
+        value={1}
+      />
+      <output
+        className="sc-higXBA fLGBdp"
+        htmlFor="New slider-thumb"
+        value={1}
+      >
+        1
+      </output>
+      <div
+        className="sc-clsHhM sc-fbkhIv bIABfr gDFDAJ"
+      />
+      <span
+        className="sc-nFpLZ dbeTqM"
+      >
+        0
+      </span>
+      <span
+        className="sc-nFpLZ dbeTqM"
+      >
+        5
+      </span>
+    </div>
+  </div>
+</div>
+`;

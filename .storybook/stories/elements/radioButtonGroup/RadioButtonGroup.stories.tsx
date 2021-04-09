@@ -3,7 +3,7 @@ import React from 'react';
 import RadioButtonGroupWrapper, { RadioButtonGroupWrapperProps } from './RadioButtonGroupWrapper';
 
 export default {
-    title: 'Elements/RadioButtonGroup',
+    title: 'Elements/Functional/RadioButtonGroup',
 
     component: RadioButtonGroupWrapper,
     argTypes: {}
