@@ -11,7 +11,7 @@ test('should click radio button and onSelected event is called, clicking on sele
         { title: 'Second value', isChecked: true }
     ];
 
-    render(<RadioButtonGroup title={'My radio group'} onSelected={onSelectFunction} choices={buttons} />);
+    render(<RadioButtonGroup title={'My radio button group'} onSelected={onSelectFunction} options={buttons} />);
 
     const radioButtons = await screen.findAllByRole(`radio`);
 

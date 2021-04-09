@@ -4,20 +4,20 @@ import { RadioButtonItem } from '../../../../src/types/radioButtonItem';
 
 export interface RadioButtonGroupWrapperProps {
     title: string;
-    choices: RadioButtonItem[];
+    options: RadioButtonItem[];
     style?: CSSProperties;
 }
 
 const RadioButtonGroupWrapper: React.FC<RadioButtonGroupWrapperProps> = ({
     title,
-    choices,
+    options,
     style
 }: RadioButtonGroupWrapperProps) => {
-    const [optionsToUse, setOptionsToUse] = useState<RadioButtonItem[]>(choices);
+    const [optionsToUse, setOptionsToUse] = useState<RadioButtonItem[]>(options);
 
     useEffect(() => {
-        setOptionsToUse(choices);
-    }, [choices]);
+        setOptionsToUse(options);
+    }, [options]);
 
     const onSelected = (index: number) => {
         console.log('Index with number ', index, ' was selected.');
@@ -36,7 +36,7 @@ const RadioButtonGroupWrapper: React.FC<RadioButtonGroupWrapperProps> = ({
         <div className={'RadioButtonGroup'}>
             <RadioButtonGroup
                 title={title}
-                choices={optionsToUse}
+                options={optionsToUse}
                 style={style}
                 onSelected={onSelected}
             ></RadioButtonGroup>

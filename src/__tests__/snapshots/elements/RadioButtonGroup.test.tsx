@@ -9,7 +9,7 @@ it('renders RadioButtonGroup correctly ', () => {
         { title: 'Second value', isChecked: true }
     ];
     const tree = renderer
-        .create(<RadioButtonGroup title={'My radio button group'} onSelected={jest.fn()} choices={buttons} />)
+        .create(<RadioButtonGroup title={'My radio button group'} onSelected={jest.fn()} options={buttons} />)
         .toJSON();
     expect(tree).toMatchSnapshot();
 });

@@ -5,14 +5,14 @@ import styles from './radioButton.module.css';
 
 export interface RadioButtonGroupProps {
     title: string;
-    choices: RadioButtonItem[];
+    options: RadioButtonItem[];
     style?: CSSProperties;
     onSelected: (index: number) => void;
 }
 
 export const RadioButtonGroup: React.FC<RadioButtonGroupProps> = ({
     title,
-    choices,
+    options,
     style,
     onSelected
 }: RadioButtonGroupProps): JSX.Element => {
@@ -22,12 +22,12 @@ export const RadioButtonGroup: React.FC<RadioButtonGroupProps> = ({
                 {title}
             </Typography>
             <div className={styles.buttonWrapper}>
-                {choices.map((choice, index) => {
+                {options.map((option, index) => {
                     return (
                         <Radio
                             key={index}
-                            label={choice.title}
-                            checked={choice.isChecked}
+                            label={option.title}
+                            checked={option.isChecked}
                             onChange={(): void => {
                                 onSelected(index);
                             }}

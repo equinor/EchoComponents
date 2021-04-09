@@ -15,7 +15,7 @@ export const Default = Template.bind({});
 
 Default.args = {
     title: 'Rotation direction',
-    choices: [
+    options: [
         {
             title: 'Standard',
             isChecked: true
