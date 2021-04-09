@@ -62,7 +62,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
     >
       <button
         className="iconButton"
-        onClick={[Function]}
+        onClick={[MockFunction]}
       >
         <svg
           aria-labelledby="eds-edit-4"
@@ -133,7 +133,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
   >
     <button
       className="iconButton"
-      onClick={[Function]}
+      onClick={[MockFunction]}
     >
       <svg
         aria-labelledby="eds-edit-6"
@@ -263,7 +263,7 @@ exports[`renders ListRow correctly without expandable row 1`] = `
     >
       <button
         className="iconButton"
-        onClick={[Function]}
+        onClick={[MockFunction]}
       >
         <svg
           aria-labelledby="eds-edit-2"

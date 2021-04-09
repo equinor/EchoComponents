@@ -75,7 +75,7 @@ exports[`renders IconList correctly 1`] = `
             >
               <button
                 className="iconButton"
-                onClick={[Function]}
+                onClick={[MockFunction]}
               >
                 <svg
                   aria-labelledby="eds-link-2"
@@ -108,7 +108,7 @@ exports[`renders IconList correctly 1`] = `
               </button>
               <button
                 className="iconButton"
-                onClick={[Function]}
+                onClick={[MockFunction]}
               >
                 <svg
                   aria-labelledby="eds-delete_to_trash-3"
@@ -236,7 +236,7 @@ exports[`renders IconList correctly 1`] = `
             >
               <button
                 className="iconButton"
-                onClick={[Function]}
+                onClick={[MockFunction]}
               >
                 <svg
                   aria-labelledby="eds-link-6"
@@ -269,7 +269,7 @@ exports[`renders IconList correctly 1`] = `
               </button>
               <button
                 className="iconButton"
-                onClick={[Function]}
+                onClick={[MockFunction]}
               >
                 <svg
                   aria-labelledby="eds-delete_to_trash-7"
@@ -391,7 +391,7 @@ exports[`renders IconList correctly 1`] = `
             >
               <button
                 className="iconButton"
-                onClick={[Function]}
+                onClick={[MockFunction]}
               >
                 <svg
                   aria-labelledby="eds-link-10"
@@ -424,7 +424,7 @@ exports[`renders IconList correctly 1`] = `
               </button>
               <button
                 className="iconButton"
-                onClick={[Function]}
+                onClick={[MockFunction]}
               >
                 <svg
                   aria-labelledby="eds-delete_to_trash-11"
@@ -657,7 +657,7 @@ exports[`renders IconList correctly 1`] = `
             >
               <button
                 className="iconButton"
-                onClick={[Function]}
+                onClick={[MockFunction]}
               >
                 <svg
                   aria-labelledby="eds-link-16"
@@ -690,7 +690,7 @@ exports[`renders IconList correctly 1`] = `
               </button>
               <button
                 className="iconButton"
-                onClick={[Function]}
+                onClick={[MockFunction]}
               >
                 <svg
                   aria-labelledby="eds-delete_to_trash-17"
