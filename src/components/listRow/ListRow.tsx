@@ -58,9 +58,9 @@ export const ListRow: React.FC<ListRowProps> = ({
                     </div>
                 </div>
                 <div className={styles.iconCol}>
-                    {item.icons.map((icon, index2) => {
+                    {item.icons.map((icon, itemIndex) => {
                         return (
-                            <button className={styles.iconButton} key={index2} onClick={icon.onClick}>
+                            <button className={styles.iconButton} key={itemIndex} onClick={icon.onClick}>
                                 <Icon name={icon.icon} title={icon.icon} color={themeConst.asBuilt}></Icon>
                             </button>
                         );
@@ -79,9 +79,9 @@ export const ListRow: React.FC<ListRowProps> = ({
             </div>
             {expandable && expandable.expanded && (
                 <div className={styles.expandedRow}>
-                    {expandable.iconItems.map((icon, index3) => {
+                    {expandable.iconItems.map((icon, iconItemsIndex) => {
                         return (
-                            <button className={styles.iconButton} key={index3} onClick={icon.onClick}>
+                            <button className={styles.iconButton} key={iconItemsIndex} onClick={icon.onClick}>
                                 <Icon name={icon.icon} title={icon.icon} color={themeConst.asBuilt}></Icon>
                             </button>
                         );
