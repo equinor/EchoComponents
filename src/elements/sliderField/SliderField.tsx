@@ -10,7 +10,19 @@ export interface SliderFieldProps {
     onChange: (value: number) => void;
     style?: CSSProperties;
 }
-
+/**
+ * Component that renders a slider with numeric values
+ *
+ * @param {SliderFieldProps} {
+ *     value: Current value of the slider,
+ *     min: Minimum value of the slider,
+ *     max: Maximum value of the slider,
+ *     title: Text shown as title of the slider,
+ *     onChange: Method that will be called if the slider value is changed,
+ *     style: style element to override wrapper style
+ * }
+ * @return {*}  {JSX.Element}
+ */
 export const SliderField: React.FC<SliderFieldProps> = ({
     value,
     min,

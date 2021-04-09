@@ -9,7 +9,17 @@ export interface RadioButtonGroupProps {
     style?: CSSProperties;
     onSelected: (index: number) => void;
 }
-
+/**
+ * Component that renders a Radio Button Group with a set of options to choose from
+ *
+ * @param {RadioButtonGroupProps} {
+ *     title: The title of the radio button group,
+ *     options: List of items to be displayed as options,
+ *     style: Style element to override wrapper style,
+ *     onSelected: Method to be called when the selected value is changed
+ * }
+ * @return {*}  {JSX.Element}
+ */
 export const RadioButtonGroup: React.FC<RadioButtonGroupProps> = ({
     title,
     options,
