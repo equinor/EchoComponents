@@ -1,24 +1,33 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { SliderFieldProps } from '../../../../src/elements/sliderField/SliderField';
-import SliderFieldWrapper from './SliderFieldWrapper';
+import SliderFieldWrapper, { OptionType, SliderFieldWrapperProps } from './SliderFieldWrapper';
 
 export default {
     title: 'Elements/Functional/SliderField',
 
     component: SliderFieldWrapper,
-    argTypes: {}
+    argTypes: {
+        variant: {
+            control: {
+                type: 'radio',
+                options: [OptionType.NUMERIC, OptionType.CUSTOM]
+            }
+        }
+    }
 } as Meta;
 
-const Template: Story<SliderFieldProps> = (args) => <SliderFieldWrapper {...args} />;
+const Template: Story<SliderFieldWrapperProps> = (args) => <SliderFieldWrapper {...args} />;
+const labelsToUse = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 
 export const Default = Template.bind({});
 
 Default.args = {
-    value: 15,
+    value: 2,
     min: 0,
-    max: 20,
+    max: 5,
+    labels: labelsToUse,
     title: 'Movement speed',
     onChange: () => {},
-    style: { width: '350px' }
+    style: { width: '350px' },
+    variant: OptionType.NUMERIC
 };
