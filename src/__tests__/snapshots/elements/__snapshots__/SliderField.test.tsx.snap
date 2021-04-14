@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders SliderField with labels correctly 1`] = `
+<div
+  className="sliderField"
+>
+  <p
+    className="sc-dlfnbm gsGDwC"
+  >
+    New slider with labels
+  </p>
+  <div
+    className="sliderWrapper"
+  >
+    <div
+      className="sc-gGmIRh xCiHu"
+      max={3}
+      min={0}
+      value={2}
+    >
+      <input
+        aria-labelledby="New slider with labels"
+        className="sc-ehSCib hynGsq"
+        id="New slider with labels-thumb"
+        max={3}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        onMouseUp={[Function]}
+        step={1}
+        type="range"
+        value={2}
+      />
+      <output
+        className="sc-higXBA iWlhii"
+        htmlFor="New slider with labels-thumb"
+        value={2}
+      >
+        C
+      </output>
+      <div
+        className="sc-clsHhM sc-fbkhIv bIABfr gDFDAJ"
+      />
+      <span
+        className="sc-nFpLZ dbeTqM"
+      >
+        A
+      </span>
+      <span
+        className="sc-nFpLZ dbeTqM"
+      >
+        D
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders SliderField with numeric values correctly  1`] = `
+<div
+  className="sliderField"
+>
+  <p
+    className="sc-dlfnbm gsGDwC"
+  >
+    New slider
+  </p>
+  <div
+    className="sliderWrapper"
+  >
+    <div
+      className="sc-gGmIRh iITkGT"
+      max={5}
+      min={0}
+      value={1}
+    >
+      <input
+        aria-labelledby="New slider"
+        className="sc-ehSCib hynGsq"
+        id="New slider-thumb"
+        max={5}
+        min={0}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        onMouseUp={[Function]}
+        step={1}
+        type="range"
+        value={1}
+      />
+      <output
+        className="sc-higXBA fLGBdp"
+        htmlFor="New slider-thumb"
+        value={1}
+      >
+        1
+      </output>
+      <div
+        className="sc-clsHhM sc-fbkhIv bIABfr gDFDAJ"
+      />
+      <span
+        className="sc-nFpLZ dbeTqM"
+      >
+        0
+      </span>
+      <span
+        className="sc-nFpLZ dbeTqM"
+      >
+        5
+      </span>
+    </div>
+  </div>
+</div>
+`;

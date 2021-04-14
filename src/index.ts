@@ -7,6 +7,8 @@ export { ListRow } from './components/listRow/ListRow';
 export { TagContextMenu } from './components/tagContextMenu/TagContextMenu';
 export { DraggableItemsWrapper } from './elements/draggableItemsWrapper/DraggableItemsWrapper';
 export { Icon } from './elements/icon/Icon';
+export { RadioButtonGroup } from './elements/radioButtonGroup/RadioButtonGroup';
+export { SliderField } from './elements/sliderField/SliderField';
 export { TagIcon } from './elements/tagIcon/TagIcon';
 export { TagIconShadowWrapper } from './elements/tagIcon/TagIconShadow';
 export { TextIconButton } from './elements/textIconButton/TextIconButton';

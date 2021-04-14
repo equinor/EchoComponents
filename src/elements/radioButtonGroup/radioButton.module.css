@@ -1,0 +1,18 @@
+.header,
+.buttonWrapper span {
+    font-weight: 500 !important;
+}
+
+.buttonWrapper {
+    margin: 10px auto 0 auto;
+    display: flex;
+    max-width: 230px;
+    justify-content: space-between;
+}
+
+.buttonWrapper label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: black;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TextIconButton } from '../../elements/textIconButton/TextIconButton';
+import { TextIconButton } from '../../..';
 
 it('renders TextIconButton correctly', () => {
     const tree = renderer.create(<TextIconButton icon={'cut'} title="saved slices" onClick={jest.fn()} />).toJSON();
