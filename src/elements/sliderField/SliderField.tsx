@@ -12,7 +12,7 @@ export interface SliderFieldProps {
     style?: CSSProperties;
 }
 /**
- * Component that renders a slider with numeric values
+ * Component that renders a slider with numeric or custom values
  *
  * @param {SliderFieldProps} {
  *     value: Current value of the slider,

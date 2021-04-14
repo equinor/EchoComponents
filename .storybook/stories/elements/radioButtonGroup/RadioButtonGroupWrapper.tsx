@@ -20,7 +20,6 @@ const RadioButtonGroupWrapper: React.FC<RadioButtonGroupWrapperProps> = ({
     }, [options]);
 
     const onSelected = (index: number) => {
-        console.log('Index with number ', index, ' was selected.');
         const updatedChoices = optionsToUse.map((c, i) => {
             if (i === index) {
                 c.isChecked = true;
