@@ -34,7 +34,12 @@ export const DialogGenerator: React.FC<DialogGeneratorProps> = ({
                 <Dialog.Actions className={styles.footer}>
                     {actionButtons.map((actionButton, index) => {
                         return (
-                            <Button key={index} onClick={actionButton.onClick} variant={actionButton.variant}>
+                            <Button
+                                key={index}
+                                onClick={actionButton.onClick}
+                                variant={actionButton.variant}
+                                color={actionButton.color}
+                            >
                                 {actionButton.title}
                             </Button>
                         );
