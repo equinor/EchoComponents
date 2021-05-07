@@ -64,6 +64,15 @@
     --systems: #d5eaf4;
     --locations: #3eb54a;
 
+    /*Echopedia Stid OF-P colors */
+    --ofpDark: #f4d6a2;
+    --ofpLight: #faebce;
+
+    /* Popover colors */
+    --warningText: #ad6200;
+    --warningIcon: #ff9200;
+    --warningBackground: #ffe7d6;
+
     /* Dropdown colors */
     --dropDownButtonBackground: #f0f0f0;
     --dropDownTextColor: #808080;
