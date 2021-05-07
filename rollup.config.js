@@ -4,7 +4,6 @@ import svgr from '@svgr/rollup';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import del from 'rollup-plugin-delete';
-import dt from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
 import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 import ts2 from 'rollup-plugin-typescript2';
@@ -19,7 +18,7 @@ export default [
             format: 'cjs',
             exports: 'named'
         },
-        external: ['react', 'react-dom', '@equinor/echo-core', '@equinor/eds-core-react', 'styled-components'],
+        external: ['react', 'react-dom', '@equinor/eds-core-react', 'styled-components'],
         plugins: [
             del({ targets: 'dist/*', runOnce: true }),
             ts2(),
@@ -40,25 +39,6 @@ export default [
             svgr(),
             nodeResolve(),
             commonjs()
-        ]
-    },
-    {
-        input: pkg.source,
-        output: [
-            {
-                file: pkg.types,
-                format: 'es'
-            }
-        ],
-        plugins: [
-            dt(),
-            postcss({
-                extract: true,
-                modules: false,
-                minimize: true,
-                include: 'src/theme/theme.css',
-                exclude: ' /.module.css$/'
-            })
         ]
     }
 ];

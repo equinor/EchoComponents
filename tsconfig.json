@@ -13,7 +13,10 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react"
+        "jsx": "react",
+        "declaration": true,
+        "outDir": "./dist"
     },
-    "include": ["src"]
+    "include": ["src"],
+    "exclude": ["./src/__mocks__", "./src/__tests__"]
 }
