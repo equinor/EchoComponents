@@ -5,7 +5,7 @@ exports[`renders SliderField with labels correctly 1`] = `
   className="sliderField"
 >
   <p
-    className="sc-dlfnbm gsGDwC"
+    className="sc-hKgILt dMHJLh"
   >
     New slider with labels
   </p>
@@ -13,14 +13,14 @@ exports[`renders SliderField with labels correctly 1`] = `
     className="sliderWrapper"
   >
     <div
-      className="sc-gGmIRh xCiHu"
+      className="sc-dwfUOf cpbypg"
       max={3}
       min={0}
       value={2}
     >
       <input
         aria-labelledby="New slider with labels"
-        className="sc-ehSCib hynGsq"
+        className="sc-GqfZa cRyNNW"
         id="New slider with labels-thumb"
         max={3}
         min={0}
@@ -32,22 +32,22 @@ exports[`renders SliderField with labels correctly 1`] = `
         value={2}
       />
       <output
-        className="sc-higXBA iWlhii"
+        className="sc-fbkhIv kzdZEg"
         htmlFor="New slider with labels-thumb"
         value={2}
       >
         C
       </output>
       <div
-        className="sc-clsHhM sc-fbkhIv bIABfr gDFDAJ"
+        className="sc-TmcTc sc-jHVexB jkwUgb bBYyAO"
       />
       <span
-        className="sc-nFpLZ dbeTqM"
+        className="sc-clsHhM bUcShG"
       >
         A
       </span>
       <span
-        className="sc-nFpLZ dbeTqM"
+        className="sc-clsHhM bUcShG"
       >
         D
       </span>
@@ -61,7 +61,7 @@ exports[`renders SliderField with numeric values correctly  1`] = `
   className="sliderField"
 >
   <p
-    className="sc-dlfnbm gsGDwC"
+    className="sc-hKgILt dMHJLh"
   >
     New slider
   </p>
@@ -69,14 +69,14 @@ exports[`renders SliderField with numeric values correctly  1`] = `
     className="sliderWrapper"
   >
     <div
-      className="sc-gGmIRh iITkGT"
+      className="sc-dwfUOf gDbUcV"
       max={5}
       min={0}
       value={1}
     >
       <input
         aria-labelledby="New slider"
-        className="sc-ehSCib hynGsq"
+        className="sc-GqfZa cRyNNW"
         id="New slider-thumb"
         max={5}
         min={0}
@@ -88,22 +88,22 @@ exports[`renders SliderField with numeric values correctly  1`] = `
         value={1}
       />
       <output
-        className="sc-higXBA fLGBdp"
+        className="sc-fbkhIv ibYZJH"
         htmlFor="New slider-thumb"
         value={1}
       >
         1
       </output>
       <div
-        className="sc-clsHhM sc-fbkhIv bIABfr gDFDAJ"
+        className="sc-TmcTc sc-jHVexB jkwUgb bBYyAO"
       />
       <span
-        className="sc-nFpLZ dbeTqM"
+        className="sc-clsHhM bUcShG"
       >
         0
       </span>
       <span
-        className="sc-nFpLZ dbeTqM"
+        className="sc-clsHhM bUcShG"
       >
         5
       </span>

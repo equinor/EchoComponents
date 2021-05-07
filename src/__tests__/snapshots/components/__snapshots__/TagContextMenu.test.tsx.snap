@@ -49,12 +49,12 @@ exports[`renders open TagContextMenu correctly 1`] = `
       className="tagText"
     >
       <h5
-        className="sc-dlfnbm eTggQY tagHeader"
+        className="sc-hKgILt favPkT tagHeader"
       >
         11PT100
       </h5>
       <p
-        className="sc-dlfnbm gsGDwC tagDescription"
+        className="sc-hKgILt dMHJLh tagDescription"
       >
         Pressure Transmitter for Instrument Air Supply 
       </p>
@@ -63,17 +63,17 @@ exports[`renders open TagContextMenu correctly 1`] = `
       className="tagInfoIcon"
     >
       <button
-        className="sc-gsTCUz eUnAE"
+        className="sc-dlfnbm bmmLHw"
         disabled={false}
         tabIndex={0}
         type="button"
       >
         <span
-          className="sc-bdfBwQ ibGDsh"
+          className="sc-gsTCUz dRDfTG"
         >
           <svg
             aria-labelledby="eds-info_circle-1"
-            className="sc-idOhPF bqIcIz"
+            className="sc-kfzAmx blqdWU"
             fill="#007079"
             height="24px"
             name={null}
@@ -89,7 +89,7 @@ exports[`renders open TagContextMenu correctly 1`] = `
               tag information
             </title>
             <path
-              className="sc-dIUggk"
+              className="sc-fKFyDc"
               clipRule="evenodd"
               d="M12.01 22C17.53 22 22 17.52 22 12S17.53 2 12.01 2C6.48 2 2 6.48 2 12s4.48 10 10.01 10zM13 9V7h-2v2h2zm0 8v-6h-2v6h2zm7-5c0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8 8-3.58 8-8z"
               data-testid="eds-icon-path"

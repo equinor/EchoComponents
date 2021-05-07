@@ -48,15 +48,13 @@ const DataInfoPopover: React.FC<DataInfoPopoverProps> = ({
         <div className={style.wrapper}>
             <div className={style.arrow}></div>
             <div className={style.optionsPopover}>
-                {isLoading && dataToShow.length === 0 && <DotProgress variant="white" />}
+                {isLoading && dataToShow.length === 0 && <DotProgress color="neutral" />}
                 {showNoDataIndicator && !isLoading && dataToShow.length === 0 && (
                     <Banner className={style.banner}>
-                        <Banner.BannerIcon variant="info">
+                        <Banner.Icon variant="info">
                             <Icon name="info_circle" title="No data to display" color={themeConst.asBuilt} />
-                        </Banner.BannerIcon>
-                        <Banner.BannerMessage className={style.infoMessage}>
-                            No information to display
-                        </Banner.BannerMessage>
+                        </Banner.Icon>
+                        <Banner.Message className={style.infoMessage}>No information to display</Banner.Message>
                     </Banner>
                 )}
                 {Object.keys(getDataGroupings).map((key) => {
