@@ -60,7 +60,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({
             ></div>
             <div className={styles.header}>
                 {showTitleToolTip ? (
-                    <Tooltip placement="bottomLeft" title={title}>
+                    <Tooltip placement="bottom-start" title={title}>
                         <Typography variant="h3" className={styles.title} ref={titleRef}>
                             {title}
                         </Typography>
@@ -71,7 +71,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({
                     </Typography>
                 )}
                 {showSubTitleToolTip ? (
-                    <Tooltip placement="bottomLeft" title={subTitle}>
+                    <Tooltip placement="bottom-start" title={subTitle}>
                         <Typography className={styles.subTitle} variant="h3" ref={subTitleRef}>
                             {subTitle}
                         </Typography>
