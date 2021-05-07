@@ -1,7 +1,7 @@
 import { Typography } from '@equinor/eds-core-react';
 import React, { CSSProperties } from 'react';
-import { themeConst } from '../..';
 import { Icon } from '../../elements/icon/Icon';
+import { themeConst } from '../../theme/themeConst';
 import { ExpandableRowProps } from '../../types/expandableRowProps';
 import { IconListItem } from '../../types/iconListItem';
 import styles from './listRow.module.css';

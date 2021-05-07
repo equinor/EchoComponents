@@ -23,7 +23,6 @@
     "author": "Echo Core",
     "license": "MIT",
     "peerDependencies": {
-        "@equinor/echo-core": "0.0.4",
         "@equinor/echo-utils": "0.0.4",
         "@equinor/eds-core-react": "^0.8.3",
         "react": "^16.13.1",
@@ -38,7 +37,6 @@
         "@babel/preset-env": "^7.12.11",
         "@babel/preset-react": "^7.12.10",
         "@babel/preset-typescript": "^7.12.7",
-        "@equinor/echo-core": "0.0.4",
         "@equinor/echo-utils": "0.0.4",
         "@equinor/eds-core-react": "^0.8.3",
         "@rollup/plugin-node-resolve": "^11.1.0",

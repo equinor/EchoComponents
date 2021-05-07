@@ -46,6 +46,15 @@ export const themeConst = {
     systems: '#D5EAF4',
     locations: '#3EB54A',
 
+    /*Echopedia Stid OF-P colors */
+    ofpDark: '#f4d6a2',
+    ofpLight: '#faebce',
+
+    /* Popover colors */
+    warningText: '#ad6200',
+    warningIcon: '#ff9200',
+    warningBackground: '#ffe7d6',
+
     /* Dropdown colors */
     dropDownButtonBackground: '#f0f0f0',
     dropDownTextColor: '#808080',
