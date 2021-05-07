@@ -3,7 +3,7 @@
 exports[`renders open DataInfoButton with badge correctly 1`] = `
 <button
   aria-label="P&ID"
-  className="sc-gsTCUz eUnAE undefined button buttonWithBadge"
+  className="sc-dlfnbm bmmLHw undefined button buttonWithBadge"
   data-count={5}
   disabled={false}
   onClick={[MockFunction]}
@@ -11,9 +11,13 @@ exports[`renders open DataInfoButton with badge correctly 1`] = `
   type="button"
 >
   <span
-    className="sc-bdfBwQ ibGDsh"
+    className="sc-gsTCUz dRDfTG"
   >
-    P&ID
+    <span
+      className="sc-bdfBwQ bdhdma"
+    >
+      P&ID
+    </span>
   </span>
 </button>
 `;
@@ -21,7 +25,7 @@ exports[`renders open DataInfoButton with badge correctly 1`] = `
 exports[`renders open DataInfoButton with badge with over 99 items correctly 1`] = `
 <button
   aria-label="Others"
-  className="sc-gsTCUz eUnAE undefined button buttonWithBadge"
+  className="sc-dlfnbm bmmLHw undefined button buttonWithBadge"
   data-count="99+"
   disabled={false}
   onClick={[MockFunction]}
@@ -29,9 +33,13 @@ exports[`renders open DataInfoButton with badge with over 99 items correctly 1`]
   type="button"
 >
   <span
-    className="sc-bdfBwQ ibGDsh"
+    className="sc-gsTCUz dRDfTG"
   >
-    Others
+    <span
+      className="sc-bdfBwQ bdhdma"
+    >
+      Others
+    </span>
   </span>
 </button>
 `;
@@ -39,7 +47,7 @@ exports[`renders open DataInfoButton with badge with over 99 items correctly 1`]
 exports[`renders open DataInfoButton without badge correctly 1`] = `
 <button
   aria-label="D&ID"
-  className="sc-gsTCUz eUnAE undefined button "
+  className="sc-dlfnbm bmmLHw undefined button "
   data-count={1}
   disabled={false}
   onClick={[MockFunction]}
@@ -47,9 +55,13 @@ exports[`renders open DataInfoButton without badge correctly 1`] = `
   type="button"
 >
   <span
-    className="sc-bdfBwQ ibGDsh"
+    className="sc-gsTCUz dRDfTG"
   >
-    D&ID
+    <span
+      className="sc-bdfBwQ bdhdma"
+    >
+      D&ID
+    </span>
   </span>
 </button>
 `;

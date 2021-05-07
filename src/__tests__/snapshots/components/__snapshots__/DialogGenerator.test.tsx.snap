@@ -5,21 +5,22 @@ exports[`renders DialogGenerator without buttons 1`] = `
   aria-describedby="eds-dialog-customcontent"
   aria-labelledby="eds-dialog-title"
   aria-modal={true}
-  className="sc-cBNfnY gvVtXL"
+  className="sc-iUuytg jsxczE sc-iBaPrD iNLDTv"
+  elevation="0 11px 15px rgba(0, 0, 0, 0.2),0 9px 46px rgba(0, 0, 0, 0.12),0 24px 38px rgba(0, 0, 0, 0.14)"
   role="dialog"
   tabIndex={0}
 >
   <div
-    className="sc-jcVebW gncZGd"
+    className="sc-cTkwdZ cWkTID"
     id="eds-dialog-title"
   >
     This is the title
   </div>
   <hr
-    className="sc-jrAGrp duBmmQ sc-bZSQDF QRFwg"
+    className="sc-iqHYGH ccXakJ sc-jNMdTA dwWGAg"
   />
   <div
-    className="sc-iUuytg cHAQWi"
+    className="sc-dOSReg iKqDIY"
     id="eds-dialog-customcontent"
   >
     <p>
@@ -34,7 +35,8 @@ exports[`renders full DialogGenerator 1`] = `
   aria-describedby="eds-dialog-customcontent"
   aria-labelledby="eds-dialog-title"
   aria-modal={true}
-  className="sc-cBNfnY gvVtXL"
+  className="sc-iUuytg jsxczE sc-iBaPrD iNLDTv"
+  elevation="0 11px 15px rgba(0, 0, 0, 0.2),0 9px 46px rgba(0, 0, 0, 0.12),0 24px 38px rgba(0, 0, 0, 0.14)"
   role="dialog"
   style={
     Object {
@@ -44,16 +46,16 @@ exports[`renders full DialogGenerator 1`] = `
   tabIndex={0}
 >
   <div
-    className="sc-jcVebW gncZGd"
+    className="sc-cTkwdZ cWkTID"
     id="eds-dialog-title"
   >
     This is the title
   </div>
   <hr
-    className="sc-jrAGrp duBmmQ sc-bZSQDF QRFwg"
+    className="sc-iqHYGH ccXakJ sc-jNMdTA dwWGAg"
   />
   <div
-    className="sc-iUuytg cHAQWi"
+    className="sc-dOSReg iKqDIY"
     id="eds-dialog-customcontent"
   >
     <p>
@@ -61,32 +63,40 @@ exports[`renders full DialogGenerator 1`] = `
     </p>
   </div>
   <div
-    className="sc-citwmv jgLzeC footer"
+    className="sc-eggNIi gJwBea footer"
   >
     <button
-      className="sc-gsTCUz gLPsnZ"
+      className="sc-dlfnbm iLZdyH"
       disabled={false}
       onClick={[MockFunction]}
       tabIndex={0}
       type="button"
     >
       <span
-        className="sc-bdfBwQ ibGDsh"
+        className="sc-gsTCUz dRDfTG"
       >
-        I changed my mind
+        <span
+          className="sc-bdfBwQ bdhdma"
+        >
+          I changed my mind
+        </span>
       </span>
     </button>
     <button
-      className="sc-gsTCUz ROJxf"
+      className="sc-dlfnbm iMaTbo"
       disabled={false}
       onClick={[MockFunction]}
       tabIndex={0}
       type="button"
     >
       <span
-        className="sc-bdfBwQ ibGDsh"
+        className="sc-gsTCUz dRDfTG"
       >
-        I agree
+        <span
+          className="sc-bdfBwQ bdhdma"
+        >
+          I agree
+        </span>
       </span>
     </button>
   </div>

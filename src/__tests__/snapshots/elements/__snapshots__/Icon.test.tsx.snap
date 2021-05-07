@@ -3,7 +3,7 @@
 exports[`renders Icon wrapper correctly 1`] = `
 <svg
   aria-labelledby="eds-arrow_up-1"
-  className="sc-idOhPF bqIcIz"
+  className="sc-kfzAmx blqdWU"
   fill="#000"
   height="24px"
   name={null}
@@ -19,7 +19,7 @@ exports[`renders Icon wrapper correctly 1`] = `
     Up
   </title>
   <path
-    className="sc-dIUggk"
+    className="sc-fKFyDc"
     clipRule="evenodd"
     d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
     data-testid="eds-icon-path"
