@@ -23,7 +23,8 @@ export const Default = Template.bind({});
 Default.args = {
     data: [
         'Aasta Hanseen',
-        'Johan Sverdrup',
+        'Johan Sverdrup operation & project',
+        'Gullfaks Common documents (A+B+C+Veslefrikk)',
         'Johan Castberg',
         'Mongstad',
         'Aasta Hanseen',
@@ -36,5 +37,6 @@ Default.args = {
     showSearch: true,
     isDisabled: false,
     disabledText: 'Disabled while syncing or loading data',
+    maxCharacterCount: 24,
     position: 'absolute'
 };

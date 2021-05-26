@@ -16,6 +16,7 @@ interface DropdownItemProps {
     filterFunc?: (data: any[], filter: string) => any[];
     isDisabled?: boolean;
     disabledText?: string;
+    maxCharacterCount?: number;
     variant?: 'compact' | 'default';
     showSearch: boolean;
     position?: 'relative' | 'absolute';
@@ -50,6 +51,7 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
     setSelected,
     isDisabled,
     disabledText = 'Disabled',
+    maxCharacterCount,
     variant,
     showSearch,
     position = 'absolute',
@@ -91,6 +93,14 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
     const handleSetFilter = (event: React.ChangeEvent<HTMLInputElement>): void => {
         event.stopPropagation();
         setFilter(event.currentTarget.value);
+    };
+
+    const generateDisplayText = (text: string, characterLimit?: number): string => {
+        if (!characterLimit || text.length <= characterLimit) {
+            return text;
+        } else {
+            return text.slice(0, characterLimit).concat('...');
+        }
     };
 
     const RenderDropdown = (): JSX.Element => {
@@ -160,7 +170,9 @@ export const Dropdown: React.FC<DropdownItemProps> = ({
                 onClick={(event: React.MouseEvent): void => handleIsOpenToggle(event)}
                 title={isDisabled ? disabledText : 'Choose an option'}
             >
-                <div data-testid="display-text">{selected.length > 0 ? selected : placeholder} </div>
+                <div data-testid="display-text">
+                    {selected.length > 0 ? generateDisplayText(selected, maxCharacterCount) : placeholder}{' '}
+                </div>
                 <Icon
                     name="arrow_drop_down"
                     title="Choose options"
