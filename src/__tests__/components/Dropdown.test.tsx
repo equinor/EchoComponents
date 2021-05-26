@@ -80,7 +80,7 @@ test('should show selected option when one is provided', () => {
         />
     );
 
-    expect(screen.getByTestId('display-text').textContent).toBe('Selected value ');
+    expect(screen.getByTestId('display-text').textContent).toBe('Selected value');
 });
 
 test('should show placeholder text if selected option is not provided', () => {
@@ -95,5 +95,5 @@ test('should show placeholder text if selected option is not provided', () => {
         />
     );
 
-    expect(screen.getByTestId('display-text').textContent).toBe('Placeholder text ');
+    expect(screen.getByTestId('display-text').textContent).toBe('Placeholder text');
 });

@@ -13,7 +13,6 @@ exports[`renders dropdown with Default style and not showSearch correctly 1`] = 
       data-testid="display-text"
     >
       Placeholder text
-       
     </div>
     <svg
       aria-labelledby="eds-arrow_drop_down-8"
@@ -74,7 +73,6 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
       data-testid="display-text"
     >
       Placeholder text
-       
     </div>
     <svg
       aria-labelledby="eds-arrow_drop_down-4"

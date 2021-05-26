@@ -8,6 +8,7 @@ export interface DropdownWrapperProps {
     showSearch: boolean;
     isDisabled?: boolean;
     disabledText?: string;
+    maxCharacterCount?: number;
     variant?: 'compact' | 'default';
     position?: 'relative' | 'absolute';
 }
@@ -18,6 +19,7 @@ const TagContextMenuWrapper: React.FC<DropdownWrapperProps> = ({
     placeholder,
     isDisabled,
     disabledText,
+    maxCharacterCount,
     variant,
     showSearch,
     position
@@ -38,6 +40,7 @@ const TagContextMenuWrapper: React.FC<DropdownWrapperProps> = ({
                     placeholder={placeholder}
                     isDisabled={isDisabled}
                     disabledText={disabledText}
+                    maxCharacterCount={maxCharacterCount}
                     variant={variant}
                     showSearch={showSearch}
                     position={position}
