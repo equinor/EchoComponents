@@ -1,9 +1,6 @@
 name: Publish to GitHub Pages
 
 on:
-name: Publish to GitHub Pages
-
-on:
     push:
         branches:
             - main
