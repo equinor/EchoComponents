@@ -1,6 +1,6 @@
 {
     "name": "@equinor/echo-components",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Package for creating echo related components.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -38,7 +38,7 @@
         "@babel/preset-react": "^7.12.10",
         "@babel/preset-typescript": "^7.12.7",
         "@equinor/echo-utils": "^0.0.9",
-        "@equinor/eds-core-react": "^0.11.1",
+        "@equinor/eds-core-react": "^0.12.1",
         "@rollup/plugin-node-resolve": "^11.1.0",
         "@rollup/plugin-typescript": "^8.0.0",
         "@rollup/plugin-url": "^6.0.0",

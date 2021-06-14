@@ -1,0 +1,70 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    padding-top: var(--small);
+    padding-bottom: var(--small);
+}
+
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    font-size: 10px !important;
+    color: var(--echoText) !important;
+    font-weight: 500 !important;
+}
+
+.tagWrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tag {
+    word-break: 'break-all';
+}
+
+.icon {
+    position: relative;
+    transform-origin: left top;
+    width: 40px;
+    height: 40px;
+    border-radius: 10rem;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-right: var(--small);
+}
+
+.tagMoreButton {
+    padding: 8px;
+    margin-left: auto;
+}
+
+.popover {
+    width: 200px !important;
+}
+
+.popoverTitle {
+    font-size: 10px !important;
+    font-weight: 500 !important;
+}
+
+.popover > button {
+    display: none !important;
+}
+
+.popover > div:nth-child(2) {
+    height: 2px !important;
+}
+
+.popover > div:nth-child(3) > button {
+    padding-left: 0 !important;
+    width: 100% !important;
+}
+
+.popover > div:nth-child(2) > hr {
+    height: 0 !important;
+}

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders inlineTagIconLink correctly 1`] = `
+<div
+  className="tagWrapper"
+  onClick={[Function]}
+>
+  <div
+    className="icon"
+    style={
+      Object {
+        "background": "#FF0000",
+      }
+    }
+  >
+    <svg
+      aria-label="tag"
+    />
+  </div>
+  <div>
+    <p
+      className="sc-eCssSg bvfwKK tag"
+    >
+      test
+    </p>
+    <p
+      className="sc-eCssSg bHjGEK description"
+    >
+      221312
+    </p>
+  </div>
+</div>
+`;
