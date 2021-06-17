@@ -5,18 +5,18 @@ exports[`renders ButtonWithPopover with more info button correctly 1`] = `
   className="wrapper"
 >
   <button
-    className="sc-dlfnbm bmmLHw button"
+    className="sc-hKgILt lkgudK button"
     disabled={false}
     onClick={[Function]}
     tabIndex={0}
     type="button"
   >
     <span
-      className="sc-gsTCUz dRDfTG"
+      className="sc-dlfnbm iOlYhO"
     >
       <svg
         aria-labelledby="eds-more_horizontal-1"
-        className="sc-kfzAmx blqdWU"
+        className="sc-iwyYcG dqcEJR"
         fill="#007079"
         height="24px"
         name={null}
@@ -32,7 +32,7 @@ exports[`renders ButtonWithPopover with more info button correctly 1`] = `
           more options
         </title>
         <path
-          className="sc-fKFyDc"
+          className="sc-cxFLnm"
           clipRule="evenodd"
           d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-8 2c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"
           data-testid="eds-icon-path"

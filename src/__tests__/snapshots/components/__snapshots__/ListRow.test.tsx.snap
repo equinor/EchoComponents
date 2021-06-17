@@ -15,7 +15,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
       >
         <svg
           aria-labelledby="eds-unfold_more-3"
-          className="sc-kfzAmx blqdWU"
+          className="sc-iwyYcG dqcEJR"
           fill="#007079"
           height="24px"
           name={null}
@@ -31,7 +31,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
             Move
           </title>
           <path
-            className="sc-fKFyDc"
+            className="sc-cxFLnm"
             clipRule="evenodd"
             d="M15.17 9L12 5.83 8.83 9 7.41 7.59 12 3l4.58 4.59L15.17 9zm-6.34 6L12 18.17 15.17 15l1.42 1.41L12 21l-4.58-4.59L8.83 15z"
             data-testid="eds-icon-path"
@@ -46,12 +46,12 @@ exports[`renders ListRow correctly with expandable row 1`] = `
         className="info"
       >
         <p
-          className="sc-hKgILt bCyDSy"
+          className="sc-eCssSg fvZGxZ"
         >
           First item
         </p>
         <p
-          className="sc-hKgILt dMHJLh"
+          className="sc-eCssSg bHjGEK"
         >
           Sub title
         </p>
@@ -66,7 +66,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
       >
         <svg
           aria-labelledby="eds-edit-4"
-          className="sc-kfzAmx blqdWU"
+          className="sc-iwyYcG dqcEJR"
           fill="#007079"
           height="24px"
           name={null}
@@ -82,7 +82,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
             edit
           </title>
           <path
-            className="sc-fKFyDc"
+            className="sc-cxFLnm"
             clipRule="evenodd"
             d="M18.368 3.29l2.34 2.34c.39.39.39 1.02 0 1.41l-1.83 1.83-3.75-3.75 1.83-1.83c.19-.19.44-.29.7-.29.26 0 .51.09.71.29zM2.998 17.25V21h3.75l11.06-11.06-3.75-3.75-11.06 11.06zM5.918 19h-.92v-.92l9.06-9.06.92.92L5.918 19z"
             data-testid="eds-icon-path"
@@ -99,7 +99,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
       >
         <svg
           aria-labelledby="eds-more_vertical-5"
-          className="sc-kfzAmx blqdWU"
+          className="sc-iwyYcG dqcEJR"
           fill="#007079"
           height="24px"
           name={null}
@@ -115,7 +115,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
             Expand
           </title>
           <path
-            className="sc-fKFyDc"
+            className="sc-cxFLnm"
             clipRule="evenodd"
             d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-2 8c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"
             data-testid="eds-icon-path"
@@ -137,7 +137,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
     >
       <svg
         aria-labelledby="eds-edit-6"
-        className="sc-kfzAmx blqdWU"
+        className="sc-iwyYcG dqcEJR"
         fill="#007079"
         height="24px"
         name={null}
@@ -153,7 +153,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
           edit
         </title>
         <path
-          className="sc-fKFyDc"
+          className="sc-cxFLnm"
           clipRule="evenodd"
           d="M18.368 3.29l2.34 2.34c.39.39.39 1.02 0 1.41l-1.83 1.83-3.75-3.75 1.83-1.83c.19-.19.44-.29.7-.29.26 0 .51.09.71.29zM2.998 17.25V21h3.75l11.06-11.06-3.75-3.75-11.06 11.06zM5.918 19h-.92v-.92l9.06-9.06.92.92L5.918 19z"
           data-testid="eds-icon-path"
@@ -170,7 +170,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
     >
       <svg
         aria-labelledby="eds-close-7"
-        className="sc-kfzAmx blqdWU"
+        className="sc-iwyYcG dqcEJR"
         fill="#007079"
         height="24px"
         name={null}
@@ -186,7 +186,7 @@ exports[`renders ListRow correctly with expandable row 1`] = `
           Close
         </title>
         <path
-          className="sc-fKFyDc"
+          className="sc-cxFLnm"
           clipRule="evenodd"
           d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
           data-testid="eds-icon-path"
@@ -216,7 +216,7 @@ exports[`renders ListRow correctly without expandable row 1`] = `
       >
         <svg
           aria-labelledby="eds-unfold_more-1"
-          className="sc-kfzAmx blqdWU"
+          className="sc-iwyYcG dqcEJR"
           fill="#007079"
           height="24px"
           name={null}
@@ -232,7 +232,7 @@ exports[`renders ListRow correctly without expandable row 1`] = `
             Move
           </title>
           <path
-            className="sc-fKFyDc"
+            className="sc-cxFLnm"
             clipRule="evenodd"
             d="M15.17 9L12 5.83 8.83 9 7.41 7.59 12 3l4.58 4.59L15.17 9zm-6.34 6L12 18.17 15.17 15l1.42 1.41L12 21l-4.58-4.59L8.83 15z"
             data-testid="eds-icon-path"
@@ -247,12 +247,12 @@ exports[`renders ListRow correctly without expandable row 1`] = `
         className="info"
       >
         <p
-          className="sc-hKgILt bCyDSy"
+          className="sc-eCssSg fvZGxZ"
         >
           First item
         </p>
         <p
-          className="sc-hKgILt dMHJLh"
+          className="sc-eCssSg bHjGEK"
         >
           Sub title
         </p>
@@ -267,7 +267,7 @@ exports[`renders ListRow correctly without expandable row 1`] = `
       >
         <svg
           aria-labelledby="eds-edit-2"
-          className="sc-kfzAmx blqdWU"
+          className="sc-iwyYcG dqcEJR"
           fill="#007079"
           height="24px"
           name={null}
@@ -283,7 +283,7 @@ exports[`renders ListRow correctly without expandable row 1`] = `
             edit
           </title>
           <path
-            className="sc-fKFyDc"
+            className="sc-cxFLnm"
             clipRule="evenodd"
             d="M18.368 3.29l2.34 2.34c.39.39.39 1.02 0 1.41l-1.83 1.83-3.75-3.75 1.83-1.83c.19-.19.44-.29.7-.29.26 0 .51.09.71.29zM2.998 17.25V21h3.75l11.06-11.06-3.75-3.75-11.06 11.06zM5.918 19h-.92v-.92l9.06-9.06.92.92L5.918 19z"
             data-testid="eds-icon-path"

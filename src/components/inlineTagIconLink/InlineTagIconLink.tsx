@@ -1,4 +1,4 @@
-import { Typography } from '@equinor/eds-core-react';
+import { Button, Typography } from '@equinor/eds-core-react';
 import React from 'react';
 import { getIcon } from '../../helpers/getIcon';
 import styles from './inlineTagIconLink.module.css';
@@ -19,7 +19,7 @@ export const InlineTagIconLink: React.FC<InlineTagIconLinkProps> = ({
     legendColor
 }: InlineTagIconLinkProps): JSX.Element => {
     return (
-        <div onClick={onClickHandler} className={styles.tagWrapper}>
+        <Button variant={'ghost'} onClick={onClickHandler} className={styles.tagButton}>
             <div style={{ background: legendColor }} className={styles.icon}>
                 {getIcon(tagCategoryDescription ?? '')}
             </div>
@@ -31,7 +31,7 @@ export const InlineTagIconLink: React.FC<InlineTagIconLinkProps> = ({
                     {description}
                 </Typography>
             </div>
-        </div>
+        </Button>
     );
 };
 

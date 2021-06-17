@@ -15,10 +15,10 @@ const Template: Story<InlineTagIconLinkProps> = (args) => <InlineTagIconLink {..
 export const Default = Template.bind({});
 
 Default.args = {
-    tagNo: 'test',
-    description: '221312',
+    tagNo: 'D-VG10-0130',
+    description: 'GATE VALVE',
     tagCategoryDescription: 'testset32323',
-    legendColor: '#FF0000',
+    legendColor: '#007079',
     onClickHandler: () => {
         console.log('ff');
     }

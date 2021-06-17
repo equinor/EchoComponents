@@ -1,14 +1,11 @@
-.wrapper {
-    display: flex;
-    width: 100%;
-    padding-top: var(--small);
-    padding-bottom: var(--small);
+.tagButton {
+    cursor: pointer;
+    height: auto;
 }
 
 .description {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
+    display: inline-block;
+    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: break-word;
@@ -17,14 +14,8 @@
     font-weight: 500 !important;
 }
 
-.tagWrapper {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
 .tag {
-    word-break: 'break-all';
+    word-break: break-all;
 }
 
 .icon {

@@ -16,7 +16,7 @@ exports[`renders dropdown with Default style and not showSearch correctly 1`] = 
     </div>
     <svg
       aria-labelledby="eds-arrow_drop_down-8"
-      className="sc-kfzAmx blqdWU"
+      className="sc-iwyYcG dqcEJR"
       fill="#007079"
       height="24px"
       name={null}
@@ -32,7 +32,7 @@ exports[`renders dropdown with Default style and not showSearch correctly 1`] = 
         Choose options
       </title>
       <path
-        className="sc-fKFyDc"
+        className="sc-cxFLnm"
         clipRule="evenodd"
         d="M7 9.5l5 5 5-5H7z"
         data-testid="eds-icon-path"
@@ -76,7 +76,7 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
     </div>
     <svg
       aria-labelledby="eds-arrow_drop_down-4"
-      className="sc-kfzAmx blqdWU"
+      className="sc-iwyYcG dqcEJR"
       fill="#007079"
       height="24px"
       name={null}
@@ -92,7 +92,7 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
         Choose options
       </title>
       <path
-        className="sc-fKFyDc"
+        className="sc-cxFLnm"
         clipRule="evenodd"
         d="M7 9.5l5 5 5-5H7z"
         data-testid="eds-icon-path"
@@ -117,14 +117,14 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
       className="searchWrapper"
     >
       <span
-        className="sc-ehSCib zyaWF"
+        className="sc-clsHhM gFiWzK"
         disabled={false}
         onClick={[Function]}
         role="search"
       >
         <svg
           aria-labelledby="eds-search-5"
-          className="sc-kfzAmx blqdWU"
+          className="sc-iwyYcG dqcEJR"
           fill="currentColor"
           height="16px"
           name={null}
@@ -140,7 +140,7 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
             search icon
           </title>
           <path
-            className="sc-fKFyDc"
+            className="sc-cxFLnm"
             clipRule="evenodd"
             d="M14.966 14.255h.79l4.99 5-1.49 1.49-5-4.99v-.79l-.27-.28a6.471 6.471 0 01-4.23 1.57 6.5 6.5 0 116.5-6.5c0 1.61-.59 3.09-1.57 4.23l.28.27zm-9.71-4.5c0 2.49 2.01 4.5 4.5 4.5s4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5-4.5 2.01-4.5 4.5z"
             data-testid="eds-icon-path"
@@ -152,7 +152,7 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
         </svg>
         <input
           aria-label="search input"
-          className="sc-lcujXC itPsTo"
+          className="sc-fbkhIv kKvEuX"
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -163,14 +163,14 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
           value=""
         />
         <div
-          className="sc-gGmIRh gysZdx"
+          className="sc-GqfZa eKgYDs"
           onClick={[Function]}
           role="button"
           size={16}
         >
           <svg
             aria-labelledby="eds-close-6"
-            className="sc-kfzAmx blqdWU"
+            className="sc-iwyYcG dqcEJR"
             fill="currentColor"
             height="16px"
             name={null}
@@ -186,7 +186,7 @@ exports[`renders dropdown with Home style and showSearch correctly 1`] = `
               clear
             </title>
             <path
-              className="sc-fKFyDc"
+              className="sc-cxFLnm"
               clipRule="evenodd"
               d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
               data-testid="eds-icon-path"
