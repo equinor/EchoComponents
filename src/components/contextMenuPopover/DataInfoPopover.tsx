@@ -10,6 +10,7 @@ export interface DataInfoPopoverProps {
     dataToShow: DataInformation[];
     isLoading: boolean;
 }
+const { BannerIcon, BannerMessage } = Banner;
 /**
  * Component that renders a popover with data information buttons
  *
@@ -51,10 +52,10 @@ const DataInfoPopover: React.FC<DataInfoPopoverProps> = ({
                 {isLoading && dataToShow.length === 0 && <DotProgress color="neutral" />}
                 {showNoDataIndicator && !isLoading && dataToShow.length === 0 && (
                     <Banner className={style.banner}>
-                        <Banner.Icon variant="info">
+                        <BannerIcon variant="info">
                             <Icon name="info_circle" title="No data to display" color={themeConst.asBuilt} />
-                        </Banner.Icon>
-                        <Banner.Message className={style.infoMessage}>No information to display</Banner.Message>
+                        </BannerIcon>
+                        <BannerMessage className={style.infoMessage}>No information to display</BannerMessage>
                     </Banner>
                 )}
                 {Object.keys(getDataGroupings).map((key) => {
