@@ -26,29 +26,35 @@ const ContextMenuWrapper: React.FC<ContextMenuWrapperProps> = ({
     selectedClassName
 }: ContextMenuWrapperProps): JSX.Element => {
     const [fetchedDataToShow, setFetchedDataToShow] = useState<DataInformation[]>([]);
-    const [expanded, setExpanded] = useState(false);
+    const [expandContextMenu, setExpandContextMenu] = useState(false);
+    const [expandPopover, setExpandPopover] = useState(false);
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const openTagInformation = (): void => {
-        setExpanded(!expanded);
+        setExpandContextMenu(!expandContextMenu);
     };
 
     const fetchDataToShow = (): void => {
-        setIsLoading(true);
-        setFetchedDataToShow([]);
+        if (expandPopover) {
+            setExpandPopover(false);
+            setFetchedDataToShow([]);
+        } else {
+            setExpandPopover(true);
+            setIsLoading(true);
 
-        setTimeout(function () {
-            setFetchedDataToShow(dataToShow);
-            setIsLoading(false);
-        }, 3000);
+            setTimeout(function () {
+                setFetchedDataToShow(dataToShow);
+                setIsLoading(false);
+            }, 3000);
+        }
     };
 
     return (
         <ContextMenu
             icon={getIcon(icon)}
             legendColor={legendColor}
-            expanded={expanded}
-            setExpanded={setExpanded}
+            expanded={expandContextMenu}
+            setExpanded={setExpandContextMenu}
             tagNo={tagNo}
             description={description}
             positionStyle={position}
@@ -57,8 +63,9 @@ const ContextMenuWrapper: React.FC<ContextMenuWrapperProps> = ({
             selectedClassName={selectedClassName}
         >
             <ButtonWithPopover
-                fetchDataToShow={fetchDataToShow}
+                onShowMoreClicked={fetchDataToShow}
                 isLoading={isLoading}
+                expanded={expandPopover}
                 fetchedData={fetchedDataToShow}
             />
         </ContextMenu>

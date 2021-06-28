@@ -10,6 +10,7 @@ export interface DataInfoPopoverProps {
     dataToShow: DataInformation[];
     isLoading: boolean;
 }
+
 /**
  * Component that renders a popover with data information buttons
  *

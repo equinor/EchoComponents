@@ -9,7 +9,12 @@ it('renders ButtonWithPopover with more info button correctly', () => {
 
     const tree = renderer
         .create(
-            <ButtonWithPopover fetchDataToShow={fetchDataToShow} isLoading={false} fetchedData={fetchedDataToShow} />
+            <ButtonWithPopover
+                expanded={true}
+                onShowMoreClicked={fetchDataToShow}
+                isLoading={false}
+                fetchedData={fetchedDataToShow}
+            />
         )
         .toJSON();
     expect(tree).toMatchSnapshot();
