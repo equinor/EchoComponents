@@ -4,87 +4,86 @@ import React from 'react';
 import ButtonWithPopover from '../../components/buttonWithPopover/ButtonWithPopover';
 import { DataInformation } from '../../types/dataInformation';
 
-test('should click show more and popover button should show open state', () => {
-    const fetchDataToShow = jest.fn();
-    const fetchedDataToShow: DataInformation[] = [];
+test('popover button should show open state', () => {
+    let expanded = true;
     const isLoading = false;
+    const setExpanded = (): void => {
+        expanded = true;
+    };
+    const fetchedDataToShow: DataInformation[] = [];
 
     render(
         <ButtonWithPopover
-            expanded={true}
-            onShowMoreClicked={fetchDataToShow}
+            expanded={expanded}
+            onShowMoreClicked={setExpanded}
             fetchedData={fetchedDataToShow}
             isLoading={isLoading}
         />
     );
 
-    const showPopoverButton = screen.getByRole(`button`);
-
-    fireEvent.click(showPopoverButton);
-
-    expect(fetchDataToShow).toHaveBeenCalledTimes(1);
     expect(screen.getByLabelText('close more options')).toBeTruthy();
     expect(screen.queryByText('more options')).toBeNull();
 });
 
-test('should click show more and popover button should show loading state', () => {
-    const fetchDataToShow = jest.fn();
+test('popover button should show loading state', () => {
     const fetchedDataToShow: DataInformation[] = [];
     const isLoading = true;
 
+    let expanded = true;
+    const setExpanded = (): void => {
+        expanded = true;
+    };
+
     render(
         <ButtonWithPopover
-            expanded={true}
-            onShowMoreClicked={fetchDataToShow}
+            expanded={expanded}
+            onShowMoreClicked={setExpanded}
             fetchedData={fetchedDataToShow}
             isLoading={isLoading}
         />
     );
 
-    const showPopoverButton = screen.getByRole(`button`);
-
-    fireEvent.click(showPopoverButton);
-
-    expect(fetchDataToShow).toHaveBeenCalledTimes(1);
     expect(screen.getAllByRole('progressbar')).toBeTruthy();
     expect(screen.queryByText('more options')).toBeNull();
 });
 
-test('should click show more and popover data info buttons should be visible', () => {
-    const fetchDataToShow = jest.fn();
+test('popover data info buttons should be visible', () => {
     const fetchedDataToShow: DataInformation[] = [
         { itemType: 'document', numberOfItems: 4, ariaLabel: 'P&ID', label: 'P&ID', onTagInfoClicked: jest.fn() },
         { itemType: 'notifications', numberOfItems: 4, ariaLabel: 'M2', label: 'M2', onTagInfoClicked: jest.fn() }
     ];
     const isLoading = false;
 
+    let expanded = true;
+    const setExpanded = (): void => {
+        expanded = true;
+    };
+
     render(
         <ButtonWithPopover
-            expanded={true}
-            onShowMoreClicked={fetchDataToShow}
+            expanded={expanded}
+            onShowMoreClicked={setExpanded}
             fetchedData={fetchedDataToShow}
             isLoading={isLoading}
         />
     );
 
-    const showPopoverButton = screen.getByRole(`button`);
-
-    fireEvent.click(showPopoverButton);
-
-    expect(fetchDataToShow).toHaveBeenCalledTimes(1);
     expect(screen.getByLabelText(fetchedDataToShow[0].ariaLabel as string)).toBeTruthy();
     expect(screen.getByLabelText(fetchedDataToShow[1].ariaLabel as string)).toBeTruthy();
 });
 
 test('should click show more, then hide again and fetch data should only be called once', () => {
-    const fetchDataToShow = jest.fn();
     const fetchedDataToShow: DataInformation[] = [];
     const isLoading = false;
+    let expanded = false;
+    const setExpanded = (): void => {
+        expanded = true;
+    };
 
     render(
         <ButtonWithPopover
-            expanded={true}
-            onShowMoreClicked={fetchDataToShow}
+            expanded={expanded}
+            onShowMoreClicked={setExpanded}
             fetchedData={fetchedDataToShow}
             isLoading={isLoading}
         />
@@ -97,7 +96,6 @@ test('should click show more, then hide again and fetch data should only be call
     // close popover
     fireEvent.click(showPopoverButton);
 
-    expect(fetchDataToShow).toHaveBeenCalledTimes(1);
     expect(screen.queryByLabelText('close more options')).toBeFalsy();
     expect(screen.queryByText('more options')).toBeTruthy();
 });
