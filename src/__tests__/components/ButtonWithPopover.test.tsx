@@ -10,7 +10,12 @@ test('should click show more and popover button should show open state', () => {
     const isLoading = false;
 
     render(
-        <ButtonWithPopover fetchDataToShow={fetchDataToShow} fetchedData={fetchedDataToShow} isLoading={isLoading} />
+        <ButtonWithPopover
+            expanded={true}
+            onShowMoreClicked={fetchDataToShow}
+            fetchedData={fetchedDataToShow}
+            isLoading={isLoading}
+        />
     );
 
     const showPopoverButton = screen.getByRole(`button`);
@@ -28,7 +33,12 @@ test('should click show more and popover button should show loading state', () =
     const isLoading = true;
 
     render(
-        <ButtonWithPopover fetchDataToShow={fetchDataToShow} fetchedData={fetchedDataToShow} isLoading={isLoading} />
+        <ButtonWithPopover
+            expanded={true}
+            onShowMoreClicked={fetchDataToShow}
+            fetchedData={fetchedDataToShow}
+            isLoading={isLoading}
+        />
     );
 
     const showPopoverButton = screen.getByRole(`button`);
@@ -49,7 +59,12 @@ test('should click show more and popover data info buttons should be visible', (
     const isLoading = false;
 
     render(
-        <ButtonWithPopover fetchDataToShow={fetchDataToShow} fetchedData={fetchedDataToShow} isLoading={isLoading} />
+        <ButtonWithPopover
+            expanded={true}
+            onShowMoreClicked={fetchDataToShow}
+            fetchedData={fetchedDataToShow}
+            isLoading={isLoading}
+        />
     );
 
     const showPopoverButton = screen.getByRole(`button`);
@@ -67,7 +82,12 @@ test('should click show more, then hide again and fetch data should only be call
     const isLoading = false;
 
     render(
-        <ButtonWithPopover fetchDataToShow={fetchDataToShow} fetchedData={fetchedDataToShow} isLoading={isLoading} />
+        <ButtonWithPopover
+            expanded={true}
+            onShowMoreClicked={fetchDataToShow}
+            fetchedData={fetchedDataToShow}
+            isLoading={isLoading}
+        />
     );
 
     const showPopoverButton = screen.getByRole(`button`);

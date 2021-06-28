@@ -45,7 +45,8 @@ it('renders ContextMenu with more info button correctly', () => {
                 selected={false}
             >
                 <ButtonWithPopover
-                    fetchDataToShow={fetchDataToShow}
+                    expanded={true}
+                    onShowMoreClicked={fetchDataToShow}
                     isLoading={false}
                     fetchedData={fetchedDataToShow}
                 />
