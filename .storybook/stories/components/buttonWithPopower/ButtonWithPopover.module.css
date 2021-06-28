@@ -1,0 +1,8 @@
+.buttonWrapper {
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    width: 300px;
+    justify-content: space-between;
+    padding: 8px;
+}

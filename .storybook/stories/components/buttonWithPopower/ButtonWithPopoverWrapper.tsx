@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ButtonWithPopover } from '../../../../src/components/buttonWithPopover/ButtonWithPopover';
 import { DataInformation } from '../../../../src/types/dataInformation';
+import style from './ButtonWithPopover.module.css';
 
 export interface ButtonWithPopoverWrapperProps {
     fetchedData: DataInformation[];
@@ -30,7 +31,8 @@ const ButtonWithPopoverWrapper: React.FC<ButtonWithPopoverWrapperProps> = ({
     };
 
     return (
-        <div>
+        <div className={style.buttonWrapper}>
+            <h3> Button with popover </h3>
             <ButtonWithPopover
                 onShowMoreClicked={onPopoverShowMoreClicked}
                 expanded={expanded}

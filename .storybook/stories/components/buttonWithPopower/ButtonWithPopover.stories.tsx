@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import React, { CSSProperties } from 'react';
+import React from 'react';
 import {
     ButtonWithPopoverWrapperProps,
     default as ButtonWithPopover,
@@ -9,31 +9,7 @@ import {
 export default {
     title: 'Components/ButtonWithPopover',
 
-    component: ButtonWithPopover,
-    argTypes: {
-        legendColor: { control: 'color' },
-        icon: {
-            control: {
-                type: 'select',
-                options: [
-                    'Electrical',
-                    'Main Equipment',
-                    'Line',
-                    'Manual Valve',
-                    'Circuit/Starter',
-                    'Cable',
-                    'Instrument',
-                    'Function',
-                    'Signal',
-                    'Telecom',
-                    'Junction Box',
-                    'Administrative',
-                    'Other'
-                ]
-            }
-        },
-        position: { control: { type: 'object' } }
-    }
+    component: ButtonWithPopover
 } as Meta;
 
 const Template: Story<ButtonWithPopoverWrapperProps> = (args) => <ButtonWithPopoverWrapper {...args} />;
@@ -104,11 +80,4 @@ Default.args = {
             onTagInfoClicked: (): void => {}
         }
     ],
-    icon: 'Electrical',
-    legendColor: '#007079',
-    tagNo: 'D-11PSSV0803',
-    description: 'CEMENT UNIT',
-    position: { left: '20px', top: '20px' } as CSSProperties,
-    selectedClassName: 'tagSelected',
-    selected: false
 };
