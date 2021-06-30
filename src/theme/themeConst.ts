@@ -9,6 +9,7 @@ export const themeConst = {
     equiGray2: '#b4bbc0',
     equiGray3: '#d1d5d8',
     equiGray4: '#e3e6e8',
+    equiGray5: '#f7f7f7',
     equiRed1: '#ff1243',
     darkEquiRed: '#ce183e',
     equiGreen1: '#006f79',
@@ -70,5 +71,12 @@ export const themeConst = {
 
     /* Toggle colors */
     toggleActive: '#4bb748',
-    toggleInactive: '#b30d2f'
+    toggleInactive: '#b30d2f',
+
+    /* Icon colors */
+    hoverIcon: '#004f55',
+    hoverIconWithNotification: '#b30d2f',
+
+    /* Text */
+    tertiaryText: '#6f6f6f'
 };
