@@ -3,6 +3,7 @@ export { ContextMenu } from './components/contextMenu/ContextMenu';
 export { DataInfoButton } from './components/contextMenuPopover/DataInfoButton';
 export { DialogGenerator } from './components/dialogGenerator/DialogGenerator';
 export { Dropdown } from './components/dropdown/Dropdown';
+export { InlineTagIconLink } from './components/inlineTagIconLink/InlineTagIconLink';
 export { ListRow } from './components/listRow/ListRow';
 export { TagContextMenu } from './components/tagContextMenu/TagContextMenu';
 export { DraggableItemsWrapper } from './elements/draggableItemsWrapper/DraggableItemsWrapper';

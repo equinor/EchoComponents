@@ -3,7 +3,7 @@
 exports[`renders RadioButtonGroup correctly  1`] = `
 <div>
   <p
-    className="sc-hKgILt dMHJLh header"
+    className="sc-eCssSg bHjGEK header"
   >
     My radio button group
   </p>
@@ -11,23 +11,23 @@ exports[`renders RadioButtonGroup correctly  1`] = `
     className="buttonWrapper"
   >
     <label
-      className="sc-eltcbb gSlHGN"
+      className="sc-iIEYCM eOdVQJ"
       disabled={false}
     >
       <span
-        className="sc-gsBrbv cqIwGN"
+        className="sc-cvJHqN gQNzyp"
         disabled={false}
       >
         <input
           checked={false}
-          className="sc-jtHMlw foxuLr"
+          className="sc-cKZHah fGVzdA"
           disabled={false}
           onChange={[Function]}
           type="radio"
         />
         <svg
           aria-hidden={true}
-          className="sc-cKZHah"
+          className="sc-aKZfe"
           fill="var(--eds_interactive_primary__resting, rgba(0, 112, 121, 1))"
           height={24}
           name={null}
@@ -36,14 +36,14 @@ exports[`renders RadioButtonGroup correctly  1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            className="sc-kiYtDG"
+            className="sc-gsBrbv"
             clipRule="evenodd"
             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-8a5 5 0 1110 0 5 5 0 01-10 0z"
             fillRule="evenodd"
             name="selected"
           />
           <path
-            className="sc-kiYtDG"
+            className="sc-gsBrbv"
             clipRule="evenodd"
             d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm2 0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8-8 3.58-8 8z"
             fillRule="evenodd"
@@ -52,29 +52,29 @@ exports[`renders RadioButtonGroup correctly  1`] = `
         </svg>
       </span>
       <span
-        className="sc-iIEYCM hLQBIp"
+        className="sc-kmASHI knZXsi"
       >
         First value
       </span>
     </label>
     <label
-      className="sc-eltcbb gSlHGN"
+      className="sc-iIEYCM eOdVQJ"
       disabled={false}
     >
       <span
-        className="sc-gsBrbv cqIwGN"
+        className="sc-cvJHqN gQNzyp"
         disabled={false}
       >
         <input
           checked={true}
-          className="sc-jtHMlw foxuLr"
+          className="sc-cKZHah fGVzdA"
           disabled={false}
           onChange={[Function]}
           type="radio"
         />
         <svg
           aria-hidden={true}
-          className="sc-cKZHah"
+          className="sc-aKZfe"
           fill="var(--eds_interactive_primary__resting, rgba(0, 112, 121, 1))"
           height={24}
           name={null}
@@ -83,14 +83,14 @@ exports[`renders RadioButtonGroup correctly  1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            className="sc-kiYtDG"
+            className="sc-gsBrbv"
             clipRule="evenodd"
             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-8a5 5 0 1110 0 5 5 0 01-10 0z"
             fillRule="evenodd"
             name="selected"
           />
           <path
-            className="sc-kiYtDG"
+            className="sc-gsBrbv"
             clipRule="evenodd"
             d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm2 0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8-8 3.58-8 8z"
             fillRule="evenodd"
@@ -99,7 +99,7 @@ exports[`renders RadioButtonGroup correctly  1`] = `
         </svg>
       </span>
       <span
-        className="sc-iIEYCM hLQBIp"
+        className="sc-kmASHI knZXsi"
       >
         Second value
       </span>

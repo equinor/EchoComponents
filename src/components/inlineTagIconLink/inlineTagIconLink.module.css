@@ -1,0 +1,52 @@
+.tagButton {
+    width: 100%;
+    min-width: 215px;
+    min-height: 64px;
+    padding: 0.5rem !important;
+    cursor: pointer;
+    height: auto;
+    display: flex !important;
+}
+
+.tagButtonNoHover {
+    width: 100%;
+    min-width: 215px;
+    min-height: 64px;
+    padding: 0.5rem !important;
+    cursor: pointer;
+    height: auto;
+    display: flex !important;
+}
+
+.tagButtonNoHover:hover {
+    background: none !important;
+}
+
+.textContainer {
+    flex: 1 1 auto;
+    text-align: left;
+}
+
+.description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    font-size: 10px !important;
+    color: var(--echoText) !important;
+    font-weight: 500 !important;
+}
+
+.tag {
+    word-break: break-all;
+}
+
+.icon {
+    flex: 1 1 auto;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin-right: 0.25rem;
+}

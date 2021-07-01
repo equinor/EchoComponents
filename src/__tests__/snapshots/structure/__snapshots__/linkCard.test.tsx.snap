@@ -16,12 +16,12 @@ exports[`renders LinkCardItem correctly 1`] = `
     className="header"
   >
     <h3
-      className="sc-hKgILt gKzDfk title"
+      className="sc-eCssSg hvXwcX title"
     >
       Johan Sverdrup
     </h3>
     <h3
-      className="sc-hKgILt gKzDfk subTitle"
+      className="sc-eCssSg hvXwcX subTitle"
     >
       Processing Platform 2
     </h3>
@@ -34,7 +34,7 @@ exports[`renders LinkCardItem correctly 1`] = `
       target="_self"
     >
       <p
-        className="sc-hKgILt dMHJLh link"
+        className="sc-eCssSg bHjGEK link"
       >
         Full
       </p>
@@ -44,7 +44,7 @@ exports[`renders LinkCardItem correctly 1`] = `
       target="_blank"
     >
       <p
-        className="sc-hKgILt dMHJLh link"
+        className="sc-eCssSg bHjGEK link"
       >
         HVDC
       </p>
@@ -54,7 +54,7 @@ exports[`renders LinkCardItem correctly 1`] = `
       target="_self"
     >
       <p
-        className="sc-hKgILt dMHJLh link"
+        className="sc-eCssSg bHjGEK link"
       >
         MSF
       </p>
@@ -64,7 +64,7 @@ exports[`renders LinkCardItem correctly 1`] = `
       target="_self"
     >
       <p
-        className="sc-hKgILt dMHJLh link"
+        className="sc-eCssSg bHjGEK link"
       >
         UPM
       </p>

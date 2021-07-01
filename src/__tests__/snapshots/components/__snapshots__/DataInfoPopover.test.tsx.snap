@@ -15,7 +15,7 @@ exports[`renders DataInfoPopover with data correctly 1`] = `
     >
       <button
         aria-label="P&ID"
-        className="sc-dlfnbm bmmLHw undefined button buttonWithBadge"
+        className="sc-hKgILt lkgudK undefined button buttonWithBadge"
         data-count={5}
         disabled={false}
         onClick={[MockFunction]}
@@ -23,18 +23,14 @@ exports[`renders DataInfoPopover with data correctly 1`] = `
         type="button"
       >
         <span
-          className="sc-gsTCUz dRDfTG"
+          className="sc-dlfnbm iOlYhO"
         >
-          <span
-            className="sc-bdfBwQ bdhdma"
-          >
-            P&ID
-          </span>
+          P&ID
         </span>
       </button>
       <button
         aria-label="D&ID"
-        className="sc-dlfnbm bmmLHw undefined button "
+        className="sc-hKgILt lkgudK undefined button "
         data-count={1}
         disabled={false}
         onClick={[MockFunction]}
@@ -42,13 +38,9 @@ exports[`renders DataInfoPopover with data correctly 1`] = `
         type="button"
       >
         <span
-          className="sc-gsTCUz dRDfTG"
+          className="sc-dlfnbm iOlYhO"
         >
-          <span
-            className="sc-bdfBwQ bdhdma"
-          >
-            D&ID
-          </span>
+          D&ID
         </span>
       </button>
     </div>
@@ -67,7 +59,7 @@ exports[`renders DataInfoPopover with loading indicator 1`] = `
     className="optionsPopover"
   >
     <svg
-      className="sc-ikPAkQ kzyPqY"
+      className="sc-eHfQar dMBMKY"
       color="var(--eds_interactive__icon_on_interactive_colors, rgba(255, 255, 255, 1))"
       height={8}
       preserveAspectRatio="xMidYMid meet"
@@ -110,7 +102,7 @@ exports[`renders DataInfoPopover with multiple item types correctly 1`] = `
     >
       <button
         aria-label="P&ID"
-        className="sc-dlfnbm bmmLHw undefined button buttonWithBadge"
+        className="sc-hKgILt lkgudK undefined button buttonWithBadge"
         data-count={5}
         disabled={false}
         onClick={[MockFunction]}
@@ -118,18 +110,14 @@ exports[`renders DataInfoPopover with multiple item types correctly 1`] = `
         type="button"
       >
         <span
-          className="sc-gsTCUz dRDfTG"
+          className="sc-dlfnbm iOlYhO"
         >
-          <span
-            className="sc-bdfBwQ bdhdma"
-          >
-            P&ID
-          </span>
+          P&ID
         </span>
       </button>
       <button
         aria-label="D&ID"
-        className="sc-dlfnbm bmmLHw undefined button "
+        className="sc-hKgILt lkgudK undefined button "
         data-count={1}
         disabled={false}
         onClick={[MockFunction]}
@@ -137,13 +125,9 @@ exports[`renders DataInfoPopover with multiple item types correctly 1`] = `
         type="button"
       >
         <span
-          className="sc-gsTCUz dRDfTG"
+          className="sc-dlfnbm iOlYhO"
         >
-          <span
-            className="sc-bdfBwQ bdhdma"
-          >
-            D&ID
-          </span>
+          D&ID
         </span>
       </button>
     </div>
@@ -152,7 +136,7 @@ exports[`renders DataInfoPopover with multiple item types correctly 1`] = `
     >
       <button
         aria-label="M1"
-        className="sc-dlfnbm bmmLHw undefined button buttonWithBadge"
+        className="sc-hKgILt lkgudK undefined button buttonWithBadge"
         data-count={5}
         disabled={false}
         onClick={[MockFunction]}
@@ -160,18 +144,14 @@ exports[`renders DataInfoPopover with multiple item types correctly 1`] = `
         type="button"
       >
         <span
-          className="sc-gsTCUz dRDfTG"
+          className="sc-dlfnbm iOlYhO"
         >
-          <span
-            className="sc-bdfBwQ bdhdma"
-          >
-            M1
-          </span>
+          M1
         </span>
       </button>
       <button
         aria-label="M2"
-        className="sc-dlfnbm bmmLHw undefined button "
+        className="sc-hKgILt lkgudK undefined button "
         data-count={1}
         disabled={false}
         onClick={[MockFunction]}
@@ -179,13 +159,9 @@ exports[`renders DataInfoPopover with multiple item types correctly 1`] = `
         type="button"
       >
         <span
-          className="sc-gsTCUz dRDfTG"
+          className="sc-dlfnbm iOlYhO"
         >
-          <span
-            className="sc-bdfBwQ bdhdma"
-          >
-            M2
-          </span>
+          M2
         </span>
       </button>
     </div>
