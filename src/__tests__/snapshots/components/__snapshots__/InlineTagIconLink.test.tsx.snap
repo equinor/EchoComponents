@@ -23,7 +23,9 @@ exports[`renders inlineTagIconLink correctly 1`] = `
         aria-label="tag"
       />
     </div>
-    <div>
+    <div
+      className="textContainer"
+    >
       <p
         className="sc-eCssSg bvfwKK tag"
       >
