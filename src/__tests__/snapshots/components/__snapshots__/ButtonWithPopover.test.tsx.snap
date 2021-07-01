@@ -16,7 +16,7 @@ exports[`renders ButtonWithPopover with more info button correctly 1`] = `
     >
       <svg
         aria-labelledby="eds-close-1"
-        className="sc-kfzAmx blqdWU"
+        className="sc-iwyYcG dqcEJR"
         fill="#007079"
         height="24px"
         name={null}

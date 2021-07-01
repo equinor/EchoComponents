@@ -9,6 +9,7 @@ export interface InlineTagIconLinkProps {
     description: string;
     tagCategoryDescription?: string;
     legendColor: string;
+    width?: number;
 }
 
 export const InlineTagIconLink: React.FC<InlineTagIconLinkProps> = ({
@@ -16,19 +17,27 @@ export const InlineTagIconLink: React.FC<InlineTagIconLinkProps> = ({
     tagNo,
     description,
     tagCategoryDescription,
-    legendColor
+    legendColor,
+    width
 }: InlineTagIconLinkProps): JSX.Element => {
+    const limitTextLength = (text: string, characterLimit?: number): string => {
+        if (!characterLimit || text.length <= characterLimit) {
+            return text;
+        }
+        return text.slice(0, characterLimit).concat('...');
+    };
+
     return (
         <Button variant={'ghost'} onClick={onClickHandler} className={styles.tagButton}>
             <div style={{ background: legendColor }} className={styles.icon}>
                 {getIcon(tagCategoryDescription ?? '')}
             </div>
-            <div>
+            <div className={styles.textContainer}>
                 <Typography variant="body_short_link" className={styles.tag}>
-                    {tagNo}
+                    {limitTextLength(tagNo, 16)}
                 </Typography>
                 <Typography className={styles.description} variant="body_short">
-                    {description}
+                    {limitTextLength(description, 24)}
                 </Typography>
             </div>
         </Button>

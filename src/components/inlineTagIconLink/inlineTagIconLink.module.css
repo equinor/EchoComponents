@@ -1,11 +1,19 @@
 .tagButton {
+    width: 100%;
+    min-width: 215px;
+    min-height: 64px;
+    padding: 0.5rem;
     cursor: pointer;
     height: auto;
+    display: flex;
+}
+
+.textContainer {
+    flex: 1 1 auto;
+    text-align: left;
 }
 
 .description {
-    display: inline-block;
-    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: break-word;
@@ -19,12 +27,12 @@
 }
 
 .icon {
+    flex: 1 1 auto;
     position: relative;
-    transform-origin: left top;
     width: 40px;
     height: 40px;
     border-radius: 10rem;
-    padding: 8px;
+    padding: 0.5rem;
     box-sizing: border-box;
-    margin-right: var(--small);
+    margin-right: 0.25rem;
 }
