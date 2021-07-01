@@ -3,6 +3,7 @@
     flex-direction: column;
     right: 0px;
     position: absolute;
+    z-index: 10;
 }
 
 .arrow {
