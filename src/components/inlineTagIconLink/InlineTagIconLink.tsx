@@ -45,7 +45,7 @@ export const InlineTagIconLink: React.FC<InlineTagIconLinkProps> = ({
     const buttonStyle = disableHover ? styles.tagButtonNoHover : styles.tagButton;
 
     return (
-        <Button variant={'ghost'} onClick={onClickHandler} className={buttonStyle}>
+        <Button variant={'ghost'} onClick={onClickHandler} className={buttonStyle} style={width ? width : ''}>
             <div style={{ background: legendColor }} className={styles.icon}>
                 {tagCategoryDescription && getIcon(tagCategoryDescription ?? '')}
                 {!tagCategoryDescription && icon && showEDSOrCustomIcon(icon)}
