@@ -2,10 +2,24 @@
     width: 100%;
     min-width: 215px;
     min-height: 64px;
-    padding: 0.5rem;
+    padding: 0.5rem !important;
     cursor: pointer;
     height: auto;
-    display: flex;
+    display: flex !important;
+}
+
+.tagButtonNoHover {
+    width: 100%;
+    min-width: 215px;
+    min-height: 64px;
+    padding: 0.5rem !important;
+    cursor: pointer;
+    height: auto;
+    display: flex !important;
+}
+
+.tagButtonNoHover:hover {
+    background: none !important;
 }
 
 .textContainer {

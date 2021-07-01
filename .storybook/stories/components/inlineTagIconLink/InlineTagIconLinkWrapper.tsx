@@ -7,8 +7,10 @@ export interface InlineTagIconLinkWrapperProps {
     tagNo: string;
     description: string;
     tagCategoryDescription?: string;
+    icon?: React.FC | SVGSVGElement;
     legendColor: string;
-    width?: number;
+    width?: string;
+    disableHover?: boolean;
 }
 
 const { Row, Cell, Head, Body } = Table;
@@ -18,12 +20,14 @@ const InlineTagIconLinkWrapper: React.FC<InlineTagIconLinkWrapperProps> = ({
     tagNo,
     description,
     tagCategoryDescription,
+    icon,
     legendColor,
-    width
+    width,
+    disableHover
 }: InlineTagIconLinkWrapperProps) => {
     return (
         <>
-            <h2>Table</h2>
+            <h2>Default width, with no hover</h2>
             <Table style={{ maxWidth: '600px' }}>
                 <Head>
                     <Row>
@@ -34,7 +38,7 @@ const InlineTagIconLinkWrapper: React.FC<InlineTagIconLinkWrapperProps> = ({
                 </Head>
                 <Body>
                     <Row>
-                        <Cell>Lorem ipsum dolor sit amet consecteur dit lot.</Cell>
+                        <Cell>With Tag Category icon</Cell>
                         <Cell>
                             <InlineTagIconLink
                                 onClickHandler={onClickHandler}
@@ -42,26 +46,28 @@ const InlineTagIconLinkWrapper: React.FC<InlineTagIconLinkWrapperProps> = ({
                                 description={description}
                                 tagCategoryDescription={tagCategoryDescription}
                                 legendColor={legendColor}
+                                disableHover
                             />
                         </Cell>
                         <Cell>Lorem ipsum dolor sit amet consecteur dit lot.</Cell>
                     </Row>
                     <Row>
-                        <Cell>Lorem ipsum dolor sit amet consecteur dit lot.</Cell>
+                        <Cell>With EDS Icon</Cell>
                         <Cell>
                             <InlineTagIconLink
                                 onClickHandler={onClickHandler}
                                 tagNo={'11-ELECTRICAL-FIELD-EQ'}
                                 description={'TEST SEPARATOR WATER SUCTION'}
-                                tagCategoryDescription={tagCategoryDescription}
+                                icon={'close'}
                                 legendColor={legendColor}
+                                disableHover
                             />
                         </Cell>
                         <Cell>Lorem ipsum dolor sit amet consecteur dit lot.</Cell>
                     </Row>
                 </Body>
             </Table>
-            <h2>Full width</h2>
+            <h2>Full width with hover</h2>
             <p>
                 <InlineTagIconLink
                     onClickHandler={onClickHandler}
