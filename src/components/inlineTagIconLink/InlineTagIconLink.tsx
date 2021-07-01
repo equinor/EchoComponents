@@ -11,7 +11,6 @@ export interface InlineTagIconLinkProps {
     tagCategoryDescription?: string;
     icon?: string | SVGSVGElement | React.ReactElement<unknown, string | React.JSXElementConstructor<unknown>>;
     legendColor: string;
-    width?: string;
     disableHover?: boolean;
 }
 
@@ -22,7 +21,6 @@ export const InlineTagIconLink: React.FC<InlineTagIconLinkProps> = ({
     tagCategoryDescription,
     icon,
     legendColor,
-    width,
     disableHover
 }: InlineTagIconLinkProps): JSX.Element => {
     const limitTextLength = (text: string, characterLimit?: number): string => {
@@ -45,7 +43,7 @@ export const InlineTagIconLink: React.FC<InlineTagIconLinkProps> = ({
     const buttonStyle = disableHover ? styles.tagButtonNoHover : styles.tagButton;
 
     return (
-        <Button variant={'ghost'} onClick={onClickHandler} className={buttonStyle} style={width ? width : ''}>
+        <Button variant={'ghost'} onClick={onClickHandler} className={buttonStyle}>
             <div style={{ background: legendColor }} className={styles.icon}>
                 {tagCategoryDescription && getIcon(tagCategoryDescription ?? '')}
                 {!tagCategoryDescription && icon && showEDSOrCustomIcon(icon)}

@@ -9,7 +9,6 @@ export interface InlineTagIconLinkWrapperProps {
     tagCategoryDescription?: string;
     icon?: string | SVGSVGElement | React.ReactElement<unknown, string | React.JSXElementConstructor<unknown>>;
     legendColor: string;
-    width?: string;
     disableHover?: boolean;
 }
 
